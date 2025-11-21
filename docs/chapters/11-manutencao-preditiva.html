@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>8&nbsp; Manutenção Preditiva com Dados Sensor – Confiabilidade e Manutenção: Aplicações em R</title>
+<title>11&nbsp; Manutenção Preditiva com Dados Sensor – Confiabilidade e Manutenção: Aplicações em R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/09-sistemas.html" rel="next">
-<link href="../chapters/07-manutencao-preventiva.html" rel="prev">
+<link href="../chapters/12-sistemas.html" rel="next">
+<link href="../chapters/10-manutencao-preventiva.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -117,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/07-manutencao-preventiva.html">Estratégias de Manutenção</a></li><li class="breadcrumb-item"><a href="../chapters/08-manutencao-preditiva.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Manutenção Preditiva com Dados Sensor</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/10-manutencao-preventiva.html">Estratégias de Manutenção</a></li><li class="breadcrumb-item"><a href="../chapters/11-manutencao-preditiva.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Manutenção Preditiva com Dados Sensor</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -172,7 +172,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Fundamentos e Teoria</span></a>
+ <span class="menu-text">Contexto e Aplicação em Mineração</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -180,20 +180,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/01-fundamentos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Fundamentos de Confiabilidade</span></span></a>
+  <a href="../chapters/01-introducao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/02-distribuicoes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Probabilidades e Distribuições para Vida Útil</span></span></a>
+  <a href="../chapters/02-performance-mineracao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Medidas de Performance Operacional na Mineração</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/03-estimacao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estimativa de Parâmetros e Inferência</span></span></a>
+  <a href="../chapters/03-fatores-moderadores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Fatores Moderadores da Manutenção</span></span></a>
   </div>
 </li>
       </ul>
@@ -201,7 +201,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Análise e Modelagem Prática</span></a>
+ <span class="menu-text">Fundamentos e Teoria</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -209,20 +209,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/04-analise-falhas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Análise de Dados de Falha com R</span></span></a>
+  <a href="../chapters/04-fundamentos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Fundamentos de Confiabilidade</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/05-weibull.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Modelagem Weibull na Prática</span></span></a>
+  <a href="../chapters/05-distribuicoes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Probabilidades e Distribuições para Vida Útil</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/06-sobrevivencia.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Análise de Sobrevivência e Modelos Semiparamétricos</span></span></a>
+  <a href="../chapters/06-estimacao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Estimativa de Parâmetros e Inferência</span></span></a>
   </div>
 </li>
       </ul>
@@ -230,7 +230,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Estratégias de Manutenção</span></a>
+ <span class="menu-text">Análise e Modelagem Prática</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -238,20 +238,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/07-manutencao-preventiva.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Manutenção Preventiva e Otimização de Políticas</span></span></a>
+  <a href="../chapters/07-analise-falhas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Análise de Dados de Falha com R</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/08-manutencao-preditiva.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Manutenção Preditiva com Dados Sensor</span></span></a>
+  <a href="../chapters/08-weibull.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Modelagem Weibull na Prática</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/09-sistemas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Modelos de Confiabilidade de Sistema</span></span></a>
+  <a href="../chapters/09-sobrevivencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Análise de Sobrevivência e Modelos Semiparamétricos</span></span></a>
   </div>
 </li>
       </ul>
@@ -259,7 +259,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Métodos Avançados e Aplicações</span></a>
+ <span class="menu-text">Estratégias de Manutenção</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -267,20 +267,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/10-simulacao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Simulação Monte Carlo Aplicada à Confiabilidade</span></span></a>
+  <a href="../chapters/10-manutencao-preventiva.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Manutenção Preventiva e Otimização de Políticas</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/11-estudos-caso.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Estudos de Caso Industriais</span></span></a>
+  <a href="../chapters/11-manutencao-preditiva.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Manutenção Preditiva com Dados Sensor</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/12-governanca.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Boas Práticas e Governança de Dados de Manutenção</span></span></a>
+  <a href="../chapters/12-sistemas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Modelos de Confiabilidade de Sistema</span></span></a>
   </div>
 </li>
       </ul>
@@ -288,12 +288,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">Apêndices</span></a>
+ <span class="menu-text">Métodos Avançados e Aplicações</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/13-simulacao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Simulação Monte Carlo Aplicada à Confiabilidade</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/14-estudos-caso.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Estudos de Caso Industriais</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/15-governanca.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Boas Práticas e Governança de Dados de Manutenção</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Apêndices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../appendices/A-pacotes.html" class="sidebar-item-text sidebar-link">
@@ -336,28 +365,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução"><span class="header-section-number">8.1</span> Introdução</a></li>
-  <li><a href="#preparação-de-dados-de-sensores" id="toc-preparação-de-dados-de-sensores" class="nav-link" data-scroll-target="#preparação-de-dados-de-sensores"><span class="header-section-number">8.2</span> Preparação de Dados de Sensores</a></li>
-  <li><a href="#feature-engineering" id="toc-feature-engineering" class="nav-link" data-scroll-target="#feature-engineering"><span class="header-section-number">8.3</span> Feature Engineering</a>
+  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução"><span class="header-section-number">11.1</span> Introdução</a></li>
+  <li><a href="#preparação-de-dados-de-sensores" id="toc-preparação-de-dados-de-sensores" class="nav-link" data-scroll-target="#preparação-de-dados-de-sensores"><span class="header-section-number">11.2</span> Preparação de Dados de Sensores</a></li>
+  <li><a href="#feature-engineering" id="toc-feature-engineering" class="nav-link" data-scroll-target="#feature-engineering"><span class="header-section-number">11.3</span> Feature Engineering</a>
   <ul class="collapse">
-  <li><a href="#estatísticas-em-janela-deslizante" id="toc-estatísticas-em-janela-deslizante" class="nav-link" data-scroll-target="#estatísticas-em-janela-deslizante"><span class="header-section-number">8.3.1</span> Estatísticas em Janela Deslizante</a></li>
+  <li><a href="#estatísticas-em-janela-deslizante" id="toc-estatísticas-em-janela-deslizante" class="nav-link" data-scroll-target="#estatísticas-em-janela-deslizante"><span class="header-section-number">11.3.1</span> Estatísticas em Janela Deslizante</a></li>
   </ul></li>
-  <li><a href="#detecção-de-anomalias" id="toc-detecção-de-anomalias" class="nav-link" data-scroll-target="#detecção-de-anomalias"><span class="header-section-number">8.4</span> Detecção de Anomalias</a></li>
-  <li><a href="#modelo-preditivo-com-machine-learning" id="toc-modelo-preditivo-com-machine-learning" class="nav-link" data-scroll-target="#modelo-preditivo-com-machine-learning"><span class="header-section-number">8.5</span> Modelo Preditivo com Machine Learning</a></li>
-  <li><a href="#importância-de-features" id="toc-importância-de-features" class="nav-link" data-scroll-target="#importância-de-features"><span class="header-section-number">8.6</span> Importância de Features</a></li>
-  <li><a href="#séries-temporais-com-prophet" id="toc-séries-temporais-com-prophet" class="nav-link" data-scroll-target="#séries-temporais-com-prophet"><span class="header-section-number">8.7</span> Séries Temporais com Prophet</a></li>
-  <li><a href="#threshold-dinâmico" id="toc-threshold-dinâmico" class="nav-link" data-scroll-target="#threshold-dinâmico"><span class="header-section-number">8.8</span> Threshold Dinâmico</a></li>
-  <li><a href="#exercícios" id="toc-exercícios" class="nav-link" data-scroll-target="#exercícios"><span class="header-section-number">8.9</span> Exercícios</a></li>
-  <li><a href="#resumo" id="toc-resumo" class="nav-link" data-scroll-target="#resumo"><span class="header-section-number">8.10</span> Resumo</a></li>
+  <li><a href="#detecção-de-anomalias" id="toc-detecção-de-anomalias" class="nav-link" data-scroll-target="#detecção-de-anomalias"><span class="header-section-number">11.4</span> Detecção de Anomalias</a></li>
+  <li><a href="#modelo-preditivo-com-machine-learning" id="toc-modelo-preditivo-com-machine-learning" class="nav-link" data-scroll-target="#modelo-preditivo-com-machine-learning"><span class="header-section-number">11.5</span> Modelo Preditivo com Machine Learning</a></li>
+  <li><a href="#importância-de-features" id="toc-importância-de-features" class="nav-link" data-scroll-target="#importância-de-features"><span class="header-section-number">11.6</span> Importância de Features</a></li>
+  <li><a href="#séries-temporais-com-prophet" id="toc-séries-temporais-com-prophet" class="nav-link" data-scroll-target="#séries-temporais-com-prophet"><span class="header-section-number">11.7</span> Séries Temporais com Prophet</a></li>
+  <li><a href="#threshold-dinâmico" id="toc-threshold-dinâmico" class="nav-link" data-scroll-target="#threshold-dinâmico"><span class="header-section-number">11.8</span> Threshold Dinâmico</a></li>
+  <li><a href="#exercícios" id="toc-exercícios" class="nav-link" data-scroll-target="#exercícios"><span class="header-section-number">11.9</span> Exercícios</a></li>
+  <li><a href="#resumo" id="toc-resumo" class="nav-link" data-scroll-target="#resumo"><span class="header-section-number">11.10</span> Resumo</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/07-manutencao-preventiva.html">Estratégias de Manutenção</a></li><li class="breadcrumb-item"><a href="../chapters/08-manutencao-preditiva.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Manutenção Preditiva com Dados Sensor</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/10-manutencao-preventiva.html">Estratégias de Manutenção</a></li><li class="breadcrumb-item"><a href="../chapters/11-manutencao-preditiva.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Manutenção Preditiva com Dados Sensor</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Manutenção Preditiva com Dados Sensor</span></h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Manutenção Preditiva com Dados Sensor</span></h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 </div>
 
 
@@ -374,12 +403,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="introdução" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="introdução"><span class="header-section-number">8.1</span> Introdução</h2>
+<section id="introdução" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="introdução"><span class="header-section-number">11.1</span> Introdução</h2>
 <p>Uso de dados de sensores e machine learning para predição de falhas.</p>
 </section>
-<section id="preparação-de-dados-de-sensores" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="preparação-de-dados-de-sensores"><span class="header-section-number">8.2</span> Preparação de Dados de Sensores</h2>
+<section id="preparação-de-dados-de-sensores" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="preparação-de-dados-de-sensores"><span class="header-section-number">11.2</span> Preparação de Dados de Sensores</h2>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -402,10 +431,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="feature-engineering" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="feature-engineering"><span class="header-section-number">8.3</span> Feature Engineering</h2>
-<section id="estatísticas-em-janela-deslizante" class="level3" data-number="8.3.1">
-<h3 data-number="8.3.1" class="anchored" data-anchor-id="estatísticas-em-janela-deslizante"><span class="header-section-number">8.3.1</span> Estatísticas em Janela Deslizante</h3>
+<section id="feature-engineering" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="feature-engineering"><span class="header-section-number">11.3</span> Feature Engineering</h2>
+<section id="estatísticas-em-janela-deslizante" class="level3" data-number="11.3.1">
+<h3 data-number="11.3.1" class="anchored" data-anchor-id="estatísticas-em-janela-deslizante"><span class="header-section-number">11.3.1</span> Estatísticas em Janela Deslizante</h3>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -427,8 +456,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 </section>
-<section id="detecção-de-anomalias" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="detecção-de-anomalias"><span class="header-section-number">8.4</span> Detecção de Anomalias</h2>
+<section id="detecção-de-anomalias" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="detecção-de-anomalias"><span class="header-section-number">11.4</span> Detecção de Anomalias</h2>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -447,8 +476,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="modelo-preditivo-com-machine-learning" class="level2" data-number="8.5">
-<h2 data-number="8.5" class="anchored" data-anchor-id="modelo-preditivo-com-machine-learning"><span class="header-section-number">8.5</span> Modelo Preditivo com Machine Learning</h2>
+<section id="modelo-preditivo-com-machine-learning" class="level2" data-number="11.5">
+<h2 data-number="11.5" class="anchored" data-anchor-id="modelo-preditivo-com-machine-learning"><span class="header-section-number">11.5</span> Modelo Preditivo com Machine Learning</h2>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -482,8 +511,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="importância-de-features" class="level2" data-number="8.6">
-<h2 data-number="8.6" class="anchored" data-anchor-id="importância-de-features"><span class="header-section-number">8.6</span> Importância de Features</h2>
+<section id="importância-de-features" class="level2" data-number="11.6">
+<h2 data-number="11.6" class="anchored" data-anchor-id="importância-de-features"><span class="header-section-number">11.6</span> Importância de Features</h2>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -492,8 +521,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="séries-temporais-com-prophet" class="level2" data-number="8.7">
-<h2 data-number="8.7" class="anchored" data-anchor-id="séries-temporais-com-prophet"><span class="header-section-number">8.7</span> Séries Temporais com Prophet</h2>
+<section id="séries-temporais-com-prophet" class="level2" data-number="11.7">
+<h2 data-number="11.7" class="anchored" data-anchor-id="séries-temporais-com-prophet"><span class="header-section-number">11.7</span> Séries Temporais com Prophet</h2>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -516,8 +545,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="threshold-dinâmico" class="level2" data-number="8.8">
-<h2 data-number="8.8" class="anchored" data-anchor-id="threshold-dinâmico"><span class="header-section-number">8.8</span> Threshold Dinâmico</h2>
+<section id="threshold-dinâmico" class="level2" data-number="11.8">
+<h2 data-number="11.8" class="anchored" data-anchor-id="threshold-dinâmico"><span class="header-section-number">11.8</span> Threshold Dinâmico</h2>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -536,14 +565,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="exercícios" class="level2" data-number="8.9">
-<h2 data-number="8.9" class="anchored" data-anchor-id="exercícios"><span class="header-section-number">8.9</span> Exercícios</h2>
+<section id="exercícios" class="level2" data-number="11.9">
+<h2 data-number="11.9" class="anchored" data-anchor-id="exercícios"><span class="header-section-number">11.9</span> Exercícios</h2>
 <p>📝 <strong>Exercício 1</strong>: Implemente detecção de anomalias com IQR.</p>
 <p>📝 <strong>Exercício 2</strong>: Treine modelo XGBoost e compare com Random Forest.</p>
 <p>📝 <strong>Exercício 3</strong>: Crie dashboard Shiny para monitoramento em tempo real.</p>
 </section>
-<section id="resumo" class="level2" data-number="8.10">
-<h2 data-number="8.10" class="anchored" data-anchor-id="resumo"><span class="header-section-number">8.10</span> Resumo</h2>
+<section id="resumo" class="level2" data-number="11.10">
+<h2 data-number="11.10" class="anchored" data-anchor-id="resumo"><span class="header-section-number">11.10</span> Resumo</h2>
 <p>🔔 <strong>Pontos-chave:</strong></p>
 <ul>
 <li>Feature engineering é crucial</li>
@@ -1179,13 +1208,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/07-manutencao-preventiva.html" class="pagination-link" aria-label="Manutenção Preventiva e Otimização de Políticas">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Manutenção Preventiva e Otimização de Políticas</span></span>
+      <a href="../chapters/10-manutencao-preventiva.html" class="pagination-link" aria-label="Manutenção Preventiva e Otimização de Políticas">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Manutenção Preventiva e Otimização de Políticas</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/09-sistemas.html" class="pagination-link" aria-label="Modelos de Confiabilidade de Sistema">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Modelos de Confiabilidade de Sistema</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/12-sistemas.html" class="pagination-link" aria-label="Modelos de Confiabilidade de Sistema">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Modelos de Confiabilidade de Sistema</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">

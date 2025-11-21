@@ -14,29 +14,35 @@ book:
     - requirements.qmd
     - setup.qmd
 
+    - part: "Contexto e Aplicação em Mineração"
+      chapters:
+        - chapters/01-introducao.qmd
+        - chapters/02-performance-mineracao.qmd
+        - chapters/03-fatores-moderadores.qmd
+
     - part: "Fundamentos e Teoria"
       chapters:
-        - chapters/01-fundamentos.qmd
-        - chapters/02-distribuicoes.qmd
-        - chapters/03-estimacao.qmd
+        - chapters/04-fundamentos.qmd
+        - chapters/05-distribuicoes.qmd
+        - chapters/06-estimacao.qmd
 
     - part: "Análise e Modelagem Prática"
       chapters:
-        - chapters/04-analise-falhas.qmd
-        - chapters/05-weibull.qmd
-        - chapters/06-sobrevivencia.qmd
+        - chapters/07-analise-falhas.qmd
+        - chapters/08-weibull.qmd
+        - chapters/09-sobrevivencia.qmd
 
     - part: "Estratégias de Manutenção"
       chapters:
-        - chapters/07-manutencao-preventiva.qmd
-        - chapters/08-manutencao-preditiva.qmd
-        - chapters/09-sistemas.qmd
+        - chapters/10-manutencao-preventiva.qmd
+        - chapters/11-manutencao-preditiva.qmd
+        - chapters/12-sistemas.qmd
 
     - part: "Métodos Avançados e Aplicações"
       chapters:
-        - chapters/10-simulacao.qmd
-        - chapters/11-estudos-caso.qmd
-        - chapters/12-governanca.qmd
+        - chapters/13-simulacao.qmd
+        - chapters/14-estudos-caso.qmd
+        - chapters/15-governanca.qmd
 
     - part: "Apêndices"
       chapters:

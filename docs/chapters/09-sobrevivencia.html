@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Estimativa de Parâmetros e Inferência – Confiabilidade e Manutenção: Aplicações em R</title>
+<title>9&nbsp; Análise de Sobrevivência e Modelos Semiparamétricos – Confiabilidade e Manutenção: Aplicações em R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/04-analise-falhas.html" rel="next">
-<link href="../chapters/02-distribuicoes.html" rel="prev">
+<link href="../chapters/10-manutencao-preventiva.html" rel="next">
+<link href="../chapters/08-weibull.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -146,7 +146,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/01-fundamentos.html">Fundamentos e Teoria</a></li><li class="breadcrumb-item"><a href="../chapters/03-estimacao.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estimativa de Parâmetros e Inferência</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/07-analise-falhas.html">Análise e Modelagem Prática</a></li><li class="breadcrumb-item"><a href="../chapters/09-sobrevivencia.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Análise de Sobrevivência e Modelos Semiparamétricos</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -201,7 +201,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Fundamentos e Teoria</span></a>
+ <span class="menu-text">Contexto e Aplicação em Mineração</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -209,20 +209,20 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/01-fundamentos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Fundamentos de Confiabilidade</span></span></a>
+  <a href="../chapters/01-introducao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/02-distribuicoes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Probabilidades e Distribuições para Vida Útil</span></span></a>
+  <a href="../chapters/02-performance-mineracao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Medidas de Performance Operacional na Mineração</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/03-estimacao.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estimativa de Parâmetros e Inferência</span></span></a>
+  <a href="../chapters/03-fatores-moderadores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Fatores Moderadores da Manutenção</span></span></a>
   </div>
 </li>
       </ul>
@@ -230,7 +230,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Análise e Modelagem Prática</span></a>
+ <span class="menu-text">Fundamentos e Teoria</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -238,20 +238,20 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/04-analise-falhas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Análise de Dados de Falha com R</span></span></a>
+  <a href="../chapters/04-fundamentos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Fundamentos de Confiabilidade</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/05-weibull.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Modelagem Weibull na Prática</span></span></a>
+  <a href="../chapters/05-distribuicoes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Probabilidades e Distribuições para Vida Útil</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/06-sobrevivencia.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Análise de Sobrevivência e Modelos Semiparamétricos</span></span></a>
+  <a href="../chapters/06-estimacao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Estimativa de Parâmetros e Inferência</span></span></a>
   </div>
 </li>
       </ul>
@@ -259,7 +259,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Estratégias de Manutenção</span></a>
+ <span class="menu-text">Análise e Modelagem Prática</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -267,20 +267,20 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/07-manutencao-preventiva.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Manutenção Preventiva e Otimização de Políticas</span></span></a>
+  <a href="../chapters/07-analise-falhas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Análise de Dados de Falha com R</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/08-manutencao-preditiva.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Manutenção Preditiva com Dados Sensor</span></span></a>
+  <a href="../chapters/08-weibull.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Modelagem Weibull na Prática</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/09-sistemas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Modelos de Confiabilidade de Sistema</span></span></a>
+  <a href="../chapters/09-sobrevivencia.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Análise de Sobrevivência e Modelos Semiparamétricos</span></span></a>
   </div>
 </li>
       </ul>
@@ -288,7 +288,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Métodos Avançados e Aplicações</span></a>
+ <span class="menu-text">Estratégias de Manutenção</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -296,20 +296,20 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/10-simulacao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Simulação Monte Carlo Aplicada à Confiabilidade</span></span></a>
+  <a href="../chapters/10-manutencao-preventiva.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Manutenção Preventiva e Otimização de Políticas</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/11-estudos-caso.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Estudos de Caso Industriais</span></span></a>
+  <a href="../chapters/11-manutencao-preditiva.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Manutenção Preditiva com Dados Sensor</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/12-governanca.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Boas Práticas e Governança de Dados de Manutenção</span></span></a>
+  <a href="../chapters/12-sistemas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Modelos de Confiabilidade de Sistema</span></span></a>
   </div>
 </li>
       </ul>
@@ -317,12 +317,41 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">Apêndices</span></a>
+ <span class="menu-text">Métodos Avançados e Aplicações</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/13-simulacao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Simulação Monte Carlo Aplicada à Confiabilidade</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/14-estudos-caso.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Estudos de Caso Industriais</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/15-governanca.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Boas Práticas e Governança de Dados de Manutenção</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Apêndices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../appendices/A-pacotes.html" class="sidebar-item-text sidebar-link">
@@ -365,33 +394,27 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução"><span class="header-section-number">3.1</span> Introdução</a></li>
-  <li><a href="#método-da-máxima-verossimilhança-mle" id="toc-método-da-máxima-verossimilhança-mle" class="nav-link" data-scroll-target="#método-da-máxima-verossimilhança-mle"><span class="header-section-number">3.2</span> Método da Máxima Verossimilhança (MLE)</a>
+  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução"><span class="header-section-number">9.1</span> Introdução</a></li>
+  <li><a href="#modelo-de-cox-regressão-de-riscos-proporcionais" id="toc-modelo-de-cox-regressão-de-riscos-proporcionais" class="nav-link" data-scroll-target="#modelo-de-cox-regressão-de-riscos-proporcionais"><span class="header-section-number">9.2</span> Modelo de Cox (Regressão de Riscos Proporcionais)</a>
   <ul class="collapse">
-  <li><a href="#conceito" id="toc-conceito" class="nav-link" data-scroll-target="#conceito"><span class="header-section-number">3.2.1</span> Conceito</a></li>
-  <li><a href="#função-de-verossimilhança" id="toc-função-de-verossimilhança" class="nav-link" data-scroll-target="#função-de-verossimilhança"><span class="header-section-number">3.2.2</span> Função de Verossimilhança</a></li>
-  <li><a href="#exemplo-exponencial" id="toc-exemplo-exponencial" class="nav-link" data-scroll-target="#exemplo-exponencial"><span class="header-section-number">3.2.3</span> Exemplo: Exponencial</a></li>
-  <li><a href="#exemplo-weibull-com-fitdistrplus" id="toc-exemplo-weibull-com-fitdistrplus" class="nav-link" data-scroll-target="#exemplo-weibull-com-fitdistrplus"><span class="header-section-number">3.2.4</span> Exemplo: Weibull com <code>fitdistrplus</code></a></li>
+  <li><a href="#formulação" id="toc-formulação" class="nav-link" data-scroll-target="#formulação"><span class="header-section-number">9.2.1</span> Formulação</a></li>
   </ul></li>
-  <li><a href="#intervalos-de-confiança" id="toc-intervalos-de-confiança" class="nav-link" data-scroll-target="#intervalos-de-confiança"><span class="header-section-number">3.3</span> Intervalos de Confiança</a>
-  <ul class="collapse">
-  <li><a href="#bootstrap" id="toc-bootstrap" class="nav-link" data-scroll-target="#bootstrap"><span class="header-section-number">3.3.1</span> Bootstrap</a></li>
-  </ul></li>
-  <li><a href="#testes-de-qualidade-de-ajuste" id="toc-testes-de-qualidade-de-ajuste" class="nav-link" data-scroll-target="#testes-de-qualidade-de-ajuste"><span class="header-section-number">3.4</span> Testes de Qualidade de Ajuste</a>
-  <ul class="collapse">
-  <li><a href="#teste-kolmogorov-smirnov" id="toc-teste-kolmogorov-smirnov" class="nav-link" data-scroll-target="#teste-kolmogorov-smirnov"><span class="header-section-number">3.4.1</span> Teste Kolmogorov-Smirnov</a></li>
-  </ul></li>
-  <li><a href="#exercícios" id="toc-exercícios" class="nav-link" data-scroll-target="#exercícios"><span class="header-section-number">3.5</span> Exercícios</a></li>
-  <li><a href="#resumo" id="toc-resumo" class="nav-link" data-scroll-target="#resumo"><span class="header-section-number">3.6</span> Resumo</a></li>
+  <li><a href="#exemplo-com-covariáveis" id="toc-exemplo-com-covariáveis" class="nav-link" data-scroll-target="#exemplo-com-covariáveis"><span class="header-section-number">9.3</span> Exemplo com Covariáveis</a></li>
+  <li><a href="#interpretação-dos-coeficientes" id="toc-interpretação-dos-coeficientes" class="nav-link" data-scroll-target="#interpretação-dos-coeficientes"><span class="header-section-number">9.4</span> Interpretação dos Coeficientes</a></li>
+  <li><a href="#verificação-de-pressupostos" id="toc-verificação-de-pressupostos" class="nav-link" data-scroll-target="#verificação-de-pressupostos"><span class="header-section-number">9.5</span> Verificação de Pressupostos</a></li>
+  <li><a href="#curvas-de-sobrevivência-por-grupo" id="toc-curvas-de-sobrevivência-por-grupo" class="nav-link" data-scroll-target="#curvas-de-sobrevivência-por-grupo"><span class="header-section-number">9.6</span> Curvas de Sobrevivência por Grupo</a></li>
+  <li><a href="#modelos-paramétricos-aft" id="toc-modelos-paramétricos-aft" class="nav-link" data-scroll-target="#modelos-paramétricos-aft"><span class="header-section-number">9.7</span> Modelos Paramétricos AFT</a></li>
+  <li><a href="#exercícios" id="toc-exercícios" class="nav-link" data-scroll-target="#exercícios"><span class="header-section-number">9.8</span> Exercícios</a></li>
+  <li><a href="#resumo" id="toc-resumo" class="nav-link" data-scroll-target="#resumo"><span class="header-section-number">9.9</span> Resumo</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/01-fundamentos.html">Fundamentos e Teoria</a></li><li class="breadcrumb-item"><a href="../chapters/03-estimacao.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estimativa de Parâmetros e Inferência</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/07-analise-falhas.html">Análise e Modelagem Prática</a></li><li class="breadcrumb-item"><a href="../chapters/09-sobrevivencia.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Análise de Sobrevivência e Modelos Semiparamétricos</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estimativa de Parâmetros e Inferência</span></h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Análise de Sobrevivência e Modelos Semiparamétricos</span></h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 </div>
 
 
@@ -408,157 +431,172 @@ window.Quarto = {
 </header>
 
 
-<section id="introdução" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="introdução"><span class="header-section-number">3.1</span> Introdução</h2>
-<p>Este capítulo aborda métodos para estimar parâmetros de distribuições de vida útil a partir de dados observados.</p>
+<section id="introdução" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="introdução"><span class="header-section-number">9.1</span> Introdução</h2>
+<p>Análise de sobrevivência com modelos de regressão, incluindo Kaplan-Meier e Cox.</p>
 </section>
-<section id="método-da-máxima-verossimilhança-mle" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="método-da-máxima-verossimilhança-mle"><span class="header-section-number">3.2</span> Método da Máxima Verossimilhança (MLE)</h2>
-<section id="conceito" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="conceito"><span class="header-section-number">3.2.1</span> Conceito</h3>
-<p>O método MLE busca os parâmetros que <strong>maximizam a probabilidade</strong> de observar os dados coletados.</p>
-</section>
-<section id="função-de-verossimilhança" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="função-de-verossimilhança"><span class="header-section-number">3.2.2</span> Função de Verossimilhança</h3>
-<p>Para dados de falha <span class="math inline">\(t_1, t_2, \ldots, t_n\)</span>:</p>
+<section id="modelo-de-cox-regressão-de-riscos-proporcionais" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="modelo-de-cox-regressão-de-riscos-proporcionais"><span class="header-section-number">9.2</span> Modelo de Cox (Regressão de Riscos Proporcionais)</h2>
+<section id="formulação" class="level3" data-number="9.2.1">
+<h3 data-number="9.2.1" class="anchored" data-anchor-id="formulação"><span class="header-section-number">9.2.1</span> Formulação</h3>
 <p><span class="math display">\[
-L(\theta) = \prod_{i=1}^n f(t_i; \theta)
+\lambda(t|X) = \lambda_0(t) \exp(\beta_1 X_1 + \beta_2 X_2 + \ldots + \beta_p X_p)
 \]</span></p>
-<p>Log-verossimilhança:</p>
-<p><span class="math display">\[
-\ell(\theta) = \sum_{i=1}^n \log f(t_i; \theta)
-\]</span></p>
+<p>onde <span class="math inline">\(\lambda_0(t)\)</span> é a taxa de risco basal.</p>
 </section>
-<section id="exemplo-exponencial" class="level3" data-number="3.2.3">
-<h3 data-number="3.2.3" class="anchored" data-anchor-id="exemplo-exponencial"><span class="header-section-number">3.2.3</span> Exemplo: Exponencial</h3>
+</section>
+<section id="exemplo-com-covariáveis" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="exemplo-com-covariáveis"><span class="header-section-number">9.3</span> Exemplo com Covariáveis</h2>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Dados simulados</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">rexp</span>(<span class="dv">50</span>, <span class="at">rate =</span> <span class="fl">0.01</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># MLE analítico para exponencial</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>lambda_mle <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">/</span> <span class="fu">mean</span>(dados)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Lambda MLE:"</span>, lambda_mle, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(survival)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(survminer)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Dados de exemplo com covariáveis</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">tempo =</span> <span class="fu">c</span>(<span class="dv">120</span>, <span class="dv">145</span>, <span class="dv">180</span>, <span class="dv">200</span>, <span class="dv">250</span>, <span class="dv">300</span>, <span class="dv">350</span>, <span class="dv">400</span>, <span class="dv">450</span>, <span class="dv">500</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>            <span class="dv">100</span>, <span class="dv">130</span>, <span class="dv">160</span>, <span class="dv">190</span>, <span class="dv">220</span>, <span class="dv">280</span>, <span class="dv">320</span>, <span class="dv">380</span>, <span class="dv">420</span>, <span class="dv">480</span>),</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">status =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>             <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>),</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">temperatura =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">70</span>, <span class="dv">10</span>), <span class="fu">rep</span>(<span class="dv">90</span>, <span class="dv">10</span>)),  <span class="co"># °C</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">carga =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"Normal"</span>, <span class="dv">10</span>), <span class="fu">rep</span>(<span class="st">"Alta"</span>, <span class="dv">10</span>))</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajustar modelo Cox</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>cox_model <span class="ot">&lt;-</span> <span class="fu">coxph</span>(<span class="fu">Surv</span>(tempo, status) <span class="sc">~</span> temperatura <span class="sc">+</span> carga, <span class="at">data =</span> dados)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(cox_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>Lambda MLE: 0.008846654 </code></pre>
-</div>
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"MTTF estimado:"</span>, <span class="dv">1</span><span class="sc">/</span>lambda_mle, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>MTTF estimado: 113.0371 </code></pre>
+<pre><code>Call:
+coxph(formula = Surv(tempo, status) ~ temperatura + carga, data = dados)
+
+  n= 20, number of events= 15 
+
+               coef exp(coef) se(coef)     z Pr(&gt;|z|)
+temperatura 0.01883   1.01901  0.02705 0.696    0.486
+cargaNormal      NA        NA  0.00000    NA       NA
+
+            exp(coef) exp(-coef) lower .95 upper .95
+temperatura     1.019     0.9813    0.9664     1.075
+cargaNormal        NA         NA        NA        NA
+
+Concordance= 0.537  (se = 0.078 )
+Likelihood ratio test= 0.49  on 1 df,   p=0.5
+Wald test            = 0.48  on 1 df,   p=0.5
+Score (logrank) test = 0.49  on 1 df,   p=0.5</code></pre>
 </div>
 </div>
 </section>
-<section id="exemplo-weibull-com-fitdistrplus" class="level3" data-number="3.2.4">
-<h3 data-number="3.2.4" class="anchored" data-anchor-id="exemplo-weibull-com-fitdistrplus"><span class="header-section-number">3.2.4</span> Exemplo: Weibull com <code>fitdistrplus</code></h3>
+<section id="interpretação-dos-coeficientes" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="interpretação-dos-coeficientes"><span class="header-section-number">9.4</span> Interpretação dos Coeficientes</h2>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fitdistrplus)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajuste Weibull</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>fit_weibull <span class="ot">&lt;-</span> <span class="fu">fitdist</span>(dados, <span class="st">"weibull"</span>)</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit_weibull)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Hazard ratios</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">exp</span>(<span class="fu">coef</span>(cox_model))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>Fitting of the distribution ' weibull ' by maximum likelihood 
-Parameters : 
-        estimate Std. Error
-shape   1.050058  0.1112928
-scale 115.332088 16.3678738
-Loglikelihood:  -286.2823   AIC:  576.5646   BIC:  580.3886 
-Correlation matrix:
-          shape     scale
-shape 1.0000000 0.3158044
-scale 0.3158044 1.0000000</code></pre>
+<pre><code>temperatura cargaNormal 
+   1.019008          NA </code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualizar ajuste</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(fit_weibull)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Intervalos de confiança</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">exp</span>(<span class="fu">confint</span>(cox_model))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>                2.5 % 97.5 %
+temperatura 0.9663812 1.0745
+cargaNormal        NA     NA</code></pre>
+</div>
+</div>
+</section>
+<section id="verificação-de-pressupostos" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="verificação-de-pressupostos"><span class="header-section-number">9.5</span> Verificação de Pressupostos</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Teste de proporcionalidade</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cox.zph</span>(cox_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>            chisq df    p
+temperatura 0.291  1 0.59
+GLOBAL      0.291  1 0.59</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gráfico de resíduos</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggcoxzph</span>(<span class="fu">cox.zph</span>(cox_model))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="03-estimacao_files/figure-html/mle-weibull-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="09-sobrevivencia_files/figure-html/cox-assumptions-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-</section>
-<section id="intervalos-de-confiança" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="intervalos-de-confiança"><span class="header-section-number">3.3</span> Intervalos de Confiança</h2>
-<section id="bootstrap" class="level3" data-number="3.3.1">
-<h3 data-number="3.3.1" class="anchored" data-anchor-id="bootstrap"><span class="header-section-number">3.3.1</span> Bootstrap</h3>
+<section id="curvas-de-sobrevivência-por-grupo" class="level2" data-number="9.6">
+<h2 data-number="9.6" class="anchored" data-anchor-id="curvas-de-sobrevivência-por-grupo"><span class="header-section-number">9.6</span> Curvas de Sobrevivência por Grupo</h2>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bootstrap para IC</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>boot_samples <span class="ot">&lt;-</span> <span class="fu">replicate</span>(<span class="dv">1000</span>, {</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  sample_boot <span class="ot">&lt;-</span> <span class="fu">sample</span>(dados, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span> <span class="sc">/</span> <span class="fu">mean</span>(sample_boot)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># IC 95%</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>ic_lower <span class="ot">&lt;-</span> <span class="fu">quantile</span>(boot_samples, <span class="fl">0.025</span>)</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>ic_upper <span class="ot">&lt;-</span> <span class="fu">quantile</span>(boot_samples, <span class="fl">0.975</span>)</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"IC 95% para lambda:"</span>, ic_lower, <span class="st">"-"</span>, ic_upper, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Curvas ajustadas</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>fit_km <span class="ot">&lt;-</span> <span class="fu">survfit</span>(<span class="fu">Surv</span>(tempo, status) <span class="sc">~</span> carga, <span class="at">data =</span> dados)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsurvplot</span>(fit_km,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">data =</span> dados,</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>           <span class="at">pval =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>           <span class="at">conf.int =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>           <span class="at">risk.table =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>           <span class="at">palette =</span> <span class="fu">c</span>(<span class="st">"steelblue"</span>, <span class="st">"coral"</span>),</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>           <span class="at">title =</span> <span class="st">"Sobrevivência por Nível de Carga"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-stdout">
-<pre><code>IC 95% para lambda: 0.006737779 - 0.01235932 </code></pre>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="09-sobrevivencia_files/figure-html/survival-curves-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
-</section>
-<section id="testes-de-qualidade-de-ajuste" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="testes-de-qualidade-de-ajuste"><span class="header-section-number">3.4</span> Testes de Qualidade de Ajuste</h2>
-<section id="teste-kolmogorov-smirnov" class="level3" data-number="3.4.1">
-<h3 data-number="3.4.1" class="anchored" data-anchor-id="teste-kolmogorov-smirnov"><span class="header-section-number">3.4.1</span> Teste Kolmogorov-Smirnov</h3>
+<section id="modelos-paramétricos-aft" class="level2" data-number="9.7">
+<h2 data-number="9.7" class="anchored" data-anchor-id="modelos-paramétricos-aft"><span class="header-section-number">9.7</span> Modelos Paramétricos AFT</h2>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Testar ajuste exponencial</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>ks_result <span class="ot">&lt;-</span> <span class="fu">ks.test</span>(dados, <span class="st">"pexp"</span>, <span class="at">rate =</span> lambda_mle)</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(ks_result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flexsurv)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Modelo AFT Weibull</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>aft_weibull <span class="ot">&lt;-</span> <span class="fu">flexsurvreg</span>(<span class="fu">Surv</span>(tempo, status) <span class="sc">~</span> temperatura <span class="sc">+</span> carga,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>                            <span class="at">data =</span> dados,</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>                            <span class="at">dist =</span> <span class="st">"weibull"</span>)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(aft_weibull)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Exact one-sample Kolmogorov-Smirnov test
-
-data:  dados
-D = 0.10156, p-value = 0.6436
-alternative hypothesis: two-sided</code></pre>
-</div>
 </div>
 </section>
+<section id="exercícios" class="level2" data-number="9.8">
+<h2 data-number="9.8" class="anchored" data-anchor-id="exercícios"><span class="header-section-number">9.8</span> Exercícios</h2>
+<p>📝 <strong>Exercício 1</strong>: Ajuste modelo Cox com 3 covariáveis.</p>
+<p>📝 <strong>Exercício 2</strong>: Compare modelo Cox vs.&nbsp;AFT.</p>
+<p>📝 <strong>Exercício 3</strong>: Interprete hazard ratios e seus IC.</p>
 </section>
-<section id="exercícios" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="exercícios"><span class="header-section-number">3.5</span> Exercícios</h2>
-<p>📝 <strong>Exercício 1</strong>: Estime parâmetros de distribuição Weibull usando MLE.</p>
-<p>📝 <strong>Exercício 2</strong>: Compare IC paramétrico vs.&nbsp;bootstrap.</p>
-<p>📝 <strong>Exercício 3</strong>: Use AIC/BIC para comparar modelos.</p>
-</section>
-<section id="resumo" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="resumo"><span class="header-section-number">3.6</span> Resumo</h2>
+<section id="resumo" class="level2" data-number="9.9">
+<h2 data-number="9.9" class="anchored" data-anchor-id="resumo"><span class="header-section-number">9.9</span> Resumo</h2>
 <p>🔔 <strong>Pontos-chave:</strong></p>
 <ul>
-<li>MLE é o método padrão para estimação</li>
-<li>Intervalos de confiança quantificam incerteza</li>
-<li>Testes de qualidade validam o ajuste</li>
+<li>Modelo Cox não requer especificação da distribuição</li>
+<li>Hazard ratios quantificam efeito das covariáveis</li>
+<li>Verificar pressupostos é essencial</li>
 </ul>
 <hr>
-<p><strong>Próximo capítulo:</strong> Análise de Dados de Falha com R</p>
+<p><strong>Próximo capítulo:</strong> Manutenção Preventiva</p>
 
 
 <!-- -->
@@ -1185,130 +1223,133 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/02-distribuicoes.html" class="pagination-link" aria-label="Probabilidades e Distribuições para Vida Útil">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Probabilidades e Distribuições para Vida Útil</span></span>
+      <a href="../chapters/08-weibull.html" class="pagination-link" aria-label="Modelagem Weibull na Prática">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Modelagem Weibull na Prática</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/04-analise-falhas.html" class="pagination-link" aria-label="Análise de Dados de Falha com R">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Análise de Dados de Falha com R</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/10-manutencao-preventiva.html" class="pagination-link" aria-label="Manutenção Preventiva e Otimização de Políticas">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Manutenção Preventiva e Otimização de Políticas</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb12" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Estimativa de Parâmetros e Inferência</span></span>
+<div class="sourceCode" id="cb12" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Análise de Sobrevivência e Modelos Semiparamétricos</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Introdução</span></span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>Este capítulo aborda métodos para estimar parâmetros de distribuições de vida útil a partir de dados observados.</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>Análise de sobrevivência com modelos de regressão, incluindo Kaplan-Meier e Cox.</span>
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Método da Máxima Verossimilhança (MLE)</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Modelo de Cox (Regressão de Riscos Proporcionais)</span></span>
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="fu">### Conceito</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="fu">### Formulação</span></span>
 <span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>O método MLE busca os parâmetros que **maximizam a probabilidade** de observar os dados coletados.</span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="fu">### Função de Verossimilhança</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>\lambda(t|X) = \lambda_0(t) \exp(\beta_1 X_1 + \beta_2 X_2 + \ldots + \beta_p X_p)</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>Para dados de falha $t_1, t_2, \ldots, t_n$:</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>onde $\lambda_0(t)$ é a taxa de risco basal.</span>
 <span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>L(\theta) = \prod_{i=1}^n f(t_i; \theta)</span>
-<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>Log-verossimilhança:</span>
-<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>\ell(\theta) = \sum_{i=1}^n \log f(t_i; \theta)</span>
-<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exemplo: Exponencial</span></span>
-<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: mle-exponencial</span></span>
-<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Dados simulados</span></span>
-<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">rexp</span>(<span class="dv">50</span>, <span class="at">rate =</span> <span class="fl">0.01</span>)</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exemplo com Covariáveis</span></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: cox-model</span></span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(survival)</span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(survminer)</span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Dados de exemplo com covariáveis</span></span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a>  <span class="at">tempo =</span> <span class="fu">c</span>(<span class="dv">120</span>, <span class="dv">145</span>, <span class="dv">180</span>, <span class="dv">200</span>, <span class="dv">250</span>, <span class="dv">300</span>, <span class="dv">350</span>, <span class="dv">400</span>, <span class="dv">450</span>, <span class="dv">500</span>,</span>
+<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a>            <span class="dv">100</span>, <span class="dv">130</span>, <span class="dv">160</span>, <span class="dv">190</span>, <span class="dv">220</span>, <span class="dv">280</span>, <span class="dv">320</span>, <span class="dv">380</span>, <span class="dv">420</span>, <span class="dv">480</span>),</span>
+<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a>  <span class="at">status =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>,</span>
+<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a>             <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>),</span>
+<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a>  <span class="at">temperatura =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">70</span>, <span class="dv">10</span>), <span class="fu">rep</span>(<span class="dv">90</span>, <span class="dv">10</span>)),  <span class="co"># °C</span></span>
+<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a>  <span class="at">carga =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"Normal"</span>, <span class="dv">10</span>), <span class="fu">rep</span>(<span class="st">"Alta"</span>, <span class="dv">10</span>))</span>
+<span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajustar modelo Cox</span></span>
+<span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a>cox_model <span class="ot">&lt;-</span> <span class="fu">coxph</span>(<span class="fu">Surv</span>(tempo, status) <span class="sc">~</span> temperatura <span class="sc">+</span> carga, <span class="at">data =</span> dados)</span>
 <span id="cb12-40"><a href="#cb12-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-41"><a href="#cb12-41" aria-hidden="true" tabindex="-1"></a><span class="co"># MLE analítico para exponencial</span></span>
-<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a>lambda_mle <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">/</span> <span class="fu">mean</span>(dados)</span>
+<span id="cb12-41"><a href="#cb12-41" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(cox_model)</span>
+<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb12-43"><a href="#cb12-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Lambda MLE:"</span>, lambda_mle, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb12-45"><a href="#cb12-45" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"MTTF estimado:"</span>, <span class="dv">1</span><span class="sc">/</span>lambda_mle, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb12-46"><a href="#cb12-46" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-47"><a href="#cb12-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-48"><a href="#cb12-48" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exemplo: Weibull com `fitdistrplus`</span></span>
-<span id="cb12-49"><a href="#cb12-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-52"><a href="#cb12-52" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb12-53"><a href="#cb12-53" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: mle-weibull</span></span>
-<span id="cb12-54"><a href="#cb12-54" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb12-55"><a href="#cb12-55" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb12-56"><a href="#cb12-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-57"><a href="#cb12-57" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fitdistrplus)</span>
-<span id="cb12-58"><a href="#cb12-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-59"><a href="#cb12-59" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajuste Weibull</span></span>
-<span id="cb12-60"><a href="#cb12-60" aria-hidden="true" tabindex="-1"></a>fit_weibull <span class="ot">&lt;-</span> <span class="fu">fitdist</span>(dados, <span class="st">"weibull"</span>)</span>
-<span id="cb12-61"><a href="#cb12-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-62"><a href="#cb12-62" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit_weibull)</span>
-<span id="cb12-63"><a href="#cb12-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-64"><a href="#cb12-64" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualizar ajuste</span></span>
-<span id="cb12-65"><a href="#cb12-65" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(fit_weibull)</span>
-<span id="cb12-66"><a href="#cb12-66" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a><span class="fu">## Interpretação dos Coeficientes</span></span>
+<span id="cb12-45"><a href="#cb12-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-48"><a href="#cb12-48" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb12-49"><a href="#cb12-49" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: hazard-ratios</span></span>
+<span id="cb12-50"><a href="#cb12-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-51"><a href="#cb12-51" aria-hidden="true" tabindex="-1"></a><span class="co"># Hazard ratios</span></span>
+<span id="cb12-52"><a href="#cb12-52" aria-hidden="true" tabindex="-1"></a><span class="fu">exp</span>(<span class="fu">coef</span>(cox_model))</span>
+<span id="cb12-53"><a href="#cb12-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-54"><a href="#cb12-54" aria-hidden="true" tabindex="-1"></a><span class="co"># Intervalos de confiança</span></span>
+<span id="cb12-55"><a href="#cb12-55" aria-hidden="true" tabindex="-1"></a><span class="fu">exp</span>(<span class="fu">confint</span>(cox_model))</span>
+<span id="cb12-56"><a href="#cb12-56" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-57"><a href="#cb12-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-58"><a href="#cb12-58" aria-hidden="true" tabindex="-1"></a><span class="fu">## Verificação de Pressupostos</span></span>
+<span id="cb12-59"><a href="#cb12-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-62"><a href="#cb12-62" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb12-63"><a href="#cb12-63" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: cox-assumptions</span></span>
+<span id="cb12-64"><a href="#cb12-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-65"><a href="#cb12-65" aria-hidden="true" tabindex="-1"></a><span class="co"># Teste de proporcionalidade</span></span>
+<span id="cb12-66"><a href="#cb12-66" aria-hidden="true" tabindex="-1"></a><span class="fu">cox.zph</span>(cox_model)</span>
 <span id="cb12-67"><a href="#cb12-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-68"><a href="#cb12-68" aria-hidden="true" tabindex="-1"></a><span class="fu">## Intervalos de Confiança</span></span>
-<span id="cb12-69"><a href="#cb12-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-70"><a href="#cb12-70" aria-hidden="true" tabindex="-1"></a><span class="fu">### Bootstrap</span></span>
+<span id="cb12-68"><a href="#cb12-68" aria-hidden="true" tabindex="-1"></a><span class="co"># Gráfico de resíduos</span></span>
+<span id="cb12-69"><a href="#cb12-69" aria-hidden="true" tabindex="-1"></a><span class="fu">ggcoxzph</span>(<span class="fu">cox.zph</span>(cox_model))</span>
+<span id="cb12-70"><a href="#cb12-70" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb12-71"><a href="#cb12-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-74"><a href="#cb12-74" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb12-75"><a href="#cb12-75" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: bootstrap-ci</span></span>
-<span id="cb12-76"><a href="#cb12-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-77"><a href="#cb12-77" aria-hidden="true" tabindex="-1"></a><span class="co"># Bootstrap para IC</span></span>
-<span id="cb12-78"><a href="#cb12-78" aria-hidden="true" tabindex="-1"></a>boot_samples <span class="ot">&lt;-</span> <span class="fu">replicate</span>(<span class="dv">1000</span>, {</span>
-<span id="cb12-79"><a href="#cb12-79" aria-hidden="true" tabindex="-1"></a>  sample_boot <span class="ot">&lt;-</span> <span class="fu">sample</span>(dados, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb12-80"><a href="#cb12-80" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span> <span class="sc">/</span> <span class="fu">mean</span>(sample_boot)</span>
-<span id="cb12-81"><a href="#cb12-81" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb12-82"><a href="#cb12-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-83"><a href="#cb12-83" aria-hidden="true" tabindex="-1"></a><span class="co"># IC 95%</span></span>
-<span id="cb12-84"><a href="#cb12-84" aria-hidden="true" tabindex="-1"></a>ic_lower <span class="ot">&lt;-</span> <span class="fu">quantile</span>(boot_samples, <span class="fl">0.025</span>)</span>
-<span id="cb12-85"><a href="#cb12-85" aria-hidden="true" tabindex="-1"></a>ic_upper <span class="ot">&lt;-</span> <span class="fu">quantile</span>(boot_samples, <span class="fl">0.975</span>)</span>
-<span id="cb12-86"><a href="#cb12-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-87"><a href="#cb12-87" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"IC 95% para lambda:"</span>, ic_lower, <span class="st">"-"</span>, ic_upper, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb12-88"><a href="#cb12-88" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-89"><a href="#cb12-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-90"><a href="#cb12-90" aria-hidden="true" tabindex="-1"></a><span class="fu">## Testes de Qualidade de Ajuste</span></span>
-<span id="cb12-91"><a href="#cb12-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-92"><a href="#cb12-92" aria-hidden="true" tabindex="-1"></a><span class="fu">### Teste Kolmogorov-Smirnov</span></span>
-<span id="cb12-93"><a href="#cb12-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-96"><a href="#cb12-96" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb12-97"><a href="#cb12-97" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: ks-test</span></span>
+<span id="cb12-72"><a href="#cb12-72" aria-hidden="true" tabindex="-1"></a><span class="fu">## Curvas de Sobrevivência por Grupo</span></span>
+<span id="cb12-73"><a href="#cb12-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-76"><a href="#cb12-76" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb12-77"><a href="#cb12-77" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: survival-curves</span></span>
+<span id="cb12-78"><a href="#cb12-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-79"><a href="#cb12-79" aria-hidden="true" tabindex="-1"></a><span class="co"># Curvas ajustadas</span></span>
+<span id="cb12-80"><a href="#cb12-80" aria-hidden="true" tabindex="-1"></a>fit_km <span class="ot">&lt;-</span> <span class="fu">survfit</span>(<span class="fu">Surv</span>(tempo, status) <span class="sc">~</span> carga, <span class="at">data =</span> dados)</span>
+<span id="cb12-81"><a href="#cb12-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-82"><a href="#cb12-82" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsurvplot</span>(fit_km,</span>
+<span id="cb12-83"><a href="#cb12-83" aria-hidden="true" tabindex="-1"></a>           <span class="at">data =</span> dados,</span>
+<span id="cb12-84"><a href="#cb12-84" aria-hidden="true" tabindex="-1"></a>           <span class="at">pval =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb12-85"><a href="#cb12-85" aria-hidden="true" tabindex="-1"></a>           <span class="at">conf.int =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb12-86"><a href="#cb12-86" aria-hidden="true" tabindex="-1"></a>           <span class="at">risk.table =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb12-87"><a href="#cb12-87" aria-hidden="true" tabindex="-1"></a>           <span class="at">palette =</span> <span class="fu">c</span>(<span class="st">"steelblue"</span>, <span class="st">"coral"</span>),</span>
+<span id="cb12-88"><a href="#cb12-88" aria-hidden="true" tabindex="-1"></a>           <span class="at">title =</span> <span class="st">"Sobrevivência por Nível de Carga"</span>)</span>
+<span id="cb12-89"><a href="#cb12-89" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-90"><a href="#cb12-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-91"><a href="#cb12-91" aria-hidden="true" tabindex="-1"></a><span class="fu">## Modelos Paramétricos AFT</span></span>
+<span id="cb12-92"><a href="#cb12-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-95"><a href="#cb12-95" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb12-96"><a href="#cb12-96" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: aft-model</span></span>
+<span id="cb12-97"><a href="#cb12-97" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
 <span id="cb12-98"><a href="#cb12-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-99"><a href="#cb12-99" aria-hidden="true" tabindex="-1"></a><span class="co"># Testar ajuste exponencial</span></span>
-<span id="cb12-100"><a href="#cb12-100" aria-hidden="true" tabindex="-1"></a>ks_result <span class="ot">&lt;-</span> <span class="fu">ks.test</span>(dados, <span class="st">"pexp"</span>, <span class="at">rate =</span> lambda_mle)</span>
-<span id="cb12-101"><a href="#cb12-101" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(ks_result)</span>
-<span id="cb12-102"><a href="#cb12-102" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-103"><a href="#cb12-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-104"><a href="#cb12-104" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercícios</span></span>
+<span id="cb12-99"><a href="#cb12-99" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flexsurv)</span>
+<span id="cb12-100"><a href="#cb12-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-101"><a href="#cb12-101" aria-hidden="true" tabindex="-1"></a><span class="co"># Modelo AFT Weibull</span></span>
+<span id="cb12-102"><a href="#cb12-102" aria-hidden="true" tabindex="-1"></a>aft_weibull <span class="ot">&lt;-</span> <span class="fu">flexsurvreg</span>(<span class="fu">Surv</span>(tempo, status) <span class="sc">~</span> temperatura <span class="sc">+</span> carga,</span>
+<span id="cb12-103"><a href="#cb12-103" aria-hidden="true" tabindex="-1"></a>                            <span class="at">data =</span> dados,</span>
+<span id="cb12-104"><a href="#cb12-104" aria-hidden="true" tabindex="-1"></a>                            <span class="at">dist =</span> <span class="st">"weibull"</span>)</span>
 <span id="cb12-105"><a href="#cb12-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-106"><a href="#cb12-106" aria-hidden="true" tabindex="-1"></a>📝 **Exercício 1**: Estime parâmetros de distribuição Weibull usando MLE.</span>
-<span id="cb12-107"><a href="#cb12-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-108"><a href="#cb12-108" aria-hidden="true" tabindex="-1"></a>📝 **Exercício 2**: Compare IC paramétrico vs. bootstrap.</span>
-<span id="cb12-109"><a href="#cb12-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-110"><a href="#cb12-110" aria-hidden="true" tabindex="-1"></a>📝 **Exercício 3**: Use AIC/BIC para comparar modelos.</span>
-<span id="cb12-111"><a href="#cb12-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-112"><a href="#cb12-112" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resumo</span></span>
-<span id="cb12-113"><a href="#cb12-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-114"><a href="#cb12-114" aria-hidden="true" tabindex="-1"></a>🔔 **Pontos-chave:**</span>
-<span id="cb12-115"><a href="#cb12-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-116"><a href="#cb12-116" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>MLE é o método padrão para estimação</span>
-<span id="cb12-117"><a href="#cb12-117" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Intervalos de confiança quantificam incerteza</span>
-<span id="cb12-118"><a href="#cb12-118" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Testes de qualidade validam o ajuste</span>
-<span id="cb12-119"><a href="#cb12-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-120"><a href="#cb12-120" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb12-121"><a href="#cb12-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-122"><a href="#cb12-122" aria-hidden="true" tabindex="-1"></a>**Próximo capítulo:** Análise de Dados de Falha com R</span>
+<span id="cb12-106"><a href="#cb12-106" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(aft_weibull)</span>
+<span id="cb12-107"><a href="#cb12-107" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-108"><a href="#cb12-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-109"><a href="#cb12-109" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercícios</span></span>
+<span id="cb12-110"><a href="#cb12-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-111"><a href="#cb12-111" aria-hidden="true" tabindex="-1"></a>📝 **Exercício 1**: Ajuste modelo Cox com 3 covariáveis.</span>
+<span id="cb12-112"><a href="#cb12-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-113"><a href="#cb12-113" aria-hidden="true" tabindex="-1"></a>📝 **Exercício 2**: Compare modelo Cox vs. AFT.</span>
+<span id="cb12-114"><a href="#cb12-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-115"><a href="#cb12-115" aria-hidden="true" tabindex="-1"></a>📝 **Exercício 3**: Interprete hazard ratios e seus IC.</span>
+<span id="cb12-116"><a href="#cb12-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-117"><a href="#cb12-117" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resumo</span></span>
+<span id="cb12-118"><a href="#cb12-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-119"><a href="#cb12-119" aria-hidden="true" tabindex="-1"></a>🔔 **Pontos-chave:**</span>
+<span id="cb12-120"><a href="#cb12-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-121"><a href="#cb12-121" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Modelo Cox não requer especificação da distribuição</span>
+<span id="cb12-122"><a href="#cb12-122" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Hazard ratios quantificam efeito das covariáveis</span>
+<span id="cb12-123"><a href="#cb12-123" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Verificar pressupostos é essencial</span>
+<span id="cb12-124"><a href="#cb12-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-125"><a href="#cb12-125" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb12-126"><a href="#cb12-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-127"><a href="#cb12-127" aria-hidden="true" tabindex="-1"></a>**Próximo capítulo:** Manutenção Preventiva</span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

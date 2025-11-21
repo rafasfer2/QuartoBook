@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>12&nbsp; Boas Práticas e Governança de Dados de Manutenção – Confiabilidade e Manutenção: Aplicações em R</title>
+<title>15&nbsp; Boas Práticas e Governança de Dados de Manutenção – Confiabilidade e Manutenção: Aplicações em R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,7 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../appendices/A-pacotes.html" rel="next">
-<link href="../chapters/11-estudos-caso.html" rel="prev">
+<link href="../chapters/14-estudos-caso.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -117,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/10-simulacao.html">Métodos Avançados e Aplicações</a></li><li class="breadcrumb-item"><a href="../chapters/12-governanca.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Boas Práticas e Governança de Dados de Manutenção</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/13-simulacao.html">Métodos Avançados e Aplicações</a></li><li class="breadcrumb-item"><a href="../chapters/15-governanca.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Boas Práticas e Governança de Dados de Manutenção</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -172,7 +172,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Fundamentos e Teoria</span></a>
+ <span class="menu-text">Contexto e Aplicação em Mineração</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -180,20 +180,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/01-fundamentos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Fundamentos de Confiabilidade</span></span></a>
+  <a href="../chapters/01-introducao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/02-distribuicoes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Probabilidades e Distribuições para Vida Útil</span></span></a>
+  <a href="../chapters/02-performance-mineracao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Medidas de Performance Operacional na Mineração</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/03-estimacao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estimativa de Parâmetros e Inferência</span></span></a>
+  <a href="../chapters/03-fatores-moderadores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Fatores Moderadores da Manutenção</span></span></a>
   </div>
 </li>
       </ul>
@@ -201,7 +201,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Análise e Modelagem Prática</span></a>
+ <span class="menu-text">Fundamentos e Teoria</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -209,20 +209,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/04-analise-falhas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Análise de Dados de Falha com R</span></span></a>
+  <a href="../chapters/04-fundamentos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Fundamentos de Confiabilidade</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/05-weibull.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Modelagem Weibull na Prática</span></span></a>
+  <a href="../chapters/05-distribuicoes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Probabilidades e Distribuições para Vida Útil</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/06-sobrevivencia.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Análise de Sobrevivência e Modelos Semiparamétricos</span></span></a>
+  <a href="../chapters/06-estimacao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Estimativa de Parâmetros e Inferência</span></span></a>
   </div>
 </li>
       </ul>
@@ -230,7 +230,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Estratégias de Manutenção</span></a>
+ <span class="menu-text">Análise e Modelagem Prática</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -238,20 +238,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/07-manutencao-preventiva.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Manutenção Preventiva e Otimização de Políticas</span></span></a>
+  <a href="../chapters/07-analise-falhas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Análise de Dados de Falha com R</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/08-manutencao-preditiva.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Manutenção Preditiva com Dados Sensor</span></span></a>
+  <a href="../chapters/08-weibull.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Modelagem Weibull na Prática</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/09-sistemas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Modelos de Confiabilidade de Sistema</span></span></a>
+  <a href="../chapters/09-sobrevivencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Análise de Sobrevivência e Modelos Semiparamétricos</span></span></a>
   </div>
 </li>
       </ul>
@@ -259,7 +259,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Métodos Avançados e Aplicações</span></a>
+ <span class="menu-text">Estratégias de Manutenção</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -267,20 +267,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/10-simulacao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Simulação Monte Carlo Aplicada à Confiabilidade</span></span></a>
+  <a href="../chapters/10-manutencao-preventiva.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Manutenção Preventiva e Otimização de Políticas</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/11-estudos-caso.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Estudos de Caso Industriais</span></span></a>
+  <a href="../chapters/11-manutencao-preditiva.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Manutenção Preditiva com Dados Sensor</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/12-governanca.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Boas Práticas e Governança de Dados de Manutenção</span></span></a>
+  <a href="../chapters/12-sistemas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Modelos de Confiabilidade de Sistema</span></span></a>
   </div>
 </li>
       </ul>
@@ -288,12 +288,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">Apêndices</span></a>
+ <span class="menu-text">Métodos Avançados e Aplicações</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/13-simulacao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Simulação Monte Carlo Aplicada à Confiabilidade</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/14-estudos-caso.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Estudos de Caso Industriais</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/15-governanca.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Boas Práticas e Governança de Dados de Manutenção</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Apêndices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../appendices/A-pacotes.html" class="sidebar-item-text sidebar-link">
@@ -336,64 +365,64 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução"><span class="header-section-number">12.1</span> Introdução</a></li>
-  <li><a href="#arquitetura-de-dados-de-manutenção" id="toc-arquitetura-de-dados-de-manutenção" class="nav-link" data-scroll-target="#arquitetura-de-dados-de-manutenção"><span class="header-section-number">12.2</span> Arquitetura de Dados de Manutenção</a>
+  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução"><span class="header-section-number">15.1</span> Introdução</a></li>
+  <li><a href="#arquitetura-de-dados-de-manutenção" id="toc-arquitetura-de-dados-de-manutenção" class="nav-link" data-scroll-target="#arquitetura-de-dados-de-manutenção"><span class="header-section-number">15.2</span> Arquitetura de Dados de Manutenção</a>
   <ul class="collapse">
-  <li><a href="#camadas-de-dados" id="toc-camadas-de-dados" class="nav-link" data-scroll-target="#camadas-de-dados"><span class="header-section-number">12.2.1</span> Camadas de Dados</a></li>
-  <li><a href="#fontes-de-dados" id="toc-fontes-de-dados" class="nav-link" data-scroll-target="#fontes-de-dados"><span class="header-section-number">12.2.2</span> Fontes de Dados</a></li>
+  <li><a href="#camadas-de-dados" id="toc-camadas-de-dados" class="nav-link" data-scroll-target="#camadas-de-dados"><span class="header-section-number">15.2.1</span> Camadas de Dados</a></li>
+  <li><a href="#fontes-de-dados" id="toc-fontes-de-dados" class="nav-link" data-scroll-target="#fontes-de-dados"><span class="header-section-number">15.2.2</span> Fontes de Dados</a></li>
   </ul></li>
-  <li><a href="#qualidade-de-dados" id="toc-qualidade-de-dados" class="nav-link" data-scroll-target="#qualidade-de-dados"><span class="header-section-number">12.3</span> Qualidade de Dados</a>
+  <li><a href="#qualidade-de-dados" id="toc-qualidade-de-dados" class="nav-link" data-scroll-target="#qualidade-de-dados"><span class="header-section-number">15.3</span> Qualidade de Dados</a>
   <ul class="collapse">
-  <li><a href="#dimensões-de-qualidade" id="toc-dimensões-de-qualidade" class="nav-link" data-scroll-target="#dimensões-de-qualidade"><span class="header-section-number">12.3.1</span> Dimensões de Qualidade</a></li>
-  <li><a href="#verificação-em-r" id="toc-verificação-em-r" class="nav-link" data-scroll-target="#verificação-em-r"><span class="header-section-number">12.3.2</span> Verificação em R</a></li>
-  <li><a href="#limpeza-de-dados" id="toc-limpeza-de-dados" class="nav-link" data-scroll-target="#limpeza-de-dados"><span class="header-section-number">12.3.3</span> Limpeza de Dados</a></li>
+  <li><a href="#dimensões-de-qualidade" id="toc-dimensões-de-qualidade" class="nav-link" data-scroll-target="#dimensões-de-qualidade"><span class="header-section-number">15.3.1</span> Dimensões de Qualidade</a></li>
+  <li><a href="#verificação-em-r" id="toc-verificação-em-r" class="nav-link" data-scroll-target="#verificação-em-r"><span class="header-section-number">15.3.2</span> Verificação em R</a></li>
+  <li><a href="#limpeza-de-dados" id="toc-limpeza-de-dados" class="nav-link" data-scroll-target="#limpeza-de-dados"><span class="header-section-number">15.3.3</span> Limpeza de Dados</a></li>
   </ul></li>
-  <li><a href="#integração-de-dados" id="toc-integração-de-dados" class="nav-link" data-scroll-target="#integração-de-dados"><span class="header-section-number">12.4</span> Integração de Dados</a>
+  <li><a href="#integração-de-dados" id="toc-integração-de-dados" class="nav-link" data-scroll-target="#integração-de-dados"><span class="header-section-number">15.4</span> Integração de Dados</a>
   <ul class="collapse">
-  <li><a href="#etl-com-r" id="toc-etl-com-r" class="nav-link" data-scroll-target="#etl-com-r"><span class="header-section-number">12.4.1</span> ETL com R</a></li>
+  <li><a href="#etl-com-r" id="toc-etl-com-r" class="nav-link" data-scroll-target="#etl-com-r"><span class="header-section-number">15.4.1</span> ETL com R</a></li>
   </ul></li>
-  <li><a href="#versionamento-de-dados" id="toc-versionamento-de-dados" class="nav-link" data-scroll-target="#versionamento-de-dados"><span class="header-section-number">12.5</span> Versionamento de Dados</a>
+  <li><a href="#versionamento-de-dados" id="toc-versionamento-de-dados" class="nav-link" data-scroll-target="#versionamento-de-dados"><span class="header-section-number">15.5</span> Versionamento de Dados</a>
   <ul class="collapse">
-  <li><a href="#dvc-data-version-control" id="toc-dvc-data-version-control" class="nav-link" data-scroll-target="#dvc-data-version-control"><span class="header-section-number">12.5.1</span> DVC (Data Version Control)</a></li>
-  <li><a href="#versionamento-de-modelos" id="toc-versionamento-de-modelos" class="nav-link" data-scroll-target="#versionamento-de-modelos"><span class="header-section-number">12.5.2</span> Versionamento de Modelos</a></li>
+  <li><a href="#dvc-data-version-control" id="toc-dvc-data-version-control" class="nav-link" data-scroll-target="#dvc-data-version-control"><span class="header-section-number">15.5.1</span> DVC (Data Version Control)</a></li>
+  <li><a href="#versionamento-de-modelos" id="toc-versionamento-de-modelos" class="nav-link" data-scroll-target="#versionamento-de-modelos"><span class="header-section-number">15.5.2</span> Versionamento de Modelos</a></li>
   </ul></li>
-  <li><a href="#pipelines-automatizados" id="toc-pipelines-automatizados" class="nav-link" data-scroll-target="#pipelines-automatizados"><span class="header-section-number">12.6</span> Pipelines Automatizados</a>
+  <li><a href="#pipelines-automatizados" id="toc-pipelines-automatizados" class="nav-link" data-scroll-target="#pipelines-automatizados"><span class="header-section-number">15.6</span> Pipelines Automatizados</a>
   <ul class="collapse">
-  <li><a href="#exemplo-com-targets" id="toc-exemplo-com-targets" class="nav-link" data-scroll-target="#exemplo-com-targets"><span class="header-section-number">12.6.1</span> Exemplo com {targets}</a></li>
+  <li><a href="#exemplo-com-targets" id="toc-exemplo-com-targets" class="nav-link" data-scroll-target="#exemplo-com-targets"><span class="header-section-number">15.6.1</span> Exemplo com {targets}</a></li>
   </ul></li>
-  <li><a href="#integração-com-cmms" id="toc-integração-com-cmms" class="nav-link" data-scroll-target="#integração-com-cmms"><span class="header-section-number">12.7</span> Integração com CMMS</a>
+  <li><a href="#integração-com-cmms" id="toc-integração-com-cmms" class="nav-link" data-scroll-target="#integração-com-cmms"><span class="header-section-number">15.7</span> Integração com CMMS</a>
   <ul class="collapse">
-  <li><a href="#api-rest" id="toc-api-rest" class="nav-link" data-scroll-target="#api-rest"><span class="header-section-number">12.7.1</span> API REST</a></li>
+  <li><a href="#api-rest" id="toc-api-rest" class="nav-link" data-scroll-target="#api-rest"><span class="header-section-number">15.7.1</span> API REST</a></li>
   </ul></li>
-  <li><a href="#integração-com-iot" id="toc-integração-com-iot" class="nav-link" data-scroll-target="#integração-com-iot"><span class="header-section-number">12.8</span> Integração com IoT</a>
+  <li><a href="#integração-com-iot" id="toc-integração-com-iot" class="nav-link" data-scroll-target="#integração-com-iot"><span class="header-section-number">15.8</span> Integração com IoT</a>
   <ul class="collapse">
-  <li><a href="#mqtt-para-sensores" id="toc-mqtt-para-sensores" class="nav-link" data-scroll-target="#mqtt-para-sensores"><span class="header-section-number">12.8.1</span> MQTT para Sensores</a></li>
+  <li><a href="#mqtt-para-sensores" id="toc-mqtt-para-sensores" class="nav-link" data-scroll-target="#mqtt-para-sensores"><span class="header-section-number">15.8.1</span> MQTT para Sensores</a></li>
   </ul></li>
-  <li><a href="#segurança-e-compliance" id="toc-segurança-e-compliance" class="nav-link" data-scroll-target="#segurança-e-compliance"><span class="header-section-number">12.9</span> Segurança e Compliance</a>
+  <li><a href="#segurança-e-compliance" id="toc-segurança-e-compliance" class="nav-link" data-scroll-target="#segurança-e-compliance"><span class="header-section-number">15.9</span> Segurança e Compliance</a>
   <ul class="collapse">
-  <li><a href="#boas-práticas" id="toc-boas-práticas" class="nav-link" data-scroll-target="#boas-práticas"><span class="header-section-number">12.9.1</span> Boas Práticas</a></li>
-  <li><a href="#exemplo-de-auditoria" id="toc-exemplo-de-auditoria" class="nav-link" data-scroll-target="#exemplo-de-auditoria"><span class="header-section-number">12.9.2</span> Exemplo de Auditoria</a></li>
+  <li><a href="#boas-práticas" id="toc-boas-práticas" class="nav-link" data-scroll-target="#boas-práticas"><span class="header-section-number">15.9.1</span> Boas Práticas</a></li>
+  <li><a href="#exemplo-de-auditoria" id="toc-exemplo-de-auditoria" class="nav-link" data-scroll-target="#exemplo-de-auditoria"><span class="header-section-number">15.9.2</span> Exemplo de Auditoria</a></li>
   </ul></li>
-  <li><a href="#reprodutibilidade" id="toc-reprodutibilidade" class="nav-link" data-scroll-target="#reprodutibilidade"><span class="header-section-number">12.10</span> Reprodutibilidade</a>
+  <li><a href="#reprodutibilidade" id="toc-reprodutibilidade" class="nav-link" data-scroll-target="#reprodutibilidade"><span class="header-section-number">15.10</span> Reprodutibilidade</a>
   <ul class="collapse">
-  <li><a href="#ambiente-com-renv" id="toc-ambiente-com-renv" class="nav-link" data-scroll-target="#ambiente-com-renv"><span class="header-section-number">12.10.1</span> Ambiente com {renv}</a></li>
-  <li><a href="#containerização-com-docker" id="toc-containerização-com-docker" class="nav-link" data-scroll-target="#containerização-com-docker"><span class="header-section-number">12.10.2</span> Containerização com Docker</a></li>
+  <li><a href="#ambiente-com-renv" id="toc-ambiente-com-renv" class="nav-link" data-scroll-target="#ambiente-com-renv"><span class="header-section-number">15.10.1</span> Ambiente com {renv}</a></li>
+  <li><a href="#containerização-com-docker" id="toc-containerização-com-docker" class="nav-link" data-scroll-target="#containerização-com-docker"><span class="header-section-number">15.10.2</span> Containerização com Docker</a></li>
   </ul></li>
-  <li><a href="#documentação" id="toc-documentação" class="nav-link" data-scroll-target="#documentação"><span class="header-section-number">12.11</span> Documentação</a>
+  <li><a href="#documentação" id="toc-documentação" class="nav-link" data-scroll-target="#documentação"><span class="header-section-number">15.11</span> Documentação</a>
   <ul class="collapse">
-  <li><a href="#metadados" id="toc-metadados" class="nav-link" data-scroll-target="#metadados"><span class="header-section-number">12.11.1</span> Metadados</a></li>
+  <li><a href="#metadados" id="toc-metadados" class="nav-link" data-scroll-target="#metadados"><span class="header-section-number">15.11.1</span> Metadados</a></li>
   </ul></li>
-  <li><a href="#exercícios" id="toc-exercícios" class="nav-link" data-scroll-target="#exercícios"><span class="header-section-number">12.12</span> Exercícios</a></li>
-  <li><a href="#resumo" id="toc-resumo" class="nav-link" data-scroll-target="#resumo"><span class="header-section-number">12.13</span> Resumo</a></li>
+  <li><a href="#exercícios" id="toc-exercícios" class="nav-link" data-scroll-target="#exercícios"><span class="header-section-number">15.12</span> Exercícios</a></li>
+  <li><a href="#resumo" id="toc-resumo" class="nav-link" data-scroll-target="#resumo"><span class="header-section-number">15.13</span> Resumo</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/10-simulacao.html">Métodos Avançados e Aplicações</a></li><li class="breadcrumb-item"><a href="../chapters/12-governanca.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Boas Práticas e Governança de Dados de Manutenção</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/13-simulacao.html">Métodos Avançados e Aplicações</a></li><li class="breadcrumb-item"><a href="../chapters/15-governanca.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Boas Práticas e Governança de Dados de Manutenção</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Boas Práticas e Governança de Dados de Manutenção</span></h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Boas Práticas e Governança de Dados de Manutenção</span></h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 </div>
 
 
@@ -410,14 +439,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="introdução" class="level2" data-number="12.1">
-<h2 data-number="12.1" class="anchored" data-anchor-id="introdução"><span class="header-section-number">12.1</span> Introdução</h2>
+<section id="introdução" class="level2" data-number="15.1">
+<h2 data-number="15.1" class="anchored" data-anchor-id="introdução"><span class="header-section-number">15.1</span> Introdução</h2>
 <p>Estratégias para gestão eficaz de dados de manutenção, qualidade, versionamento e integração.</p>
 </section>
-<section id="arquitetura-de-dados-de-manutenção" class="level2" data-number="12.2">
-<h2 data-number="12.2" class="anchored" data-anchor-id="arquitetura-de-dados-de-manutenção"><span class="header-section-number">12.2</span> Arquitetura de Dados de Manutenção</h2>
-<section id="camadas-de-dados" class="level3" data-number="12.2.1">
-<h3 data-number="12.2.1" class="anchored" data-anchor-id="camadas-de-dados"><span class="header-section-number">12.2.1</span> Camadas de Dados</h3>
+<section id="arquitetura-de-dados-de-manutenção" class="level2" data-number="15.2">
+<h2 data-number="15.2" class="anchored" data-anchor-id="arquitetura-de-dados-de-manutenção"><span class="header-section-number">15.2</span> Arquitetura de Dados de Manutenção</h2>
+<section id="camadas-de-dados" class="level3" data-number="15.2.1">
+<h3 data-number="15.2.1" class="anchored" data-anchor-id="camadas-de-dados"><span class="header-section-number">15.2.1</span> Camadas de Dados</h3>
 <pre><code>┌─────────────────────────────────────┐
 │     Camada de Visualização          │  ← Dashboards, Relatórios
 ├─────────────────────────────────────┤
@@ -430,8 +459,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 │     Camada de Coleta                │  ← CMMS, IoT, Sensores
 └─────────────────────────────────────┘</code></pre>
 </section>
-<section id="fontes-de-dados" class="level3" data-number="12.2.2">
-<h3 data-number="12.2.2" class="anchored" data-anchor-id="fontes-de-dados"><span class="header-section-number">12.2.2</span> Fontes de Dados</h3>
+<section id="fontes-de-dados" class="level3" data-number="15.2.2">
+<h3 data-number="15.2.2" class="anchored" data-anchor-id="fontes-de-dados"><span class="header-section-number">15.2.2</span> Fontes de Dados</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -470,10 +499,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </section>
 </section>
-<section id="qualidade-de-dados" class="level2" data-number="12.3">
-<h2 data-number="12.3" class="anchored" data-anchor-id="qualidade-de-dados"><span class="header-section-number">12.3</span> Qualidade de Dados</h2>
-<section id="dimensões-de-qualidade" class="level3" data-number="12.3.1">
-<h3 data-number="12.3.1" class="anchored" data-anchor-id="dimensões-de-qualidade"><span class="header-section-number">12.3.1</span> Dimensões de Qualidade</h3>
+<section id="qualidade-de-dados" class="level2" data-number="15.3">
+<h2 data-number="15.3" class="anchored" data-anchor-id="qualidade-de-dados"><span class="header-section-number">15.3</span> Qualidade de Dados</h2>
+<section id="dimensões-de-qualidade" class="level3" data-number="15.3.1">
+<h3 data-number="15.3.1" class="anchored" data-anchor-id="dimensões-de-qualidade"><span class="header-section-number">15.3.1</span> Dimensões de Qualidade</h3>
 <ol type="1">
 <li><strong>Completude</strong> — Dados ausentes</li>
 <li><strong>Acurácia</strong> — Dados corretos</li>
@@ -482,8 +511,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Unicidade</strong> — Sem duplicação</li>
 </ol>
 </section>
-<section id="verificação-em-r" class="level3" data-number="12.3.2">
-<h3 data-number="12.3.2" class="anchored" data-anchor-id="verificação-em-r"><span class="header-section-number">12.3.2</span> Verificação em R</h3>
+<section id="verificação-em-r" class="level3" data-number="15.3.2">
+<h3 data-number="15.3.2" class="anchored" data-anchor-id="verificação-em-r"><span class="header-section-number">15.3.2</span> Verificação em R</h3>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -509,8 +538,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="limpeza-de-dados" class="level3" data-number="12.3.3">
-<h3 data-number="12.3.3" class="anchored" data-anchor-id="limpeza-de-dados"><span class="header-section-number">12.3.3</span> Limpeza de Dados</h3>
+<section id="limpeza-de-dados" class="level3" data-number="15.3.3">
+<h3 data-number="15.3.3" class="anchored" data-anchor-id="limpeza-de-dados"><span class="header-section-number">15.3.3</span> Limpeza de Dados</h3>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -539,10 +568,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 </section>
-<section id="integração-de-dados" class="level2" data-number="12.4">
-<h2 data-number="12.4" class="anchored" data-anchor-id="integração-de-dados"><span class="header-section-number">12.4</span> Integração de Dados</h2>
-<section id="etl-com-r" class="level3" data-number="12.4.1">
-<h3 data-number="12.4.1" class="anchored" data-anchor-id="etl-com-r"><span class="header-section-number">12.4.1</span> ETL com R</h3>
+<section id="integração-de-dados" class="level2" data-number="15.4">
+<h2 data-number="15.4" class="anchored" data-anchor-id="integração-de-dados"><span class="header-section-number">15.4</span> Integração de Dados</h2>
+<section id="etl-com-r" class="level3" data-number="15.4.1">
+<h3 data-number="15.4.1" class="anchored" data-anchor-id="etl-com-r"><span class="header-section-number">15.4.1</span> ETL com R</h3>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -575,10 +604,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 </section>
-<section id="versionamento-de-dados" class="level2" data-number="12.5">
-<h2 data-number="12.5" class="anchored" data-anchor-id="versionamento-de-dados"><span class="header-section-number">12.5</span> Versionamento de Dados</h2>
-<section id="dvc-data-version-control" class="level3" data-number="12.5.1">
-<h3 data-number="12.5.1" class="anchored" data-anchor-id="dvc-data-version-control"><span class="header-section-number">12.5.1</span> DVC (Data Version Control)</h3>
+<section id="versionamento-de-dados" class="level2" data-number="15.5">
+<h2 data-number="15.5" class="anchored" data-anchor-id="versionamento-de-dados"><span class="header-section-number">15.5</span> Versionamento de Dados</h2>
+<section id="dvc-data-version-control" class="level3" data-number="15.5.1">
+<h3 data-number="15.5.1" class="anchored" data-anchor-id="dvc-data-version-control"><span class="header-section-number">15.5.1</span> DVC (Data Version Control)</h3>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Inicializar DVC</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">dvc</span> init</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -592,8 +621,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Push para remote storage (S3, Azure, etc.)</span></span>
 <span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="ex">dvc</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="versionamento-de-modelos" class="level3" data-number="12.5.2">
-<h3 data-number="12.5.2" class="anchored" data-anchor-id="versionamento-de-modelos"><span class="header-section-number">12.5.2</span> Versionamento de Modelos</h3>
+<section id="versionamento-de-modelos" class="level3" data-number="15.5.2">
+<h3 data-number="15.5.2" class="anchored" data-anchor-id="versionamento-de-modelos"><span class="header-section-number">15.5.2</span> Versionamento de Modelos</h3>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -614,10 +643,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 </section>
-<section id="pipelines-automatizados" class="level2" data-number="12.6">
-<h2 data-number="12.6" class="anchored" data-anchor-id="pipelines-automatizados"><span class="header-section-number">12.6</span> Pipelines Automatizados</h2>
-<section id="exemplo-com-targets" class="level3" data-number="12.6.1">
-<h3 data-number="12.6.1" class="anchored" data-anchor-id="exemplo-com-targets"><span class="header-section-number">12.6.1</span> Exemplo com {targets}</h3>
+<section id="pipelines-automatizados" class="level2" data-number="15.6">
+<h2 data-number="15.6" class="anchored" data-anchor-id="pipelines-automatizados"><span class="header-section-number">15.6</span> Pipelines Automatizados</h2>
+<section id="exemplo-com-targets" class="level3" data-number="15.6.1">
+<h3 data-number="15.6.1" class="anchored" data-anchor-id="exemplo-com-targets"><span class="header-section-number">15.6.1</span> Exemplo com {targets}</h3>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -642,10 +671,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 </section>
-<section id="integração-com-cmms" class="level2" data-number="12.7">
-<h2 data-number="12.7" class="anchored" data-anchor-id="integração-com-cmms"><span class="header-section-number">12.7</span> Integração com CMMS</h2>
-<section id="api-rest" class="level3" data-number="12.7.1">
-<h3 data-number="12.7.1" class="anchored" data-anchor-id="api-rest"><span class="header-section-number">12.7.1</span> API REST</h3>
+<section id="integração-com-cmms" class="level2" data-number="15.7">
+<h2 data-number="15.7" class="anchored" data-anchor-id="integração-com-cmms"><span class="header-section-number">15.7</span> Integração com CMMS</h2>
+<section id="api-rest" class="level3" data-number="15.7.1">
+<h3 data-number="15.7.1" class="anchored" data-anchor-id="api-rest"><span class="header-section-number">15.7.1</span> API REST</h3>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -680,10 +709,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 </section>
-<section id="integração-com-iot" class="level2" data-number="12.8">
-<h2 data-number="12.8" class="anchored" data-anchor-id="integração-com-iot"><span class="header-section-number">12.8</span> Integração com IoT</h2>
-<section id="mqtt-para-sensores" class="level3" data-number="12.8.1">
-<h3 data-number="12.8.1" class="anchored" data-anchor-id="mqtt-para-sensores"><span class="header-section-number">12.8.1</span> MQTT para Sensores</h3>
+<section id="integração-com-iot" class="level2" data-number="15.8">
+<h2 data-number="15.8" class="anchored" data-anchor-id="integração-com-iot"><span class="header-section-number">15.8</span> Integração com IoT</h2>
+<section id="mqtt-para-sensores" class="level3" data-number="15.8.1">
+<h3 data-number="15.8.1" class="anchored" data-anchor-id="mqtt-para-sensores"><span class="header-section-number">15.8.1</span> MQTT para Sensores</h3>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -706,10 +735,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 </section>
-<section id="segurança-e-compliance" class="level2" data-number="12.9">
-<h2 data-number="12.9" class="anchored" data-anchor-id="segurança-e-compliance"><span class="header-section-number">12.9</span> Segurança e Compliance</h2>
-<section id="boas-práticas" class="level3" data-number="12.9.1">
-<h3 data-number="12.9.1" class="anchored" data-anchor-id="boas-práticas"><span class="header-section-number">12.9.1</span> Boas Práticas</h3>
+<section id="segurança-e-compliance" class="level2" data-number="15.9">
+<h2 data-number="15.9" class="anchored" data-anchor-id="segurança-e-compliance"><span class="header-section-number">15.9</span> Segurança e Compliance</h2>
+<section id="boas-práticas" class="level3" data-number="15.9.1">
+<h3 data-number="15.9.1" class="anchored" data-anchor-id="boas-práticas"><span class="header-section-number">15.9.1</span> Boas Práticas</h3>
 <ol type="1">
 <li><strong>Autenticação e autorização</strong>
 <ul>
@@ -733,8 +762,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ol>
 </section>
-<section id="exemplo-de-auditoria" class="level3" data-number="12.9.2">
-<h3 data-number="12.9.2" class="anchored" data-anchor-id="exemplo-de-auditoria"><span class="header-section-number">12.9.2</span> Exemplo de Auditoria</h3>
+<section id="exemplo-de-auditoria" class="level3" data-number="15.9.2">
+<h3 data-number="15.9.2" class="anchored" data-anchor-id="exemplo-de-auditoria"><span class="header-section-number">15.9.2</span> Exemplo de Auditoria</h3>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -755,10 +784,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 </section>
-<section id="reprodutibilidade" class="level2" data-number="12.10">
-<h2 data-number="12.10" class="anchored" data-anchor-id="reprodutibilidade"><span class="header-section-number">12.10</span> Reprodutibilidade</h2>
-<section id="ambiente-com-renv" class="level3" data-number="12.10.1">
-<h3 data-number="12.10.1" class="anchored" data-anchor-id="ambiente-com-renv"><span class="header-section-number">12.10.1</span> Ambiente com {renv}</h3>
+<section id="reprodutibilidade" class="level2" data-number="15.10">
+<h2 data-number="15.10" class="anchored" data-anchor-id="reprodutibilidade"><span class="header-section-number">15.10</span> Reprodutibilidade</h2>
+<section id="ambiente-com-renv" class="level3" data-number="15.10.1">
+<h3 data-number="15.10.1" class="anchored" data-anchor-id="ambiente-com-renv"><span class="header-section-number">15.10.1</span> Ambiente com {renv}</h3>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -773,8 +802,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="containerização-com-docker" class="level3" data-number="12.10.2">
-<h3 data-number="12.10.2" class="anchored" data-anchor-id="containerização-com-docker"><span class="header-section-number">12.10.2</span> Containerização com Docker</h3>
+<section id="containerização-com-docker" class="level3" data-number="15.10.2">
+<h3 data-number="15.10.2" class="anchored" data-anchor-id="containerização-com-docker"><span class="header-section-number">15.10.2</span> Containerização com Docker</h3>
 <div class="sourceCode" id="cb12"><pre class="sourceCode dockerfile code-with-copy"><code class="sourceCode dockerfile"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dockerfile</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> rocker/r-ver:4.5.1</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -795,10 +824,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="kw">CMD</span> [<span class="st">"Rscript"</span>, <span class="st">"run_analysis.R"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
-<section id="documentação" class="level2" data-number="12.11">
-<h2 data-number="12.11" class="anchored" data-anchor-id="documentação"><span class="header-section-number">12.11</span> Documentação</h2>
-<section id="metadados" class="level3" data-number="12.11.1">
-<h3 data-number="12.11.1" class="anchored" data-anchor-id="metadados"><span class="header-section-number">12.11.1</span> Metadados</h3>
+<section id="documentação" class="level2" data-number="15.11">
+<h2 data-number="15.11" class="anchored" data-anchor-id="documentação"><span class="header-section-number">15.11</span> Documentação</h2>
+<section id="metadados" class="level3" data-number="15.11.1">
+<h3 data-number="15.11.1" class="anchored" data-anchor-id="metadados"><span class="header-section-number">15.11.1</span> Metadados</h3>
 <div class="sourceCode" id="cb13"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># metadata.yml</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dataset</span><span class="kw">:</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">name</span><span class="kw">:</span><span class="at"> </span><span class="st">"Histórico de Falhas - Bombas"</span></span>
@@ -820,14 +849,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">description</span><span class="kw">:</span><span class="at"> Tempo acumulado de operação até falha ou censura</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
-<section id="exercícios" class="level2" data-number="12.12">
-<h2 data-number="12.12" class="anchored" data-anchor-id="exercícios"><span class="header-section-number">12.12</span> Exercícios</h2>
+<section id="exercícios" class="level2" data-number="15.12">
+<h2 data-number="15.12" class="anchored" data-anchor-id="exercícios"><span class="header-section-number">15.12</span> Exercícios</h2>
 <p>📝 <strong>Exercício 1</strong>: Implemente pipeline ETL para seus dados.</p>
 <p>📝 <strong>Exercício 2</strong>: Configure versionamento com DVC.</p>
 <p>📝 <strong>Exercício 3</strong>: Crie dashboard de qualidade de dados.</p>
 </section>
-<section id="resumo" class="level2" data-number="12.13">
-<h2 data-number="12.13" class="anchored" data-anchor-id="resumo"><span class="header-section-number">12.13</span> Resumo</h2>
+<section id="resumo" class="level2" data-number="15.13">
+<h2 data-number="15.13" class="anchored" data-anchor-id="resumo"><span class="header-section-number">15.13</span> Resumo</h2>
 <p>🔔 <strong>Pontos-chave:</strong></p>
 <ul>
 <li>Governança de dados é fundamental para análises confiáveis</li>
@@ -1464,8 +1493,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/11-estudos-caso.html" class="pagination-link" aria-label="Estudos de Caso Industriais">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Estudos de Caso Industriais</span></span>
+      <a href="../chapters/14-estudos-caso.html" class="pagination-link" aria-label="Estudos de Caso Industriais">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Estudos de Caso Industriais</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

@@ -1,0 +1,348 @@
+# Medidas de Performance Operacional na Mineração {#sec-performance-mineracao}
+
+## Introdução
+
+A medição e o monitoramento de performance operacional são fundamentais para a gestão eficaz de operações de mineração. Este capítulo apresenta as principais medidas utilizadas para avaliar o desempenho de equipamentos, especialmente caminhões fora de estrada, e os processos associados.
+
+## Ciclo de Processos de Carregamento e Transporte {#sec-ciclo-processos}
+
+### Descrição do Ciclo Operacional
+
+O ciclo operacional de um caminhão fora de estrada em uma mina a céu aberto consiste nas seguintes etapas:
+
+1. **Posicionamento para Carregamento**
+   - Manobra até a pá carregadeira ou escavadeira
+   - Tempo típico: 1-3 minutos
+
+2. **Carregamento**
+   - Enchimento da caçamba com material
+   - Número de passes: 3-6 (dependendo do tamanho da escavadeira)
+   - Tempo típico: 2-5 minutos
+
+3. **Transporte Carregado**
+   - Deslocamento até o ponto de descarga (britador, pilha de estéril)
+   - Velocidade média: 30-50 km/h (varia com rampa e condições da pista)
+   - Tempo: variável (5-30 minutos)
+
+4. **Descarga**
+   - Basculamento da caçamba
+   - Tempo típico: 1-2 minutos
+
+5. **Retorno Vazio**
+   - Retorno à frente de carregamento
+   - Velocidade média: 40-60 km/h
+   - Tempo: variável
+
+```{r}
+#| label: fig-ciclo-operacional
+#| fig-cap: "Representação do ciclo operacional de um caminhão fora de estrada"
+#| echo: false
+#| eval: false
+
+library(DiagrammeR)
+
+grViz("
+digraph ciclo_operacional {
+  graph [rankdir = LR, bgcolor = transparent]
+
+  node [shape = box, style = filled, fillcolor = lightblue,
+        fontname = Helvetica, fontsize = 10]
+
+  Fila [label = 'Fila para\\nCarregamento']
+  Carreg [label = 'Carregamento\\n2-5 min', fillcolor = lightgreen]
+  Transp [label = 'Transporte\\nCarregado\\n5-30 min', fillcolor = lightyellow]
+  Descarga [label = 'Descarga\\n1-2 min', fillcolor = lightcoral]
+  Retorno [label = 'Retorno\\nVazio\\n5-20 min', fillcolor = lightgray]
+
+  Fila -> Carreg -> Transp -> Descarga -> Retorno -> Fila
+
+  {rank = same; Carreg; Descarga}
+}
+")
+```
+
+### Tempo de Ciclo
+
+O **tempo de ciclo** é a soma de todas as etapas:
+
+$$
+T_{ciclo} = T_{fila} + T_{carreg} + T_{transp} + T_{descarga} + T_{retorno}
+$$
+
+Fatores que influenciam o tempo de ciclo:
+
+- Distância de transporte
+- Condições da pista (manutenção, umidade, rampa)
+- Capacidade do operador
+- Compatibilidade equipamento de carga × caminhão
+- Organização do tráfego
+
+### Produtividade
+
+A produtividade é calculada como:
+
+$$
+Produtividade = \frac{Capacidade \times Ciclos \times Disponibilidade \times Utilização}{Tempo}
+$$
+
+```{r}
+#| label: exemplo-produtividade
+#| warning: false
+
+# Exemplo de cálculo de produtividade
+calcular_produtividade <- function(capacidade_ton, tempo_ciclo_min,
+                                   disponibilidade, utilizacao,
+                                   horas_operacao = 24) {
+  ciclos_por_hora <- 60 / tempo_ciclo_min
+  ciclos_totais <- ciclos_por_hora * horas_operacao * disponibilidade * utilizacao
+  producao_diaria <- capacidade_ton * ciclos_totais
+
+  return(list(
+    ciclos_hora = ciclos_por_hora,
+    ciclos_dia = ciclos_totais,
+    producao_ton_dia = producao_diaria
+  ))
+}
+
+# Exemplo: Caminhão 240 ton
+resultado <- calcular_produtividade(
+  capacidade_ton = 240,
+  tempo_ciclo_min = 25,
+  disponibilidade = 0.85,
+  utilizacao = 0.90,
+  horas_operacao = 24
+)
+
+cat("Ciclos/hora:", round(resultado$ciclos_hora, 2), "\n")
+cat("Ciclos/dia:", round(resultado$ciclos_dia, 1), "\n")
+cat("Produção (ton/dia):", format(round(resultado$producao_ton_dia), big.mark = "."), "\n")
+```
+
+## Status do Equipamento {#sec-status-equipamento}
+
+### Classificação de Estados Operacionais
+
+Os equipamentos de mineração são classificados em diferentes estados ao longo do tempo:
+
+#### 1. **Operando (OP)**
+- Equipamento realizando sua função produtiva
+- Exemplos: Carregando, transportando, descarregando
+
+#### 2. **Em Espera (EM)**
+- Equipamento disponível mas não operando
+- Exemplos: Fila para carregamento, aguardando descarga
+
+#### 3. **Em Manutenção (MA)**
+- **Preventiva (MP)**: Manutenção programada
+- **Corretiva (MC)**: Reparo de falha não planejada
+- **Inspeção (MI)**: Verificações de rotina
+
+#### 4. **Indisponível (IN)**
+- Falta de operador
+- Condições ambientais adversas
+- Falta de frente de trabalho
+
+### Diagrama de Estados
+
+```{r}
+#| label: fig-estados-equipamento
+#| fig-cap: "Diagrama de estados de um equipamento de mineração"
+#| echo: false
+#| eval: false
+
+grViz("
+digraph estados {
+  graph [rankdir = TB, bgcolor = transparent]
+
+  node [shape = oval, style = filled, fontname = Helvetica]
+
+  OP [label = 'OPERANDO', fillcolor = '#2ECC71']
+  EM [label = 'EM ESPERA', fillcolor = '#F39C12']
+  MP [label = 'MANUTENÇÃO\\nPREVENTIVA', fillcolor = '#3498DB']
+  MC [label = 'MANUTENÇÃO\\nCORRETIVA', fillcolor = '#E74C3C']
+  IN [label = 'INDISPONÍVEL', fillcolor = '#95A5A6']
+
+  OP -> EM [label = '  sem demanda  ']
+  EM -> OP [label = '  demanda  ']
+  OP -> MP [label = '  programação  ']
+  OP -> MC [label = '  falha  ']
+  MP -> OP [label = '  conclusão  ']
+  MC -> OP [label = '  reparo  ']
+  {OP EM MP MC} -> IN [label = '  fatores externos  ', style = dashed]
+  IN -> EM [label = '  normalização  ', style = dashed]
+}
+")
+```
+
+### Registro de Dados
+
+Os sistemas de gestão de manutenção (CMMS) e de despacho (FMS - Fleet Management System) registram:
+
+- **Timestamps**: Início e fim de cada estado
+- **Código de parada**: Motivo da interrupção
+- **Localização**: Onde ocorreu a parada
+- **Responsável**: Quem executou a manutenção
+- **Componentes**: Sistemas afetados
+
+## Elementos de Suporte {#sec-elementos-suporte}
+
+### Infraestrutura de Suporte à Operação
+
+Para que os caminhões operem eficientemente, diversos elementos de suporte são necessários:
+
+#### 1. **Manutenção de Pistas**
+- Nivelamento e compactação
+- Controle de poeira (irrigação)
+- Drenagem adequada
+- Sinalização e iluminação
+
+#### 2. **Abastecimento**
+- Estações de abastecimento estrategicamente localizadas
+- Tempo de abastecimento: 10-15 minutos
+- Combustível: diesel (~500 litros/abastecimento para caminhões grandes)
+
+#### 3. **Troca de Turnos**
+- Briefings de segurança
+- Transferência de informações operacionais
+- Inspeção pré-operacional
+
+#### 4. **Planejamento de Mina**
+- Definição de rotas ótimas
+- Alocação de equipamentos
+- Gestão de filas
+
+#### 5. **Sistema de Despacho**
+- Software de otimização em tempo real
+- Comunicação com operadores
+- Monitoramento de produtividade
+
+## Indicadores-Chave de Desempenho (ICD) {#sec-icd}
+
+### Indicadores de Disponibilidade
+
+#### Disponibilidade Física (DF)
+
+Proporção do tempo em que o equipamento está disponível para operar:
+
+$$
+DF = \frac{Horas_{Calendário} - Horas_{Manutenção}}{Horas_{Calendário}} \times 100\%
+$$
+
+**Meta típica**: 85-90% para caminhões fora de estrada
+
+#### Disponibilidade Mecânica (DM)
+
+Similar à DF, mas exclui paradas por falta de operador ou condições externas:
+
+$$
+DM = \frac{Horas_{Disponíveis}}{Horas_{Disponíveis} + Horas_{Manutenção}} \times 100\%
+$$
+
+### Indicadores de Utilização
+
+#### Utilização (UT)
+
+Proporção do tempo disponível em que o equipamento está efetivamente operando:
+
+$$
+UT = \frac{Horas_{Operando}}{Horas_{Disponível}} \times 100\%
+$$
+
+**Meta típica**: 85-95%
+
+#### Efetividade Global do Equipamento (OEE)
+
+Métrica composta que considera disponibilidade, utilização e qualidade:
+
+$$
+OEE = Disponibilidade \times Utilização \times Qualidade
+$$
+
+Para mineração, "qualidade" geralmente se refere ao fator de enchimento da caçamba.
+
+### Indicadores de Manutenção
+
+#### Tempo Médio Entre Falhas (MTBF)
+
+$$
+MTBF = \frac{\sum Horas_{Operando}}{Número_{Falhas}}
+$$
+
+**Unidade**: horas
+
+**Meta**: Maximizar (indica maior confiabilidade)
+
+#### Tempo Médio de Reparo (MTTR)
+
+$$
+MTTR = \frac{\sum Tempo_{Reparo}}{Número_{Falhas}}
+$$
+
+**Unidade**: horas
+
+**Meta**: Minimizar (indica melhor mantenabilidade)
+
+### Exemplo de Cálculo de ICDs
+
+```{r}
+#| label: exemplo-icds
+#| warning: false
+
+library(dplyr)
+library(kableExtra)
+
+# Dados exemplo: um mês de operação (720 horas)
+dados_exemplo <- data.frame(
+  Equipamento = "CAT 793F #101",
+  Horas_Calendario = 720,
+  Horas_Manutencao_Preventiva = 24,
+  Horas_Manutencao_Corretiva = 36,
+  Horas_Indisponivel = 20,
+  Horas_Operando = 560,
+  Numero_Falhas = 3
+)
+
+# Calcular ICDs
+icds <- dados_exemplo %>%
+  mutate(
+    Horas_Manutencao_Total = Horas_Manutencao_Preventiva + Horas_Manutencao_Corretiva,
+    Horas_Disponivel = Horas_Calendario - Horas_Manutencao_Total - Horas_Indisponivel,
+
+    DF_pct = round((Horas_Calendario - Horas_Manutencao_Total) / Horas_Calendario * 100, 1),
+    UT_pct = round(Horas_Operando / Horas_Disponivel * 100, 1),
+
+    MTBF_horas = round(Horas_Operando / Numero_Falhas, 1),
+    MTTR_horas = round(Horas_Manutencao_Corretiva / Numero_Falhas, 1)
+  ) %>%
+  select(Equipamento, DF_pct, UT_pct, MTBF_horas, MTTR_horas)
+
+icds %>%
+  kable(col.names = c("Equipamento", "DF (%)", "UT (%)", "MTBF (h)", "MTTR (h)"),
+        caption = "Indicadores-Chave de Desempenho - Exemplo") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+```
+
+### Benchmarking Industrial
+
+| Indicador | Classe Mundial | Bom | Médio | Baixo |
+|-----------|---------------|-----|-------|-------|
+| **Disponibilidade Física** | >90% | 85-90% | 75-85% | <75% |
+| **Utilização** | >90% | 85-90% | 75-85% | <75% |
+| **MTBF (horas)** | >200 | 150-200 | 100-150 | <100 |
+| **MTTR (horas)** | <8 | 8-12 | 12-18 | >18 |
+
+: Benchmarking de ICDs para caminhões fora de estrada {#tbl-benchmarking}
+
+## Resumo
+
+🔔 **Pontos-chave:**
+
+- O ciclo operacional de carregamento e transporte determina a produtividade
+- Equipamentos transitam entre estados operacionais ao longo do tempo
+- Elementos de suporte são críticos para operação eficiente
+- ICDs quantificam performance e permitem comparações (benchmarking)
+- Disponibilidade, utilização e confiabilidade são métricas fundamentais
+
+---
+
+**Próximo capítulo:** Fatores Moderadores da Manutenção

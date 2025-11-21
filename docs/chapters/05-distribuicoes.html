@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Probabilidades e Distribuições para Vida Útil – Confiabilidade e Manutenção: Aplicações em R</title>
+<title>5&nbsp; Probabilidades e Distribuições para Vida Útil – Confiabilidade e Manutenção: Aplicações em R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/03-estimacao.html" rel="next">
-<link href="../chapters/01-fundamentos.html" rel="prev">
+<link href="../chapters/06-estimacao.html" rel="next">
+<link href="../chapters/04-fundamentos.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -146,7 +146,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/01-fundamentos.html">Fundamentos e Teoria</a></li><li class="breadcrumb-item"><a href="../chapters/02-distribuicoes.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Probabilidades e Distribuições para Vida Útil</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/04-fundamentos.html">Fundamentos e Teoria</a></li><li class="breadcrumb-item"><a href="../chapters/05-distribuicoes.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Probabilidades e Distribuições para Vida Útil</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -201,7 +201,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Fundamentos e Teoria</span></a>
+ <span class="menu-text">Contexto e Aplicação em Mineração</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -209,20 +209,20 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/01-fundamentos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Fundamentos de Confiabilidade</span></span></a>
+  <a href="../chapters/01-introducao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/02-distribuicoes.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Probabilidades e Distribuições para Vida Útil</span></span></a>
+  <a href="../chapters/02-performance-mineracao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Medidas de Performance Operacional na Mineração</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/03-estimacao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estimativa de Parâmetros e Inferência</span></span></a>
+  <a href="../chapters/03-fatores-moderadores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Fatores Moderadores da Manutenção</span></span></a>
   </div>
 </li>
       </ul>
@@ -230,7 +230,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Análise e Modelagem Prática</span></a>
+ <span class="menu-text">Fundamentos e Teoria</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -238,20 +238,20 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/04-analise-falhas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Análise de Dados de Falha com R</span></span></a>
+  <a href="../chapters/04-fundamentos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Fundamentos de Confiabilidade</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/05-weibull.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Modelagem Weibull na Prática</span></span></a>
+  <a href="../chapters/05-distribuicoes.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Probabilidades e Distribuições para Vida Útil</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/06-sobrevivencia.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Análise de Sobrevivência e Modelos Semiparamétricos</span></span></a>
+  <a href="../chapters/06-estimacao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Estimativa de Parâmetros e Inferência</span></span></a>
   </div>
 </li>
       </ul>
@@ -259,7 +259,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Estratégias de Manutenção</span></a>
+ <span class="menu-text">Análise e Modelagem Prática</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -267,20 +267,20 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/07-manutencao-preventiva.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Manutenção Preventiva e Otimização de Políticas</span></span></a>
+  <a href="../chapters/07-analise-falhas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Análise de Dados de Falha com R</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/08-manutencao-preditiva.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Manutenção Preditiva com Dados Sensor</span></span></a>
+  <a href="../chapters/08-weibull.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Modelagem Weibull na Prática</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/09-sistemas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Modelos de Confiabilidade de Sistema</span></span></a>
+  <a href="../chapters/09-sobrevivencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Análise de Sobrevivência e Modelos Semiparamétricos</span></span></a>
   </div>
 </li>
       </ul>
@@ -288,7 +288,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Métodos Avançados e Aplicações</span></a>
+ <span class="menu-text">Estratégias de Manutenção</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -296,20 +296,20 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/10-simulacao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Simulação Monte Carlo Aplicada à Confiabilidade</span></span></a>
+  <a href="../chapters/10-manutencao-preventiva.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Manutenção Preventiva e Otimização de Políticas</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/11-estudos-caso.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Estudos de Caso Industriais</span></span></a>
+  <a href="../chapters/11-manutencao-preditiva.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Manutenção Preditiva com Dados Sensor</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/12-governanca.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Boas Práticas e Governança de Dados de Manutenção</span></span></a>
+  <a href="../chapters/12-sistemas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Modelos de Confiabilidade de Sistema</span></span></a>
   </div>
 </li>
       </ul>
@@ -317,12 +317,41 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">Apêndices</span></a>
+ <span class="menu-text">Métodos Avançados e Aplicações</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/13-simulacao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Simulação Monte Carlo Aplicada à Confiabilidade</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/14-estudos-caso.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Estudos de Caso Industriais</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/15-governanca.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Boas Práticas e Governança de Dados de Manutenção</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Apêndices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../appendices/A-pacotes.html" class="sidebar-item-text sidebar-link">
@@ -365,42 +394,42 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução"><span class="header-section-number">2.1</span> Introdução</a></li>
-  <li><a href="#distribuição-exponencial" id="toc-distribuição-exponencial" class="nav-link" data-scroll-target="#distribuição-exponencial"><span class="header-section-number">2.2</span> Distribuição Exponencial</a>
+  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução"><span class="header-section-number">5.1</span> Introdução</a></li>
+  <li><a href="#distribuição-exponencial" id="toc-distribuição-exponencial" class="nav-link" data-scroll-target="#distribuição-exponencial"><span class="header-section-number">5.2</span> Distribuição Exponencial</a>
   <ul class="collapse">
-  <li><a href="#função-densidade-de-probabilidade" id="toc-função-densidade-de-probabilidade" class="nav-link" data-scroll-target="#função-densidade-de-probabilidade"><span class="header-section-number">2.2.1</span> Função Densidade de Probabilidade</a></li>
-  <li><a href="#função-confiabilidade" id="toc-função-confiabilidade" class="nav-link" data-scroll-target="#função-confiabilidade"><span class="header-section-number">2.2.2</span> Função Confiabilidade</a></li>
-  <li><a href="#propriedades" id="toc-propriedades" class="nav-link" data-scroll-target="#propriedades"><span class="header-section-number">2.2.3</span> Propriedades</a></li>
-  <li><a href="#exemplo-em-r" id="toc-exemplo-em-r" class="nav-link" data-scroll-target="#exemplo-em-r"><span class="header-section-number">2.2.4</span> Exemplo em R</a></li>
+  <li><a href="#função-densidade-de-probabilidade" id="toc-função-densidade-de-probabilidade" class="nav-link" data-scroll-target="#função-densidade-de-probabilidade"><span class="header-section-number">5.2.1</span> Função Densidade de Probabilidade</a></li>
+  <li><a href="#função-confiabilidade" id="toc-função-confiabilidade" class="nav-link" data-scroll-target="#função-confiabilidade"><span class="header-section-number">5.2.2</span> Função Confiabilidade</a></li>
+  <li><a href="#propriedades" id="toc-propriedades" class="nav-link" data-scroll-target="#propriedades"><span class="header-section-number">5.2.3</span> Propriedades</a></li>
+  <li><a href="#exemplo-em-r" id="toc-exemplo-em-r" class="nav-link" data-scroll-target="#exemplo-em-r"><span class="header-section-number">5.2.4</span> Exemplo em R</a></li>
   </ul></li>
-  <li><a href="#distribuição-weibull" id="toc-distribuição-weibull" class="nav-link" data-scroll-target="#distribuição-weibull"><span class="header-section-number">2.3</span> Distribuição Weibull</a>
+  <li><a href="#distribuição-weibull" id="toc-distribuição-weibull" class="nav-link" data-scroll-target="#distribuição-weibull"><span class="header-section-number">5.3</span> Distribuição Weibull</a>
   <ul class="collapse">
-  <li><a href="#função-densidade-de-probabilidade-1" id="toc-função-densidade-de-probabilidade-1" class="nav-link" data-scroll-target="#função-densidade-de-probabilidade-1"><span class="header-section-number">2.3.1</span> Função Densidade de Probabilidade</a></li>
-  <li><a href="#parâmetros" id="toc-parâmetros" class="nav-link" data-scroll-target="#parâmetros"><span class="header-section-number">2.3.2</span> Parâmetros</a></li>
-  <li><a href="#função-confiabilidade-1" id="toc-função-confiabilidade-1" class="nav-link" data-scroll-target="#função-confiabilidade-1"><span class="header-section-number">2.3.3</span> Função Confiabilidade</a></li>
-  <li><a href="#taxa-de-falha" id="toc-taxa-de-falha" class="nav-link" data-scroll-target="#taxa-de-falha"><span class="header-section-number">2.3.4</span> Taxa de Falha</a></li>
-  <li><a href="#exemplo-em-r-1" id="toc-exemplo-em-r-1" class="nav-link" data-scroll-target="#exemplo-em-r-1"><span class="header-section-number">2.3.5</span> Exemplo em R</a></li>
+  <li><a href="#função-densidade-de-probabilidade-1" id="toc-função-densidade-de-probabilidade-1" class="nav-link" data-scroll-target="#função-densidade-de-probabilidade-1"><span class="header-section-number">5.3.1</span> Função Densidade de Probabilidade</a></li>
+  <li><a href="#parâmetros" id="toc-parâmetros" class="nav-link" data-scroll-target="#parâmetros"><span class="header-section-number">5.3.2</span> Parâmetros</a></li>
+  <li><a href="#função-confiabilidade-1" id="toc-função-confiabilidade-1" class="nav-link" data-scroll-target="#função-confiabilidade-1"><span class="header-section-number">5.3.3</span> Função Confiabilidade</a></li>
+  <li><a href="#taxa-de-falha" id="toc-taxa-de-falha" class="nav-link" data-scroll-target="#taxa-de-falha"><span class="header-section-number">5.3.4</span> Taxa de Falha</a></li>
+  <li><a href="#exemplo-em-r-1" id="toc-exemplo-em-r-1" class="nav-link" data-scroll-target="#exemplo-em-r-1"><span class="header-section-number">5.3.5</span> Exemplo em R</a></li>
   </ul></li>
-  <li><a href="#distribuição-lognormal" id="toc-distribuição-lognormal" class="nav-link" data-scroll-target="#distribuição-lognormal"><span class="header-section-number">2.4</span> Distribuição Lognormal</a>
+  <li><a href="#distribuição-lognormal" id="toc-distribuição-lognormal" class="nav-link" data-scroll-target="#distribuição-lognormal"><span class="header-section-number">5.4</span> Distribuição Lognormal</a>
   <ul class="collapse">
-  <li><a href="#função-densidade" id="toc-função-densidade" class="nav-link" data-scroll-target="#função-densidade"><span class="header-section-number">2.4.1</span> Função Densidade</a></li>
-  <li><a href="#parâmetros-1" id="toc-parâmetros-1" class="nav-link" data-scroll-target="#parâmetros-1"><span class="header-section-number">2.4.2</span> Parâmetros</a></li>
-  <li><a href="#quando-usar" id="toc-quando-usar" class="nav-link" data-scroll-target="#quando-usar"><span class="header-section-number">2.4.3</span> Quando Usar</a></li>
-  <li><a href="#exemplo-em-r-2" id="toc-exemplo-em-r-2" class="nav-link" data-scroll-target="#exemplo-em-r-2"><span class="header-section-number">2.4.4</span> Exemplo em R</a></li>
+  <li><a href="#função-densidade" id="toc-função-densidade" class="nav-link" data-scroll-target="#função-densidade"><span class="header-section-number">5.4.1</span> Função Densidade</a></li>
+  <li><a href="#parâmetros-1" id="toc-parâmetros-1" class="nav-link" data-scroll-target="#parâmetros-1"><span class="header-section-number">5.4.2</span> Parâmetros</a></li>
+  <li><a href="#quando-usar" id="toc-quando-usar" class="nav-link" data-scroll-target="#quando-usar"><span class="header-section-number">5.4.3</span> Quando Usar</a></li>
+  <li><a href="#exemplo-em-r-2" id="toc-exemplo-em-r-2" class="nav-link" data-scroll-target="#exemplo-em-r-2"><span class="header-section-number">5.4.4</span> Exemplo em R</a></li>
   </ul></li>
-  <li><a href="#comparação-de-distribuições" id="toc-comparação-de-distribuições" class="nav-link" data-scroll-target="#comparação-de-distribuições"><span class="header-section-number">2.5</span> Comparação de Distribuições</a></li>
-  <li><a href="#escolha-do-modelo" id="toc-escolha-do-modelo" class="nav-link" data-scroll-target="#escolha-do-modelo"><span class="header-section-number">2.6</span> Escolha do Modelo</a></li>
-  <li><a href="#exercícios" id="toc-exercícios" class="nav-link" data-scroll-target="#exercícios"><span class="header-section-number">2.7</span> Exercícios</a></li>
-  <li><a href="#resumo" id="toc-resumo" class="nav-link" data-scroll-target="#resumo"><span class="header-section-number">2.8</span> Resumo</a></li>
+  <li><a href="#comparação-de-distribuições" id="toc-comparação-de-distribuições" class="nav-link" data-scroll-target="#comparação-de-distribuições"><span class="header-section-number">5.5</span> Comparação de Distribuições</a></li>
+  <li><a href="#escolha-do-modelo" id="toc-escolha-do-modelo" class="nav-link" data-scroll-target="#escolha-do-modelo"><span class="header-section-number">5.6</span> Escolha do Modelo</a></li>
+  <li><a href="#exercícios" id="toc-exercícios" class="nav-link" data-scroll-target="#exercícios"><span class="header-section-number">5.7</span> Exercícios</a></li>
+  <li><a href="#resumo" id="toc-resumo" class="nav-link" data-scroll-target="#resumo"><span class="header-section-number">5.8</span> Resumo</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/01-fundamentos.html">Fundamentos e Teoria</a></li><li class="breadcrumb-item"><a href="../chapters/02-distribuicoes.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Probabilidades e Distribuições para Vida Útil</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/04-fundamentos.html">Fundamentos e Teoria</a></li><li class="breadcrumb-item"><a href="../chapters/05-distribuicoes.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Probabilidades e Distribuições para Vida Útil</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Probabilidades e Distribuições para Vida Útil</span></h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Probabilidades e Distribuições para Vida Útil</span></h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 </div>
 
 
@@ -417,35 +446,35 @@ window.Quarto = {
 </header>
 
 
-<section id="introdução" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="introdução"><span class="header-section-number">2.1</span> Introdução</h2>
+<section id="introdução" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="introdução"><span class="header-section-number">5.1</span> Introdução</h2>
 <p>Este capítulo apresenta as principais distribuições de probabilidade utilizadas para modelar o tempo até a falha de componentes e sistemas.</p>
 </section>
-<section id="distribuição-exponencial" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="distribuição-exponencial"><span class="header-section-number">2.2</span> Distribuição Exponencial</h2>
+<section id="distribuição-exponencial" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="distribuição-exponencial"><span class="header-section-number">5.2</span> Distribuição Exponencial</h2>
 <p>A distribuição exponencial é o modelo mais simples, caracterizada por <strong>taxa de falha constante</strong>.</p>
-<section id="função-densidade-de-probabilidade" class="level3" data-number="2.2.1">
-<h3 data-number="2.2.1" class="anchored" data-anchor-id="função-densidade-de-probabilidade"><span class="header-section-number">2.2.1</span> Função Densidade de Probabilidade</h3>
+<section id="função-densidade-de-probabilidade" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="função-densidade-de-probabilidade"><span class="header-section-number">5.2.1</span> Função Densidade de Probabilidade</h3>
 <p><span id="eq-exp-pdf"><span class="math display">\[
 f(t) = \lambda e^{-\lambda t}, \quad t \geq 0
-\tag{2.1}\]</span></span></p>
+\tag{5.1}\]</span></span></p>
 </section>
-<section id="função-confiabilidade" class="level3" data-number="2.2.2">
-<h3 data-number="2.2.2" class="anchored" data-anchor-id="função-confiabilidade"><span class="header-section-number">2.2.2</span> Função Confiabilidade</h3>
+<section id="função-confiabilidade" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="função-confiabilidade"><span class="header-section-number">5.2.2</span> Função Confiabilidade</h3>
 <p><span id="eq-exp-reliability"><span class="math display">\[
 R(t) = e^{-\lambda t}
-\tag{2.2}\]</span></span></p>
+\tag{5.2}\]</span></span></p>
 </section>
-<section id="propriedades" class="level3" data-number="2.2.3">
-<h3 data-number="2.2.3" class="anchored" data-anchor-id="propriedades"><span class="header-section-number">2.2.3</span> Propriedades</h3>
+<section id="propriedades" class="level3" data-number="5.2.3">
+<h3 data-number="5.2.3" class="anchored" data-anchor-id="propriedades"><span class="header-section-number">5.2.3</span> Propriedades</h3>
 <ul>
 <li>Taxa de falha constante: <span class="math inline">\(\lambda(t) = \lambda\)</span></li>
 <li>Sem memória: <span class="math inline">\(P(T &gt; s+t | T &gt; s) = P(T &gt; t)\)</span></li>
 <li>MTTF = <span class="math inline">\(1/\lambda\)</span></li>
 </ul>
 </section>
-<section id="exemplo-em-r" class="level3" data-number="2.2.4">
-<h3 data-number="2.2.4" class="anchored" data-anchor-id="exemplo-em-r"><span class="header-section-number">2.2.4</span> Exemplo em R</h3>
+<section id="exemplo-em-r" class="level3" data-number="5.2.4">
+<h3 data-number="5.2.4" class="anchored" data-anchor-id="exemplo-em-r"><span class="header-section-number">5.2.4</span> Exemplo em R</h3>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -473,24 +502,24 @@ R(t) = e^{-\lambda t}
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="02-distribuicoes_files/figure-html/exp-example-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="05-distribuicoes_files/figure-html/exp-example-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
 </section>
-<section id="distribuição-weibull" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="distribuição-weibull"><span class="header-section-number">2.3</span> Distribuição Weibull</h2>
+<section id="distribuição-weibull" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="distribuição-weibull"><span class="header-section-number">5.3</span> Distribuição Weibull</h2>
 <p>A distribuição Weibull é a <strong>mais utilizada</strong> em engenharia de confiabilidade por sua flexibilidade.</p>
-<section id="função-densidade-de-probabilidade-1" class="level3" data-number="2.3.1">
-<h3 data-number="2.3.1" class="anchored" data-anchor-id="função-densidade-de-probabilidade-1"><span class="header-section-number">2.3.1</span> Função Densidade de Probabilidade</h3>
+<section id="função-densidade-de-probabilidade-1" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="função-densidade-de-probabilidade-1"><span class="header-section-number">5.3.1</span> Função Densidade de Probabilidade</h3>
 <p><span id="eq-weibull-pdf"><span class="math display">\[
 f(t) = \frac{\beta}{\eta}\left(\frac{t}{\eta}\right)^{\beta-1} e^{-(t/\eta)^\beta}
-\tag{2.3}\]</span></span></p>
+\tag{5.3}\]</span></span></p>
 </section>
-<section id="parâmetros" class="level3" data-number="2.3.2">
-<h3 data-number="2.3.2" class="anchored" data-anchor-id="parâmetros"><span class="header-section-number">2.3.2</span> Parâmetros</h3>
+<section id="parâmetros" class="level3" data-number="5.3.2">
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="parâmetros"><span class="header-section-number">5.3.2</span> Parâmetros</h3>
 <ul>
 <li><strong>β (beta)</strong>: parâmetro de forma
 <ul>
@@ -501,20 +530,20 @@ f(t) = \frac{\beta}{\eta}\left(\frac{t}{\eta}\right)^{\beta-1} e^{-(t/\eta)^\bet
 <li><strong>η (eta)</strong>: parâmetro de escala (vida característica)</li>
 </ul>
 </section>
-<section id="função-confiabilidade-1" class="level3" data-number="2.3.3">
-<h3 data-number="2.3.3" class="anchored" data-anchor-id="função-confiabilidade-1"><span class="header-section-number">2.3.3</span> Função Confiabilidade</h3>
+<section id="função-confiabilidade-1" class="level3" data-number="5.3.3">
+<h3 data-number="5.3.3" class="anchored" data-anchor-id="função-confiabilidade-1"><span class="header-section-number">5.3.3</span> Função Confiabilidade</h3>
 <p><span id="eq-weibull-reliability"><span class="math display">\[
 R(t) = e^{-(t/\eta)^\beta}
-\tag{2.4}\]</span></span></p>
+\tag{5.4}\]</span></span></p>
 </section>
-<section id="taxa-de-falha" class="level3" data-number="2.3.4">
-<h3 data-number="2.3.4" class="anchored" data-anchor-id="taxa-de-falha"><span class="header-section-number">2.3.4</span> Taxa de Falha</h3>
+<section id="taxa-de-falha" class="level3" data-number="5.3.4">
+<h3 data-number="5.3.4" class="anchored" data-anchor-id="taxa-de-falha"><span class="header-section-number">5.3.4</span> Taxa de Falha</h3>
 <p><span id="eq-weibull-hazard"><span class="math display">\[
 \lambda(t) = \frac{\beta}{\eta}\left(\frac{t}{\eta}\right)^{\beta-1}
-\tag{2.5}\]</span></span></p>
+\tag{5.5}\]</span></span></p>
 </section>
-<section id="exemplo-em-r-1" class="level3" data-number="2.3.5">
-<h3 data-number="2.3.5" class="anchored" data-anchor-id="exemplo-em-r-1"><span class="header-section-number">2.3.5</span> Exemplo em R</h3>
+<section id="exemplo-em-r-1" class="level3" data-number="5.3.5">
+<h3 data-number="5.3.5" class="anchored" data-anchor-id="exemplo-em-r-1"><span class="header-section-number">5.3.5</span> Exemplo em R</h3>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -541,39 +570,39 @@ R(t) = e^{-(t/\eta)^\beta}
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="02-distribuicoes_files/figure-html/weibull-example-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="05-distribuicoes_files/figure-html/weibull-example-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
 </section>
-<section id="distribuição-lognormal" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="distribuição-lognormal"><span class="header-section-number">2.4</span> Distribuição Lognormal</h2>
+<section id="distribuição-lognormal" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="distribuição-lognormal"><span class="header-section-number">5.4</span> Distribuição Lognormal</h2>
 <p>A distribuição lognormal é adequada para processos onde o <strong>logaritmo do tempo</strong> até a falha segue distribuição normal.</p>
-<section id="função-densidade" class="level3" data-number="2.4.1">
-<h3 data-number="2.4.1" class="anchored" data-anchor-id="função-densidade"><span class="header-section-number">2.4.1</span> Função Densidade</h3>
+<section id="função-densidade" class="level3" data-number="5.4.1">
+<h3 data-number="5.4.1" class="anchored" data-anchor-id="função-densidade"><span class="header-section-number">5.4.1</span> Função Densidade</h3>
 <p><span id="eq-lognormal-pdf"><span class="math display">\[
 f(t) = \frac{1}{t\sigma\sqrt{2\pi}} e^{-\frac{(\ln t - \mu)^2}{2\sigma^2}}
-\tag{2.6}\]</span></span></p>
+\tag{5.6}\]</span></span></p>
 </section>
-<section id="parâmetros-1" class="level3" data-number="2.4.2">
-<h3 data-number="2.4.2" class="anchored" data-anchor-id="parâmetros-1"><span class="header-section-number">2.4.2</span> Parâmetros</h3>
+<section id="parâmetros-1" class="level3" data-number="5.4.2">
+<h3 data-number="5.4.2" class="anchored" data-anchor-id="parâmetros-1"><span class="header-section-number">5.4.2</span> Parâmetros</h3>
 <ul>
 <li><strong>μ (mu)</strong>: média do logaritmo</li>
 <li><strong>σ (sigma)</strong>: desvio padrão do logaritmo</li>
 </ul>
 </section>
-<section id="quando-usar" class="level3" data-number="2.4.3">
-<h3 data-number="2.4.3" class="anchored" data-anchor-id="quando-usar"><span class="header-section-number">2.4.3</span> Quando Usar</h3>
+<section id="quando-usar" class="level3" data-number="5.4.3">
+<h3 data-number="5.4.3" class="anchored" data-anchor-id="quando-usar"><span class="header-section-number">5.4.3</span> Quando Usar</h3>
 <ul>
 <li>Falhas causadas por <strong>fadiga</strong></li>
 <li>Processos de <strong>degradação</strong> multiplicativos</li>
 <li>Tempos de reparo</li>
 </ul>
 </section>
-<section id="exemplo-em-r-2" class="level3" data-number="2.4.4">
-<h3 data-number="2.4.4" class="anchored" data-anchor-id="exemplo-em-r-2"><span class="header-section-number">2.4.4</span> Exemplo em R</h3>
+<section id="exemplo-em-r-2" class="level3" data-number="5.4.4">
+<h3 data-number="5.4.4" class="anchored" data-anchor-id="exemplo-em-r-2"><span class="header-section-number">5.4.4</span> Exemplo em R</h3>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -596,15 +625,15 @@ f(t) = \frac{1}{t\sigma\sqrt{2\pi}} e^{-\frac{(\ln t - \mu)^2}{2\sigma^2}}
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="02-distribuicoes_files/figure-html/lognormal-example-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="05-distribuicoes_files/figure-html/lognormal-example-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
 </section>
-<section id="comparação-de-distribuições" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="comparação-de-distribuições"><span class="header-section-number">2.5</span> Comparação de Distribuições</h2>
+<section id="comparação-de-distribuições" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="comparação-de-distribuições"><span class="header-section-number">5.5</span> Comparação de Distribuições</h2>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -628,14 +657,14 @@ f(t) = \frac{1}{t\sigma\sqrt{2\pi}} e^{-\frac{(\ln t - \mu)^2}{2\sigma^2}}
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="02-distribuicoes_files/figure-html/comparison-1.png" class="img-fluid figure-img" width="960"></p>
+<p><img src="05-distribuicoes_files/figure-html/comparison-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="escolha-do-modelo" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="escolha-do-modelo"><span class="header-section-number">2.6</span> Escolha do Modelo</h2>
+<section id="escolha-do-modelo" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="escolha-do-modelo"><span class="header-section-number">5.6</span> Escolha do Modelo</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -668,14 +697,14 @@ f(t) = \frac{1}{t\sigma\sqrt{2\pi}} e^{-\frac{(\ln t - \mu)^2}{2\sigma^2}}
 </tbody>
 </table>
 </section>
-<section id="exercícios" class="level2" data-number="2.7">
-<h2 data-number="2.7" class="anchored" data-anchor-id="exercícios"><span class="header-section-number">2.7</span> Exercícios</h2>
+<section id="exercícios" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="exercícios"><span class="header-section-number">5.7</span> Exercícios</h2>
 <p>📝 <strong>Exercício 1</strong>: Ajuste uma distribuição Weibull a dados de falha e estime β e η.</p>
 <p>📝 <strong>Exercício 2</strong>: Compare o ajuste de exponencial vs.&nbsp;Weibull usando teste de qualidade de ajuste.</p>
 <p>📝 <strong>Exercício 3</strong>: Simule 1000 tempos de falha de uma distribuição Weibull(β=2, η=100) e verifique se a média empírica se aproxima da teórica.</p>
 </section>
-<section id="resumo" class="level2" data-number="2.8">
-<h2 data-number="2.8" class="anchored" data-anchor-id="resumo"><span class="header-section-number">2.8</span> Resumo</h2>
+<section id="resumo" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="resumo"><span class="header-section-number">5.8</span> Resumo</h2>
 <p>🔔 <strong>Pontos-chave:</strong></p>
 <ul>
 <li>Exponencial: modelo simples, taxa constante</li>
@@ -1311,13 +1340,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/01-fundamentos.html" class="pagination-link" aria-label="Fundamentos de Confiabilidade">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Fundamentos de Confiabilidade</span></span>
+      <a href="../chapters/04-fundamentos.html" class="pagination-link" aria-label="Fundamentos de Confiabilidade">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Fundamentos de Confiabilidade</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/03-estimacao.html" class="pagination-link" aria-label="Estimativa de Parâmetros e Inferência">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estimativa de Parâmetros e Inferência</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/06-estimacao.html" class="pagination-link" aria-label="Estimativa de Parâmetros e Inferência">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Estimativa de Parâmetros e Inferência</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
