@@ -42,6 +42,8 @@ digraph ciclo_operacional {
 O tempo total do ciclo influencia diretamente a produtividade da operação e é afetado por fatores como distância de transporte, condições da pista, eficiência do equipamento de carga e organização do tráfego.
 :::
 
+![Ciclo de processos de carregamento e transporte](images/ciclo-carregamento-transporte.svg){#fig-ciclo-processos}
+
 ## Status do Equipamento {#sec-status-equipamento}
 
 Como a medição é feita baseado em durações de tempo, os apontamentos são realizados sempre que o caminhão alterar o seu status de operação, estes, que são subdivididos em **4 classes**: apto para operação, liberado pela manutenção, em manutenção ou em parada operacional.
@@ -137,50 +139,9 @@ Os ICDs são derivados de elementos de medição, logo, como um elemento pode se
 
 Cada ICD revela um aspecto de desempenho para uma unidade de trabalho ou sistema, derivado de dados monitorados de elementos de suporte. Os ICDs podem ser agrupados por aqueles que representam um grupo de aspectos com atributos semelhantes.
 
-A @fig-relacoes-icds apresenta um exemplo das relações de status de equipamento e elementos de suporte, retirado dos dados em estudo. Em contrário às análises teóricas das relações, é possível observar outras ligações com as categorias de horas, estas que representam o segundo tipo básico de relacionamento.
+A Figure 2 apresenta um exemplo das relações de status de equipamento e elementos de suporte, retirado dos dados em estudo. Em contrário às análises teóricas das relações, é possível observar outras ligações com as categorias de horas, estas que representam o segundo tipo básico de relacionamento.
 
-```{r}
-#| label: fig-relacoes-icds
-#| fig-cap: "Relações de apontamentos entre status e categoria de horas"
-#| echo: false
-#| eval: false
-
-library(DiagrammeR)
-
-grViz("
-digraph relacoes {
-  graph [rankdir = LR, bgcolor = transparent]
-
-  node [shape = box, style = filled, fontname = Helvetica, fontsize = 9]
-
-  subgraph cluster_status {
-    label = 'Status do Equipamento'
-    style = filled
-    color = lightgrey
-
-    APO [label = 'Apto p/\\nOperação', fillcolor = '#2ECC71']
-    LIB [label = 'Liberado\\nManutenção', fillcolor = '#3498DB']
-    MAN [label = 'Em\\nManutenção', fillcolor = '#E74C3C']
-    PAR [label = 'Parada\\nOperacional', fillcolor = '#95A5A6']
-  }
-
-  subgraph cluster_horas {
-    label = 'Categorias de Horas'
-    style = filled
-    color = lightblue
-
-    HT [label = 'Horas\\nTrabalhadas']
-    HM [label = 'Horas\\nManutenção']
-    HO [label = 'Horas\\nOciosas']
-  }
-
-  APO -> HT
-  LIB -> HO
-  MAN -> HM
-  PAR -> HO
-}
-")
-```
+![Relações de apontamentos entre status e categoria de horas](images/fig-relacoes-status-horas.png){#fig-relacoes-icds}
 
 ### Disponibilidade Física (DF)
 
