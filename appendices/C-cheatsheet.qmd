@@ -1,0 +1,315 @@
+# Apêndice C: Cheatsheets e Fórmulas {.unnumbered}
+
+## Distribuições de Vida Útil
+
+### Distribuição Exponencial
+
+| Propriedade | Fórmula |
+|------------|---------|
+| **PDF** | $f(t) = \lambda e^{-\lambda t}$ |
+| **CDF** | $F(t) = 1 - e^{-\lambda t}$ |
+| **Confiabilidade** | $R(t) = e^{-\lambda t}$ |
+| **Taxa de falha** | $\lambda(t) = \lambda$ (constante) |
+| **MTTF** | $1/\lambda$ |
+| **Variância** | $1/\lambda^2$ |
+
+**Quando usar:** Falhas aleatórias, componentes eletrônicos, fase útil da vida.
+
+---
+
+### Distribuição Weibull
+
+| Propriedade | Fórmula |
+|------------|---------|
+| **PDF** | $f(t) = \frac{\beta}{\eta}\left(\frac{t}{\eta}\right)^{\beta-1} e^{-(t/\eta)^\beta}$ |
+| **CDF** | $F(t) = 1 - e^{-(t/\eta)^\beta}$ |
+| **Confiabilidade** | $R(t) = e^{-(t/\eta)^\beta}$ |
+| **Taxa de falha** | $\lambda(t) = \frac{\beta}{\eta}\left(\frac{t}{\eta}\right)^{\beta-1}$ |
+| **MTTF** | $\eta \cdot \Gamma\left(1 + \frac{1}{\beta}\right)$ |
+
+**Parâmetros:**
+- **β (beta)**: forma
+  - β < 1: mortalidade infantil
+  - β = 1: taxa constante (exponencial)
+  - β > 1: desgaste/envelhecimento
+- **η (eta)**: escala (vida característica)
+
+**Quando usar:** Maioria dos casos industriais, muito flexível.
+
+---
+
+### Distribuição Lognormal
+
+| Propriedade | Fórmula |
+|------------|---------|
+| **PDF** | $f(t) = \frac{1}{t\sigma\sqrt{2\pi}} e^{-\frac{(\ln t - \mu)^2}{2\sigma^2}}$ |
+| **CDF** | $F(t) = \Phi\left(\frac{\ln t - \mu}{\sigma}\right)$ |
+| **Confiabilidade** | $R(t) = 1 - \Phi\left(\frac{\ln t - \mu}{\sigma}\right)$ |
+| **Mediana** | $e^\mu$ |
+| **MTTF** | $e^{\mu + \sigma^2/2}$ |
+
+**Quando usar:** Fadiga, degradação multiplicativa, tempos de reparo.
+
+---
+
+### Distribuição Gamma
+
+| Propriedade | Fórmula |
+|------------|---------|
+| **PDF** | $f(t) = \frac{\lambda^\alpha}{\Gamma(\alpha)} t^{\alpha-1} e^{-\lambda t}$ |
+| **MTTF** | $\alpha / \lambda$ |
+
+**Quando usar:** Processos de Poisson, soma de exponenciais.
+
+---
+
+## Métricas de Confiabilidade
+
+| Métrica | Símbolo | Fórmula | Unidade |
+|---------|---------|---------|---------|
+| **Confiabilidade** | $R(t)$ | $P(T > t)$ | - |
+| **Taxa de falha** | $\lambda(t)$ | $\frac{f(t)}{R(t)}$ | falhas/tempo |
+| **MTTF** | - | $\int_0^\infty R(t) dt$ | tempo |
+| **MTBF** | - | Tempo médio entre falhas | tempo |
+| **MTTR** | - | Tempo médio de reparo | tempo |
+| **Disponibilidade** | $A$ | $\frac{MTBF}{MTBF + MTTR}$ | - |
+
+---
+
+## Sistemas
+
+### Sistema Série
+
+$$R_{\text{série}}(t) = \prod_{i=1}^n R_i(t)$$
+
+**MTTF:** Não há fórmula simples (depende das distribuições).
+
+**Nota:** Confiabilidade do sistema é **menor** que a de qualquer componente.
+
+---
+
+### Sistema Paralelo (Redundância)
+
+$$R_{\text{paralelo}}(t) = 1 - \prod_{i=1}^n [1 - R_i(t)]$$
+
+**Componentes idênticos:**
+
+$$R_{\text{paralelo}}(t) = 1 - [1 - R(t)]^n$$
+
+---
+
+### Sistema k-out-of-n
+
+$$R_{k/n}(t) = \sum_{i=k}^n \binom{n}{i} R(t)^i [1-R(t)]^{n-i}$$
+
+**Casos especiais:**
+- n-out-of-n: sistema série
+- 1-out-of-n: sistema paralelo
+
+---
+
+## Testes Estatísticos
+
+### Teste de Kolmogorov-Smirnov
+
+**Hipóteses:**
+- $H_0$: Dados seguem distribuição especificada
+- $H_1$: Dados não seguem
+
+**Estatística:**
+
+$$D_n = \sup_t |F_n(t) - F(t)|$$
+
+**Decisão:** Rejeitar $H_0$ se $D_n > D_{\alpha, n}$ (valor crítico).
+
+---
+
+### Teste Log-Rank (Comparação de Curvas)
+
+**Hipóteses:**
+- $H_0$: Curvas de sobrevivência são iguais
+- $H_1$: Curvas diferem
+
+**Estatística:**
+
+$$\chi^2 = \sum_{i=1}^g \frac{(O_i - E_i)^2}{E_i}$$
+
+---
+
+## Intervalos de Confiança
+
+### IC para Taxa de Falha (Exponencial)
+
+$$\left[\frac{2n}{{\chi^2_{1-\alpha/2, 2n}}}, \frac{2n}{{\chi^2_{\alpha/2, 2n}}}\right] \cdot \frac{1}{T}$$
+
+onde $n$ = número de falhas, $T$ = tempo total.
+
+---
+
+### IC Bootstrap (Genérico)
+
+1. Reamostrar dados com reposição (B vezes)
+2. Calcular estatística para cada amostra
+3. IC: percentis $\alpha/2$ e $1-\alpha/2$
+
+---
+
+## Códigos R Rápidos
+
+### Ajustar Weibull
+
+```r
+library(fitdistrplus)
+fit <- fitdist(dados, "weibull")
+summary(fit)
+```
+
+### Kaplan-Meier
+
+```r
+library(survival)
+km <- survfit(Surv(tempo, status) ~ 1)
+plot(km, xlab = "Tempo", ylab = "R(t)")
+```
+
+### Modelo Cox
+
+```r
+cox <- coxph(Surv(tempo, status) ~ covariate, data = df)
+summary(cox)
+```
+
+### Simular Weibull
+
+```r
+dados <- rweibull(n = 100, shape = 2, scale = 1000)
+```
+
+### Calcular Confiabilidade
+
+```r
+R <- function(t, beta, eta) exp(-(t/eta)^beta)
+R(500, beta = 2, eta = 1000)
+```
+
+---
+
+## Fórmulas de Manutenção
+
+### Custo por Hora (Preventiva)
+
+$$C(T_p) = \frac{C_p R(T_p) + C_f [1 - R(T_p)]}{\int_0^{T_p} R(t) dt}$$
+
+- $C_p$: custo preventiva
+- $C_f$: custo falha
+- $T_p$: intervalo preventivo
+
+---
+
+### Disponibilidade com Manutenção
+
+$$A = \frac{MTBF}{MTBF + MTTR}$$
+
+---
+
+### Taxa de Falha Média
+
+$$\overline{\lambda} = \frac{1}{MTBF}$$
+
+---
+
+## Interpretação Visual
+
+### Papel de Weibull
+
+**Eixos:**
+- X: $\ln(t)$
+- Y: $\ln(-\ln(R(t)))$
+
+**Reta indica Weibull:**
+- Inclinação = $\beta$
+- Intercepto relacionado a $\eta$
+
+---
+
+### Curva Bathtub (Banheira)
+
+```
+Taxa de Falha λ(t)
+  │
+  │ \___________________/─────
+  │   ↑       ↑        ↑
+  │   │       │        │
+  │ Infant  Useful   Wear-out
+  │ Mortality Life     Phase
+  └─────────────────────────→ Tempo
+```
+
+- **Fase 1:** β < 1 (mortalidade infantil)
+- **Fase 2:** β ≈ 1 (vida útil)
+- **Fase 3:** β > 1 (desgaste)
+
+---
+
+## Conversões Úteis
+
+### Parâmetros Weibull
+
+**De β e η para λ (exponencial) quando β = 1:**
+
+$$\lambda = \frac{1}{\eta}$$
+
+**MTTF para Weibull:**
+
+$$MTTF = \eta \cdot \Gamma\left(1 + \frac{1}{\beta}\right)$$
+
+**Valores de Γ:**
+- Γ(1) = 1
+- Γ(1.5) ≈ 0.886
+- Γ(2) = 1
+
+---
+
+### Confiabilidade para Falha
+
+$$F(t) = 1 - R(t)$$
+
+---
+
+### Hazard Rate para PDF
+
+$$f(t) = \lambda(t) \cdot R(t)$$
+
+---
+
+## Atalhos de Interpretação
+
+| Situação | Distribuição Provável | β Típico |
+|----------|----------------------|----------|
+| Componente eletrônico novo | Exponencial | 1.0 |
+| Rolamento industrial | Weibull | 1.5 - 3.0 |
+| Fadiga mecânica | Lognormal | - |
+| Software bugs | Exponencial ou Weibull (β < 1) | 0.5 - 1.0 |
+| Equipamento sem manutenção | Weibull | 2.5 - 4.0 |
+
+---
+
+## Referências Rápidas
+
+### Pacotes R
+
+- `survival` - Análise de sobrevivência
+- `flexsurv` - Modelos paramétricos
+- `WeibullR` - Análise Weibull
+- `fitdistrplus` - Ajuste de distribuições
+- `caret` - Machine learning
+
+### Websites
+
+- [reliawiki.org](http://reliawiki.org/)
+- [Weibull.com](https://www.weibull.com/)
+- [NIST Engineering Statistics Handbook](https://www.itl.nist.gov/div898/handbook/)
+
+---
+
+**💡 Dica:** Imprima este apêndice para referência rápida durante análises!

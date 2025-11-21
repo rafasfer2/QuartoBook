@@ -1,0 +1,379 @@
+# Apêndice A: Pacotes e Funções Úteis em R {.unnumbered}
+
+## Pacotes Essenciais para Confiabilidade
+
+### Manipulação de Dados
+
+#### `tidyverse`
+
+Coleção de pacotes para ciência de dados.
+
+```{r}
+#| eval: false
+
+library(tidyverse)
+
+# dplyr - manipulação
+dados %>%
+  filter(status == 1) %>%
+  mutate(tempo_dias = tempo / 24) %>%
+  group_by(tipo) %>%
+  summarise(mtbf = mean(tempo_dias))
+
+# ggplot2 - visualização
+ggplot(dados, aes(x = tempo, y = confiabilidade)) +
+  geom_line() +
+  theme_minimal()
+```
+
+### Análise de Sobrevivência
+
+#### `survival`
+
+Pacote padrão para análise de sobrevivência.
+
+```{r}
+#| eval: false
+
+library(survival)
+
+# Criar objeto Surv
+surv_obj <- Surv(time = tempo, event = status)
+
+# Kaplan-Meier
+km_fit <- survfit(surv_obj ~ grupo)
+
+# Modelo Cox
+cox_model <- coxph(surv_obj ~ idade + temperatura, data = dados)
+```
+
+**Funções principais:**
+- `Surv()` - Criar objeto de sobrevivência
+- `survfit()` - Ajustar Kaplan-Meier
+- `coxph()` - Regressão de Cox
+- `survdiff()` - Teste log-rank
+
+#### `flexsurv`
+
+Modelos paramétricos flexíveis.
+
+```{r}
+#| eval: false
+
+library(flexsurv)
+
+# Modelo Weibull AFT
+fit <- flexsurvreg(Surv(tempo, status) ~ temperatura,
+                   dist = "weibull")
+
+# Distribuições disponíveis:
+# "weibull", "exp", "lnorm", "gamma", "gompertz", etc.
+```
+
+#### `WeibullR`
+
+Especializado em análise Weibull.
+
+```{r}
+#| eval: false
+
+library(WeibullR)
+
+# Criar objeto Weibull
+fit <- wblr(tempos, suspensoes = censuras)
+
+# Adicionar intervalos de confiança
+fit <- wblr.conf(fit)
+
+# Plotar papel de Weibull
+wblr.plot(fit)
+```
+
+### Ajuste de Distribuições
+
+#### `fitdistrplus`
+
+Ajuste e diagnóstico de distribuições.
+
+```{r}
+#| eval: false
+
+library(fitdistrplus)
+
+# Ajustar distribuição
+fit_weibull <- fitdist(dados, "weibull")
+fit_lnorm <- fitdist(dados, "lnorm")
+
+# Comparar ajustes
+gofstat(list(fit_weibull, fit_lnorm))
+
+# Plotar diagnósticos
+plot(fit_weibull)
+```
+
+### Machine Learning
+
+#### `caret`
+
+Framework unificado para ML.
+
+```{r}
+#| eval: false
+
+library(caret)
+
+# Treinar modelo
+modelo <- train(falha ~ .,
+                data = treino,
+                method = "rf",
+                trControl = trainControl(method = "cv", number = 5))
+
+# Importância de variáveis
+varImp(modelo)
+```
+
+**Métodos disponíveis:**
+- `"rf"` - Random Forest
+- `"xgbTree"` - XGBoost
+- `"glm"` - Regressão Logística
+- `"svmRadial"` - SVM
+
+#### `randomForest`
+
+Implementação específica de Random Forest.
+
+```{r}
+#| eval: false
+
+library(randomForest)
+
+modelo <- randomForest(falha ~ .,
+                       data = treino,
+                       ntree = 500,
+                       importance = TRUE)
+
+# Matriz de confusão
+predict(modelo, teste)
+```
+
+### Séries Temporais
+
+#### `prophet`
+
+Previsão de séries temporais (Facebook).
+
+```{r}
+#| eval: false
+
+library(prophet)
+
+# Preparar dados (requer colunas 'ds' e 'y')
+df <- data.frame(ds = datas, y = valores)
+
+# Ajustar modelo
+m <- prophet(df)
+
+# Previsão
+future <- make_future_dataframe(m, periods = 30)
+forecast <- predict(m, future)
+```
+
+#### `anomalize`
+
+Detecção de anomalias em séries temporais.
+
+```{r}
+#| eval: false
+
+library(anomalize)
+
+dados %>%
+  time_decompose(temperatura) %>%
+  anomalize(remainder) %>%
+  time_recompose() %>%
+  plot_anomalies()
+```
+
+### Visualização
+
+#### `survminer`
+
+Visualizações para análise de sobrevivência.
+
+```{r}
+#| eval: false
+
+library(survminer)
+
+# Curva KM estilizada
+ggsurvplot(km_fit,
+           conf.int = TRUE,
+           risk.table = TRUE,
+           pval = TRUE,
+           palette = "jco")
+```
+
+#### `plotly`
+
+Gráficos interativos.
+
+```{r}
+#| eval: false
+
+library(plotly)
+
+# Converter ggplot
+p <- ggplot(dados, aes(x, y)) + geom_line()
+ggplotly(p)
+
+# Plot direto
+plot_ly(dados, x = ~tempo, y = ~confiabilidade, type = "scatter", mode = "lines")
+```
+
+### Tabelas
+
+#### `kableExtra`
+
+Tabelas estilizadas para relatórios.
+
+```{r}
+#| eval: false
+
+library(kableExtra)
+
+dados %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover")) %>%
+  row_spec(0, bold = TRUE, color = "white", background = "steelblue")
+```
+
+#### `DT`
+
+Tabelas interativas.
+
+```{r}
+#| eval: false
+
+library(DT)
+
+datatable(dados,
+          filter = "top",
+          options = list(pageLength = 25))
+```
+
+### Simulação
+
+#### `simmer`
+
+Simulação de eventos discretos.
+
+```{r}
+#| eval: false
+
+library(simmer)
+
+# Criar ambiente de simulação
+env <- simmer()
+
+# Definir trajetórias e recursos
+# ...
+
+# Executar simulação
+run(env, until = 1000)
+```
+
+## Snippets Úteis
+
+### Calcular MTTF de Weibull
+
+```{r}
+#| eval: false
+
+mttf_weibull <- function(beta, eta) {
+  eta * gamma(1 + 1/beta)
+}
+```
+
+### Confiabilidade em Tempo t
+
+```{r}
+#| eval: false
+
+confiabilidade_weibull <- function(t, beta, eta) {
+  exp(-(t/eta)^beta)
+}
+```
+
+### Bootstrap IC
+
+```{r}
+#| eval: false
+
+bootstrap_ci <- function(data, stat_fun, n_boot = 1000, conf = 0.95) {
+  boot_stats <- replicate(n_boot, {
+    sample_boot <- sample(data, replace = TRUE)
+    stat_fun(sample_boot)
+  })
+
+  alpha <- 1 - conf
+  quantile(boot_stats, c(alpha/2, 1 - alpha/2))
+}
+```
+
+### Plotar Taxa de Falha
+
+```{r}
+#| eval: false
+
+plot_hazard <- function(beta, eta, t_max = 1000) {
+  t <- seq(0, t_max, length.out = 200)
+  hazard <- (beta/eta) * (t/eta)^(beta - 1)
+
+  ggplot(data.frame(t, hazard), aes(t, hazard)) +
+    geom_line(color = "steelblue", linewidth = 1.2) +
+    labs(title = paste("Taxa de Falha (β =", beta, ")"),
+         x = "Tempo", y = "λ(t)") +
+    theme_minimal()
+}
+```
+
+## Instalação Rápida
+
+```{r}
+#| eval: false
+
+# Todos os pacotes essenciais
+install.packages(c(
+  # Manipulação
+  "tidyverse", "data.table", "lubridate",
+
+  # Confiabilidade
+  "survival", "flexsurv", "WeibullR", "reliability",
+  "fitdistrplus",
+
+  # Machine Learning
+  "caret", "randomForest", "xgboost",
+
+  # Séries Temporais
+  "prophet", "anomalize", "forecast",
+
+  # Visualização
+  "survminer", "plotly", "patchwork",
+
+  # Tabelas
+  "kableExtra", "DT", "gt",
+
+  # Relatórios
+  "knitr", "rmarkdown", "quarto",
+
+  # Outros
+  "broom", "here", "pins"
+))
+```
+
+## Recursos Online
+
+- [CRAN Task View: Survival Analysis](https://cran.r-project.org/web/views/Survival.html)
+- [survival package vignette](https://cran.r-project.org/web/packages/survival/vignettes/survival.pdf)
+- [R for Data Science](https://r4ds.hadley.nz/)
+- [Posit Cheatsheets](https://posit.co/resources/cheatsheets/)

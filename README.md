@@ -1,18 +1,55 @@
-# 📚 Quarto Book Project
+# 📚 Confiabilidade e Manutenção: Aplicações em R
 
-Projeto de livro digital criado com **Quarto**, **R** e **VS Code**.
+📖 Livro interativo sobre análise de confiabilidade e estratégias de manutenção usando R
+
+[![Deploy Book](https://github.com/seu-usuario/QuartoBook/actions/workflows/publish.yml/badge.svg)](https://github.com/seu-usuario/QuartoBook/actions/workflows/publish.yml)
+
+## 📖 Sobre o Livro
+
+Este livro oferece uma abordagem **prática e aplicada** sobre **confiabilidade** e **manutenção industrial**, com implementações completas em **R**. Todos os exemplos são reproduzíveis e incluem código completo.
+
+### Conteúdo
+
+**Parte I: Fundamentos e Teoria**
+- Fundamentos de Confiabilidade
+- Distribuições de Probabilidade para Vida Útil
+- Estimação de Parâmetros e Inferência
+
+**Parte II: Análise e Modelagem Prática**
+- Análise de Dados de Falha com R
+- Modelagem Weibull na Prática
+- Análise de Sobrevivência e Modelos de Cox
+
+**Parte III: Estratégias de Manutenção**
+- Manutenção Preventiva e Otimização de Políticas
+- Manutenção Preditiva com Dados de Sensores
+- Modelos de Confiabilidade de Sistemas
+
+**Parte IV: Métodos Avançados e Aplicações**
+- Simulação Monte Carlo para Confiabilidade
+- Estudos de Caso Industriais
+- Governança de Dados e Melhores Práticas
+
+**Público-alvo:** Engenheiros de confiabilidade, analistas de manutenção, cientistas de dados, estudantes e profissionais da indústria.
 
 ## 🚀 Quick Start
 
-### Visualizar Book
+### 1. Instalar Dependências
+
+```bash
+# Instalar pacotes R
+Rscript resources/install_packages.R
+```
+
+### 2. Visualizar Livro
 
 ```bash
 quarto preview
 ```
 
-Abrirá automaticamente no navegador com hot reload.
+Abre automaticamente no navegador com hot reload.
 
-### Renderizar
+### 3. Renderizar Completo
 
 ```bash
 # HTML (padrão)
@@ -26,16 +63,26 @@ quarto render --to pdf
 
 ```
 QuartoBook/
-├── _quarto.yml       # Configuração do book
-├── index.qmd         # Homepage
-├── intro.qmd         # Introdução
-├── summary.qmd       # Análises com código R
-├── references.qmd    # Referências
-├── references.bib    # Bibliografia
-├── _book/           # Output (não versionado)
-├── .Rprofile        # Configurações R
-├── .gitignore       # Arquivos ignorados
-└── README.md        # Este arquivo
+├── _quarto.yml              # Configuração do livro
+├── index.qmd                # Página inicial
+├── preface.qmd              # Prefácio
+├── requirements.qmd         # Como usar
+├── setup.qmd                # Instalação
+├── chapters/                # 12 capítulos principais
+│   ├── 01-fundamentos.qmd
+│   ├── 02-distribuicoes.qmd
+│   └── ...
+├── appendices/              # 3 apêndices
+│   ├── A-pacotes.qmd
+│   ├── B-templates.qmd
+│   └── C-cheatsheet.qmd
+├── resources/               # Scripts e dados
+│   ├── install_packages.R
+│   └── data/
+├── docs/                    # Output renderizado
+├── references.qmd           # Referências
+├── credits.qmd              # Créditos
+└── README.md                # Este arquivo
 ```
 
 ## ✏️ Adicionar Capítulo
@@ -104,19 +151,51 @@ install.packages(c(
 ))
 ```
 
-## 📤 Publicar
+## 🌐 Hospedagem
 
-### GitHub Pages
+Este livro pode ser hospedado em várias plataformas:
+
+### GitHub Pages (Recomendado)
 
 ```bash
-quarto publish gh-pages
+# 1. Criar repositório no GitHub
+# 2. Push do código
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/seu-usuario/QuartoBook.git
+git push -u origin main
+
+# 3. Habilitar GitHub Pages
+# Settings → Pages → Source: GitHub Actions
 ```
 
-### Netlify/Vercel
+O GitHub Actions renderiza e publica automaticamente em: `https://seu-usuario.github.io/QuartoBook/`
+
+### Quarto Pub
 
 ```bash
-quarto render
-# Upload da pasta _book/
+quarto publish quarto-pub
+```
+
+### Netlify
+
+```bash
+# 1. Criar conta em netlify.com
+# 2. Conectar repositório GitHub
+# 3. Configurar:
+#    Build command: quarto render
+#    Publish directory: docs
+```
+
+### Vercel
+
+```bash
+# 1. Criar conta em vercel.com
+# 2. Import repositório
+# 3. Configurar:
+#    Build command: quarto render
+#    Output directory: docs
 ```
 
 ## 🔗 Links Úteis

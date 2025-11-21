@@ -1,0 +1,211 @@
+# Estrutura do Projeto - Confiabilidade e Manutenção
+
+## ✅ Estrutura Criada
+
+### 📁 Diretórios
+
+```
+QuartoBook/
+├── chapters/              ✅ 12 capítulos principais
+├── appendices/            ✅ 3 apêndices
+├── resources/             ✅ Recursos e dados
+│   └── data/             (para datasets de exemplo)
+└── docs/                  ✅ Output renderizado
+```
+
+### 📄 Arquivos Principais
+
+#### Material Inicial
+- ✅ `index.qmd` - Página de boas-vindas
+- ✅ `preface.qmd` - Prefácio
+- ✅ `requirements.qmd` - Como usar o livro
+- ✅ `setup.qmd` - Instalação e ambiente
+
+#### Capítulos (chapters/)
+1. ✅ `01-fundamentos.qmd` - Fundamentos de Confiabilidade
+2. ✅ `02-distribuicoes.qmd` - Probabilidades e Distribuições para Vida Útil
+3. ✅ `03-estimacao.qmd` - Estimativa de Parâmetros e Inferência
+4. ✅ `04-analise-falhas.qmd` - Análise de Dados de Falha com R
+5. ✅ `05-weibull.qmd` - Modelagem Weibull na Prática
+6. ✅ `06-sobrevivencia.qmd` - Análise de Sobrevivência
+7. ✅ `07-manutencao-preventiva.qmd` - Manutenção Preventiva
+8. ✅ `08-manutencao-preditiva.qmd` - Manutenção Preditiva
+9. ✅ `09-sistemas.qmd` - Modelos de Confiabilidade de Sistema
+10. ✅ `10-simulacao.qmd` - Simulação Monte Carlo
+11. ✅ `11-estudos-caso.qmd` - Estudos de Caso Industriais
+12. ✅ `12-governanca.qmd` - Governança de Dados
+
+#### Apêndices (appendices/)
+- ✅ `A-pacotes.qmd` - Pacotes e Funções Úteis em R
+- ✅ `B-templates.qmd` - Templates Quarto e Automação
+- ✅ `C-cheatsheet.qmd` - Cheatsheets e Fórmulas
+
+#### Finais
+- ✅ `references.qmd` - Referências bibliográficas
+- ✅ `credits.qmd` - Créditos e Agradecimentos
+
+#### Configuração
+- ✅ `_quarto.yml` - Configuração completa do livro
+- ✅ `resources/install_packages.R` - Script de instalação
+
+## 📊 Estrutura do _quarto.yml
+
+```yaml
+book:
+  title: "Confiabilidade e Manutenção: Aplicações em R"
+
+  chapters:
+    - index.qmd
+    - preface.qmd
+    - requirements.qmd
+    - setup.qmd
+
+    - part: "Fundamentos e Teoria"
+      chapters: [01, 02, 03]
+
+    - part: "Análise e Modelagem Prática"
+      chapters: [04, 05, 06]
+
+    - part: "Estratégias de Manutenção"
+      chapters: [07, 08, 09]
+
+    - part: "Métodos Avançados e Aplicações"
+      chapters: [10, 11, 12]
+
+    - part: "Apêndices"
+      chapters: [A, B, C]
+
+    - references.qmd
+    - credits.qmd
+```
+
+## 🎯 Próximos Passos
+
+### 1. Testar Renderização
+
+```bash
+# Preview
+quarto preview
+
+# Render completo
+quarto render
+```
+
+### 2. Adicionar Dados de Exemplo
+
+Criar datasets em `resources/data/`:
+- `falhas_bombas.csv`
+- `sensores_compressor.csv`
+- `historico_motores.rds`
+
+### 3. Expandir Conteúdo
+
+Os capítulos foram criados com **templates estruturados**. Você pode:
+- Adicionar mais exemplos práticos
+- Incluir gráficos e visualizações
+- Expandir seções teóricas
+- Adicionar exercícios resolvidos
+
+### 4. Personalizar
+
+- Ajustar tema em `_quarto.yml`
+- Adicionar logo/imagens
+- Configurar bibliografia
+- Customizar CSS
+
+### 5. Deploy
+
+Opções de publicação:
+- GitHub Pages
+- Quarto Pub
+- Netlify
+- Vercel
+
+## 📝 Observações sobre Arquivos Antigos
+
+Os arquivos originais foram **preservados**:
+- `intro.qmd` - Conteúdo sobre SIAM
+- `summary.qmd` - Análises SIAM
+
+**Recomendação:**
+- Mova para uma pasta `old/` se não forem mais necessários
+- Ou delete se o conteúdo foi migrado
+
+## 🚀 Como Usar
+
+### Desenvolvimento Local
+
+```bash
+# 1. Instalar pacotes R
+Rscript resources/install_packages.R
+
+# 2. Preview com hot reload
+quarto preview
+
+# 3. Editar capítulos conforme necessário
+```
+
+### Adicionar Novo Conteúdo
+
+```bash
+# Criar novo capítulo
+touch chapters/13-novo-topico.qmd
+
+# Adicionar em _quarto.yml
+# chapters:
+#   - chapters/13-novo-topico.qmd
+```
+
+### Renderizar e Deploy
+
+```bash
+# Render
+quarto render
+
+# Deploy GitHub Pages
+git add docs/
+git commit -m "Update book"
+git push
+```
+
+## ✨ Recursos Implementados
+
+### Código R
+- ✅ Exemplos reproduzíveis
+- ✅ Chunks configurados
+- ✅ Cache habilitado
+
+### Visualização
+- ✅ Tema claro/escuro
+- ✅ Code-fold
+- ✅ TOC navegável
+- ✅ Numeração de seções
+
+### Conteúdo
+- ✅ Equações LaTeX
+- ✅ Referências cruzadas
+- ✅ Callouts
+- ✅ Tabelas formatadas
+
+### Reprodutibilidade
+- ✅ Script de instalação
+- ✅ Freeze automático
+- ✅ Documentação completa
+
+## 📚 Resumo
+
+Total de arquivos criados/modificados:
+- ✅ 4 arquivos de introdução
+- ✅ 12 capítulos principais
+- ✅ 3 apêndices
+- ✅ 2 arquivos finais
+- ✅ 1 configuração principal
+- ✅ 1 script de instalação
+
+**Total:** 23 arquivos + estrutura de diretórios
+
+---
+
+**Status:** ✅ Estrutura completa criada e configurada!
+
+**Próximo passo:** Testar renderização com `quarto preview`

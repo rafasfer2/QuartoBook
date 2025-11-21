@@ -1,20 +1,76 @@
-# Bem-vindo ao SIAM
+# Bem-vindo {.unnumbered}
 
-Este é o livro de documentação e análises do **Sistema Integrado de Atendimento à Mulher (SIAM)**.
+Bem-vindo ao livro **"Confiabilidade e Manutenção: Aplicações em R"**!
 
-## Sobre o Projeto
+::: {.callout-note appearance="simple"}
+## Sobre este Livro
 
-O SIAM é uma aplicação Shiny desenvolvida em R para gestão integrada de atendimento a mulheres em situação de vulnerabilidade.
+Este livro fornece uma introdução **prática e aplicada** aos conceitos de confiabilidade, análise de dados de falha e modelagem de vida útil, com ênfase no uso da linguagem **R** como ferramenta principal.
+:::
 
-## Estrutura deste Livro
+## 📚 O que você vai aprender
 
-Este livro está organizado em capítulos que cobrem:
+- **Fundamentos de confiabilidade** — Conceitos, métricas e distribuições de vida útil
+- **Análise de dados de falha** — Técnicas estatísticas para dados censurados
+- **Modelagem Weibull** — Aplicação prática da distribuição mais usada em engenharia
+- **Análise de sobrevivência** — Modelos paramétricos e semiparamétricos
+- **Estratégias de manutenção** — Otimização de políticas preventivas e preditivas
+- **Machine learning** — Predição de falhas com dados de sensores
+- **Simulação Monte Carlo** — Avaliação de políticas sob incerteza
+- **Boas práticas** — Governança de dados e reprodutibilidade
 
-- Introdução ao sistema
-- Análises e relatórios
-- Documentação técnica
-- Referências
+## 🎯 Para quem é este livro
 
-## Como Usar
+- **Engenheiros de confiabilidade e manutenção**
+- **Analistas de dados** em contextos industriais
+- **Estudantes e pesquisadores** em engenharia e estatística
+- **Gestores técnicos** que tomam decisões baseadas em dados
 
-Navegue pelos capítulos usando o menu lateral. O código R pode ser visualizado clicando em "Show Code".
+## 🚀 Como usar este livro
+
+1. **Leia sequencialmente** — Os capítulos são progressivos
+2. **Execute os exemplos** — Todos os códigos R são reproduzíveis
+3. **Faça os exercícios** — Pratique para consolidar o aprendizado
+4. **Use como referência** — Consulte os apêndices quando necessário
+
+## 📖 Estrutura
+
+O livro está organizado em quatro partes:
+
+### Parte I: Fundamentos e Teoria
+Conceitos básicos, distribuições de probabilidade e métodos de estimação.
+
+### Parte II: Análise e Modelagem Prática
+Análise de dados de falha, modelagem Weibull e análise de sobrevivência.
+
+### Parte III: Estratégias de Manutenção
+Manutenção preventiva, preditiva e modelagem de sistemas complexos.
+
+### Parte IV: Métodos Avançados e Aplicações
+Simulação, estudos de caso industriais e governança de dados.
+
+## 💻 Requisitos
+
+- **R** (versão ≥ 4.0)
+- **RStudio** ou VS Code
+- **Pacotes R** — `tidyverse`, `survival`, `flexsurv`, `ggplot2`, entre outros
+
+Veja instruções detalhadas de instalação no capítulo [Instalação e Ambiente](setup.qmd).
+
+## 🔗 Recursos Adicionais
+
+- **Código fonte:** [GitHub](https://github.com/seu-usuario/QuartoBook)
+- **Dados de exemplo:** Disponíveis em `resources/data/`
+- **Discussões:** [Issues no GitHub](https://github.com/seu-usuario/QuartoBook/issues)
+
+---
+
+::: {.callout-tip}
+## Pronto para começar?
+
+Inicie pelo [Prefácio](preface.qmd) para entender melhor o contexto e objetivos deste livro, ou vá direto para [Como Usar este Livro](requirements.qmd) para configurar seu ambiente.
+:::
+
+---
+
+**Boa leitura e bons estudos!** 📊✨

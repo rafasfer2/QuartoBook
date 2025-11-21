@@ -1,0 +1,423 @@
+# Apêndice B: Templates Quarto e Automação {.unnumbered}
+
+## Estrutura de Projeto Quarto Book
+
+### Arquivo `_quarto.yml`
+
+```yaml
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Confiabilidade e Manutenção"
+  subtitle: "Aplicações em R"
+  author: "Seu Nome"
+  date: today
+
+  chapters:
+    - index.qmd
+    - preface.qmd
+
+    - part: "Parte I"
+      chapters:
+        - chapters/01-intro.qmd
+        - chapters/02-analise.qmd
+
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    code-fold: show
+    code-tools: true
+    toc: true
+    toc-depth: 3
+    number-sections: true
+
+  pdf:
+    documentclass: scrbook
+    toc: true
+    number-sections: true
+
+execute:
+  echo: true
+  warning: false
+  message: false
+  cache: true
+  freeze: auto
+```
+
+## Template de Capítulo
+
+```markdown
+# Título do Capítulo
+
+## Introdução
+
+Breve introdução ao tema...
+
+## Conceitos
+
+### Subseção 1
+
+Explicação com equação:
+
+$$
+R(t) = e^{-\lambda t}
+$$ {#eq-confiabilidade}
+
+### Exemplo Prático
+
+💡 **Exemplo**: Descrição do exemplo
+
+```{r}
+#| label: exemplo-codigo
+#| warning: false
+#| fig-cap: "Legenda da figura"
+#| eval: false
+
+# Exemplo ilustrativo (não executado)
+# library(tidyverse)
+# dados <- data.frame(...)
+# ggplot(dados, aes(x, y)) + geom_line()
+```
+
+## Exercícios
+
+📝 **Exercício 1**: Descrição do exercício.
+
+## Resumo
+
+🔔 **Pontos-chave:**
+
+- Ponto 1
+- Ponto 2
+
+---
+
+**Próximo capítulo:** Nome do próximo
+```
+
+## Opções de Chunks
+
+### Controle de Execução
+
+```{r}
+#| label: nome-unico
+#| eval: true          # Executar código
+#| echo: true          # Mostrar código
+#| output: true        # Mostrar output
+#| warning: false      # Esconder warnings
+#| message: false      # Esconder mensagens
+#| error: false        # Parar em erros
+#| cache: true         # Usar cache
+```
+
+### Figuras
+
+```{r}
+#| label: fig-exemplo
+#| fig-cap: "Legenda da figura"
+#| fig-width: 8
+#| fig-height: 6
+#| fig-align: center
+#| out-width: "80%"
+
+# Código do gráfico
+```
+
+### Tabelas
+
+```{r}
+#| label: tbl-exemplo
+#| tbl-cap: "Legenda da tabela"
+
+# Código da tabela
+```
+
+## Referências Cruzadas
+
+### Figuras
+
+```markdown
+Veja @fig-exemplo para detalhes.
+
+```{r}
+#| label: fig-exemplo-2
+#| fig-cap: "Minha figura"
+
+plot(1:10)
+```
+```
+
+### Tabelas
+
+```markdown
+A @tbl-resultados apresenta os dados.
+
+```{r}
+#| label: tbl-resultados
+#| tbl-cap: "Resultados"
+#| eval: false
+
+# knitr::kable(dados)
+```
+```
+
+### Equações
+
+```markdown
+Como mostra a @eq-weibull:
+
+$$
+f(t) = \frac{\beta}{\eta}\left(\frac{t}{\eta}\right)^{\beta-1} e^{-(t/\eta)^\beta}
+$$ {#eq-weibull}
+```
+
+### Capítulos e Seções
+
+```markdown
+Como discutido no @sec-introducao...
+
+## Introdução {#sec-introducao}
+```
+
+## CI/CD com GitHub Actions
+
+### `.github/workflows/quarto-publish.yml`
+
+```yaml
+name: Render and Publish Quarto Book
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.5.1'
+
+      - name: Install R packages
+        run: |
+          install.packages(c("tidyverse", "survival", "ggplot2"))
+        shell: Rscript {0}
+
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: '1.6.39'
+
+      - name: Render Quarto Book
+        run: quarto render
+
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+```
+
+## Deploy para Quarto Pub
+
+### Comandos
+
+```bash
+# Publicar pela primeira vez
+quarto publish quarto-pub
+
+# Atualizar
+quarto publish quarto-pub --update
+```
+
+### Configuração no `_quarto.yml`
+
+```yaml
+project:
+  type: book
+
+quarto-pub:
+  site-id: "seu-site-id"
+```
+
+## Deploy para GitHub Pages
+
+### Passo a Passo
+
+1. **Configurar output para `docs/`**
+
+```yaml
+project:
+  output-dir: docs
+```
+
+2. **Criar `.nojekyll`**
+
+```bash
+touch docs/.nojekyll
+```
+
+3. **Configurar GitHub Pages**
+   - Settings → Pages
+   - Source: Deploy from branch
+   - Branch: `main` / `docs`
+
+4. **Push e esperar**
+
+```bash
+git add .
+git commit -m "Update book"
+git push
+```
+
+## Deploy para Netlify
+
+### `netlify.toml`
+
+```toml
+[build]
+  command = "quarto render"
+  publish = "docs"
+
+[build.environment]
+  QUARTO_VERSION = "1.6.39"
+  R_VERSION = "4.5.1"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+```
+
+## Makefile para Automação
+
+### `Makefile`
+
+```makefile
+.PHONY: preview render clean deploy
+
+preview:
+	quarto preview
+
+render:
+	quarto render
+
+clean:
+	rm -rf docs/ _book/ .quarto/ *_cache/ *_files/
+
+deploy: render
+	git add docs/
+	git commit -m "Update rendered book"
+	git push
+
+install-deps:
+	Rscript -e "install.packages(c('tidyverse', 'survival', 'ggplot2'))"
+```
+
+**Uso:**
+
+```bash
+make preview   # Visualizar
+make render    # Renderizar
+make clean     # Limpar
+make deploy    # Deploy
+```
+
+## Docker para Reprodutibilidade
+
+### `Dockerfile`
+
+```dockerfile
+FROM rocker/r-ver:4.5.1
+
+# Instalar Quarto
+RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.6.39/quarto-1.6.39-linux-amd64.deb
+RUN dpkg -i quarto-1.6.39-linux-amd64.deb
+
+# Instalar dependências R
+RUN R -e "install.packages(c('tidyverse', 'survival', 'ggplot2'))"
+
+# Copiar projeto
+COPY . /workspace
+WORKDIR /workspace
+
+# Renderizar
+CMD ["quarto", "render"]
+```
+
+**Uso:**
+
+```bash
+docker build -t meu-livro .
+docker run -v $(pwd):/workspace meu-livro
+```
+
+## Scripts Auxiliares
+
+### `render_and_open.R`
+
+```r
+#!/usr/bin/env Rscript
+
+# Renderizar e abrir no navegador
+system("quarto render")
+system("open docs/index.html")  # macOS
+# system("xdg-open docs/index.html")  # Linux
+# system("start docs/index.html")  # Windows
+```
+
+### `check_links.sh`
+
+```bash
+#!/bin/bash
+# Verificar links quebrados
+
+quarto render
+cd docs
+python -m http.server 8000 &
+SERVER_PID=$!
+sleep 2
+
+# Usar linkchecker ou similar
+linkchecker http://localhost:8000
+
+kill $SERVER_PID
+```
+
+## Boas Práticas
+
+✅ **Fazer:**
+- Usar `freeze: auto` para cache inteligente
+- Versionar dados pequenos com Git LFS
+- Documentar requisitos em `README.md`
+- Testar localmente antes de fazer push
+- Usar CI/CD para deploy automático
+
+❌ **Evitar:**
+- Commitar arquivos gerados (`_book/`, `docs/`)
+- Dados grandes sem Git LFS
+- Executar código demorado sem cache
+- Dependências não documentadas
+
+## Recursos
+
+- [Quarto Books Guide](https://quarto.org/docs/books/)
+- [GitHub Actions Documentation](https://docs.github.com/actions)
+- [Quarto Pub](https://quartopub.com/)
+- [Netlify Docs](https://docs.netlify.com/)

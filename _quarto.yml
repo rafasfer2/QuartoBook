@@ -1,17 +1,51 @@
 project:
   type: book
-  output-dir: _book
+  output-dir: docs
 
 book:
-  title: "Meu Quarto Book"
-  subtitle: "Documentação e Análises em R"
+  title: "Confiabilidade e Manutenção: Aplicações em R"
+  subtitle: "Análise de Dados de Falha, Modelagem de Vida Útil e Estratégias de Manutenção"
   author: "Rafael da Silva Fernandes"
   date: today
+
   chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
+    - preface.qmd
+    - requirements.qmd
+    - setup.qmd
+
+    - part: "Fundamentos e Teoria"
+      chapters:
+        - chapters/01-fundamentos.qmd
+        - chapters/02-distribuicoes.qmd
+        - chapters/03-estimacao.qmd
+
+    - part: "Análise e Modelagem Prática"
+      chapters:
+        - chapters/04-analise-falhas.qmd
+        - chapters/05-weibull.qmd
+        - chapters/06-sobrevivencia.qmd
+
+    - part: "Estratégias de Manutenção"
+      chapters:
+        - chapters/07-manutencao-preventiva.qmd
+        - chapters/08-manutencao-preditiva.qmd
+        - chapters/09-sistemas.qmd
+
+    - part: "Métodos Avançados e Aplicações"
+      chapters:
+        - chapters/10-simulacao.qmd
+        - chapters/11-estudos-caso.qmd
+        - chapters/12-governanca.qmd
+
+    - part: "Apêndices"
+      chapters:
+        - appendices/A-pacotes.qmd
+        - appendices/B-templates.qmd
+        - appendices/C-cheatsheet.qmd
+
     - references.qmd
+    - credits.qmd
 
 bibliography: references.bib
 
@@ -26,10 +60,6 @@ format:
     toc-depth: 3
     number-sections: true
     link-external-newwindow: true
-  pdf:
-    documentclass: scrreprt
-    toc: true
-    number-sections: true
 
 execute:
   echo: true

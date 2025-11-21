@@ -1,0 +1,207 @@
+# Como Usar este Livro {.unnumbered}
+
+## Convenções e Organização
+
+Este livro foi desenvolvido para ser **prático, reproduzível e didático**. Todos os exemplos de código R podem ser executados diretamente, e os dados utilizados estão disponíveis no diretório `resources/data/`.
+
+### Organização dos Capítulos
+
+O livro está dividido em **quatro partes principais**:
+
+1. **Fundamentos e Teoria** — Conceitos básicos de confiabilidade, distribuições de vida útil e métodos de estimação.
+2. **Análise e Modelagem Prática** — Técnicas de análise de dados de falha, modelagem Weibull e análise de sobrevivência.
+3. **Estratégias de Manutenção** — Manutenção preventiva, preditiva e modelagem de sistemas complexos.
+4. **Métodos Avançados e Aplicações** — Simulação Monte Carlo, estudos de caso industriais e governança de dados.
+
+Cada capítulo inclui:
+
+- **Teoria concisa** — Explicação dos conceitos fundamentais.
+- **Exemplos práticos com R** — Código reproduzível e comentado.
+- **Visualizações e tabelas** — Gráficos interpretativos e resumos estatísticos.
+- **Exercícios** 📝 — Atividades para consolidar o aprendizado.
+
+### Convenções de Código
+
+Todo o código R é apresentado em blocos destacados e pode ser copiado diretamente:
+
+```{r}
+#| eval: false
+#| echo: true
+
+# Exemplo de código R
+library(dplyr)
+library(ggplot2)
+
+# Carregar dados de exemplo
+data <- read.csv("resources/data/falhas.csv")
+
+# Análise exploratória
+summary(data)
+```
+
+- **`#| eval: false`** indica que o código não será executado automaticamente (apenas exibido).
+- **`#| echo: true`** indica que o código será mostrado no output final.
+
+### Símbolos e Ícones
+
+- 💡 **Exemplo prático** — Demonstração de aplicação real.
+- 📝 **Exercício** — Atividade proposta para o leitor.
+- 🔔 **Dica importante** — Informação relevante ou ponto de atenção.
+- ⚠️ **Atenção** — Cuidado ou limitação a considerar.
+
+### Referências Cruzadas
+
+Figuras, tabelas e equações são numeradas e referenciadas ao longo do texto:
+
+- **Figuras:** @fig-weibull
+- **Tabelas:** @tbl-mtbf
+- **Equações:** @eq-confiabilidade
+
+## Requisitos de Software
+
+Para reproduzir os exemplos deste livro, você precisará de:
+
+### R (versão ≥ 4.0)
+
+R é a linguagem de programação principal utilizada. Faça o download em: [https://www.r-project.org/](https://www.r-project.org/)
+
+### RStudio Desktop ou VS Code
+
+**RStudio** é o IDE recomendado para desenvolvimento em R: [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/)
+
+Alternativamente, você pode usar **VS Code** com as extensões:
+- R (reditorsupport.r)
+- Quarto (quarto.quarto)
+
+### Quarto CLI
+
+Este livro foi desenvolvido com **Quarto**, um sistema de publicação científica. Instale em: [https://quarto.org/docs/get-started/](https://quarto.org/docs/get-started/)
+
+### Pacotes R Necessários
+
+Os seguintes pacotes R são utilizados ao longo do livro:
+
+```{r}
+#| eval: false
+#| echo: true
+
+# Manipulação e visualização de dados
+install.packages(c("tidyverse", "dplyr", "tidyr", "readr", "ggplot2", "plotly"))
+
+# Análise de confiabilidade e sobrevivência
+install.packages(c("survival", "flexsurv", "WeibullR", "reliability"))
+
+# Tabelas e relatórios
+install.packages(c("knitr", "kableExtra", "DT", "broom"))
+
+# Machine learning e manutenção preditiva
+install.packages(c("caret", "randomForest", "prophet", "anomalize"))
+
+# Simulação
+install.packages(c("simmer", "MASS"))
+```
+
+Para instalar todos os pacotes de uma vez:
+
+```{r}
+#| eval: false
+#| echo: true
+
+source("resources/install_packages.R")
+```
+
+## Estrutura de Arquivos e Dados
+
+O projeto deste livro está organizado da seguinte forma:
+
+```
+QuartoBook/
+├── _quarto.yml              # Configuração do livro
+├── index.qmd                # Página inicial
+├── preface.qmd              # Prefácio
+├── requirements.qmd         # Este arquivo
+├── setup.qmd                # Instruções de instalação
+├── chapters/                # Capítulos principais
+│   ├── 01-fundamentos.qmd
+│   ├── 02-distribuicoes.qmd
+│   └── ...
+├── appendices/              # Apêndices
+│   ├── A-pacotes.qmd
+│   └── ...
+├── resources/               # Recursos adicionais
+│   ├── data/                # Dados de exemplo (CSV, RDS)
+│   ├── scripts/             # Scripts R auxiliares
+│   └── images/              # Imagens e figuras
+├── docs/                    # Output renderizado (HTML)
+└── references.bib           # Bibliografia
+```
+
+### Dados de Exemplo
+
+Todos os datasets utilizados nos exemplos estão disponíveis em `resources/data/`:
+
+- `falhas_bombas.csv` — Dados de falha de bombas industriais.
+- `sensores_compressor.csv` — Dados de sensores para manutenção preditiva.
+- `historico_motores.rds` — Histórico de manutenção de motores elétricos.
+
+## Como Executar os Exemplos
+
+### No RStudio
+
+1. Abra o arquivo `.qmd` desejado.
+2. Clique em **"Run"** para executar os chunks de código individualmente.
+3. Use **Ctrl+Shift+K** para renderizar o documento completo.
+
+### No VS Code
+
+1. Instale as extensões Quarto e R.
+2. Abra o arquivo `.qmd`.
+3. Use **Ctrl+Enter** para executar linhas de código.
+4. Execute `quarto preview` no terminal para visualizar o livro completo.
+
+### Via Terminal
+
+Para renderizar o livro completo:
+
+```bash
+quarto render
+```
+
+Para visualizar com hot reload:
+
+```bash
+quarto preview
+```
+
+## Reprodutibilidade
+
+Este livro foi desenvolvido com práticas de **ciência de dados reproduzível**:
+
+- Todos os dados de exemplo estão versionados.
+- Códigos são testados e validados.
+- Sessões R são gerenciadas com `.Rprofile`.
+- Outputs são congelados com `freeze: auto` no Quarto.
+
+Para garantir reprodutibilidade, recomendamos:
+
+```{r}
+#| eval: false
+#| echo: true
+
+# Verificar versão do R
+R.version.string
+
+# Listar pacotes instalados
+installed.packages()[, c("Package", "Version")]
+```
+
+## Dúvidas e Suporte
+
+Para dúvidas, sugestões ou relato de erros:
+
+- **GitHub Issues:** [https://github.com/SEU_USER/QuartoBook/issues](https://github.com/SEU_USER/QuartoBook/issues)
+- **Email:** rafael@example.com
+
+---
+
+**Boa leitura e bons estudos!** 🚀

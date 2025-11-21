@@ -1,0 +1,62 @@
+# Prefácio {.unnumbered}
+
+## Sobre este Livro
+
+A **confiabilidade** e a **manutenção** de equipamentos e sistemas são pilares fundamentais para a operação eficiente e segura de indústrias em todo o mundo. Com o avanço da coleta de dados, da computação estatística e do aprendizado de máquina, a análise quantitativa de falhas e a otimização de estratégias de manutenção tornaram-se mais acessíveis e poderosas do que nunca.
+
+Este livro tem como objetivo fornecer uma introdução **prática e aplicada** aos conceitos de confiabilidade, análise de dados de falha e modelagem de vida útil, com ênfase no uso da linguagem **R** como ferramenta principal. Ele é direcionado a engenheiros, analistas de dados, gestores de manutenção, estudantes e profissionais que desejam aplicar métodos estatísticos modernos para melhorar a disponibilidade, reduzir custos e otimizar políticas de manutenção.
+
+## Público-Alvo
+
+- **Engenheiros de confiabilidade e manutenção** que buscam ferramentas práticas para análise de dados de falha e otimização de políticas.
+- **Analistas de dados** interessados em aplicar modelos estatísticos e de machine learning em contextos industriais.
+- **Estudantes e pesquisadores** que desejam aprender técnicas de análise de sobrevivência e modelagem de confiabilidade com exemplos reais.
+- **Gestores técnicos** que precisam tomar decisões baseadas em dados para melhorar a performance de ativos.
+
+## Objetivos
+
+Ao final deste livro, o leitor será capaz de:
+
+- Compreender os **conceitos fundamentais** de confiabilidade, disponibilidade e manutenção.
+- Ajustar e interpretar **distribuições de vida útil** (Weibull, exponencial, lognormal) a dados reais.
+- Realizar **análise de sobrevivência** com dados censurados usando técnicas paramétricas e semiparamétricas.
+- Implementar **estratégias de manutenção preventiva e preditiva** com base em dados de sensores e histórico de falhas.
+- Utilizar **simulação Monte Carlo** para avaliar políticas de manutenção sob incerteza.
+- Aplicar boas práticas de **gestão de dados** e reprodutibilidade em projetos de confiabilidade.
+
+## Como Usar este Livro
+
+Este livro é **totalmente reproduzível**. Todos os exemplos de código R estão embutidos nos capítulos e podem ser executados diretamente. Recomendamos que o leitor:
+
+1. **Instale o R e o RStudio** (ou use o VS Code com extensões de R) seguindo as instruções no capítulo de instalação.
+2. **Execute os exemplos** à medida que avança pelos capítulos para consolidar o aprendizado.
+3. **Explore os exercícios** propostos ao final de cada capítulo para praticar os conceitos.
+4. **Utilize os dados de exemplo** fornecidos na pasta `resources/data/` para replicar as análises.
+
+Os capítulos são organizados de forma **progressiva**, começando pelos fundamentos teóricos e avançando para aplicações práticas e estudos de caso. Você pode seguir a ordem proposta ou pular para capítulos específicos de acordo com suas necessidades.
+
+## Ferramentas e Recursos
+
+Este livro foi desenvolvido com:
+
+- **Quarto** — Sistema de publicação científica e técnica que integra código, texto e visualizações.
+- **R** — Linguagem de programação estatística open-source com vasto ecossistema de pacotes.
+- **Pacotes R principais** — `survival`, `flexsurv`, `WeibullR`, `reliability`, `tidyverse`, `ggplot2`, entre outros.
+
+Todos os materiais suplementares, incluindo dados, scripts e recursos adicionais, estão disponíveis no diretório `resources/` do projeto.
+
+## Convenções
+
+- **Código R** é apresentado em blocos destacados e pode ser copiado diretamente.
+- **Figuras e tabelas** são numeradas e referenciadas ao longo do texto.
+- **Exemplos práticos** são marcados com 💡 e **exercícios** com 📝.
+- **Dicas importantes** são destacadas com 🔔.
+
+## Agradecimentos
+
+Este livro é fruto de anos de experiência prática em engenharia de confiabilidade, análise de dados e ensino. Agradeço à comunidade R, aos desenvolvedores de pacotes open-source e a todos que contribuíram com feedback e sugestões ao longo do desenvolvimento deste material.
+
+---
+
+**Rafael da Silva Fernandes**
+*Novembro de 2025*

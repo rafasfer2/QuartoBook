@@ -1,0 +1,172 @@
+# Créditos e Agradecimentos {.unnumbered}
+
+## Autor
+
+**Rafael da Silva Fernandes**
+Engenheiro, Analista de Dados e Entusiasta de R
+
+- 📧 Email: rafael@example.com
+- 💼 LinkedIn: [linkedin.com/in/rafaelfernandes](https://linkedin.com/in/rafaelfernandes)
+- 🐙 GitHub: [github.com/rafaelfernandes](https://github.com/rafaelfernandes)
+
+## Sobre o Autor
+
+Rafael da Silva Fernandes é engenheiro com experiência em análise de confiabilidade, manutenção industrial e ciência de dados. Este livro é fruto de anos de prática aplicando métodos estatísticos para otimização de estratégias de manutenção em ambientes industriais.
+
+## Agradecimentos
+
+Este livro não seria possível sem o apoio e contribuição de diversas pessoas e comunidades:
+
+### Comunidade R
+
+Agradeço à **comunidade R** e aos desenvolvedores dos pacotes open-source que tornaram este trabalho possível:
+
+- **Hadley Wickham** e equipe do `tidyverse`
+- **Terry Therneau** pelo pacote `survival`
+- **Christopher Jackson** pelo `flexsurv`
+- **David Gohel** pelo `officer` e `flextable`
+- Desenvolvedores do **Quarto** e **Posit**
+
+### Revisores e Colaboradores
+
+Agradecimentos especiais a:
+
+- Colegas de trabalho que forneceram feedback valioso
+- Beta readers que testaram os exemplos
+- Comunidade GitHub que reportou issues e sugeriu melhorias
+
+### Instituições
+
+- **Empresas** que forneceram dados anonimizados para estudos de caso
+- **Universidades** que promovem pesquisa em confiabilidade
+- **Comunidades online** (Stack Overflow, RStudio Community, Cross Validated)
+
+### Família
+
+Gratidão à minha família pelo apoio durante o desenvolvimento deste livro.
+
+## Ferramentas Utilizadas
+
+Este livro foi desenvolvido com:
+
+- **Quarto** — Sistema de publicação científica ([quarto.org](https://quarto.org))
+- **R** — Linguagem de programação estatística ([r-project.org](https://www.r-project.org))
+- **RStudio / VS Code** — IDEs para desenvolvimento
+- **GitHub** — Versionamento e colaboração
+- **Git** — Controle de versão
+
+### Pacotes R Principais
+
+```r
+tidyverse      # Manipulação e visualização de dados
+survival       # Análise de sobrevivência
+flexsurv       # Modelos paramétricos flexíveis
+WeibullR       # Análise Weibull
+fitdistrplus   # Ajuste de distribuições
+ggplot2        # Visualizações
+knitr          # Relatórios reproduzíveis
+```
+
+## Licença e Uso
+
+### Conteúdo
+
+Este livro está licenciado sob [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+Você pode:
+- ✅ Compartilhar — copiar e redistribuir
+- ✅ Adaptar — remixar e transformar
+
+Desde que:
+- 📝 Atribua crédito apropriado
+- 🚫 Não use para fins comerciais
+- 🔄 Compartilhe adaptações sob a mesma licença
+
+### Código
+
+Todo o código R apresentado neste livro está licenciado sob [MIT License](https://opensource.org/licenses/MIT) e pode ser usado livremente em projetos pessoais e comerciais.
+
+## Como Citar este Livro
+
+### Formato ABNT
+
+```
+FERNANDES, Rafael da Silva. Confiabilidade e Manutenção: Aplicações em R.
+1. ed. [S.l.]: Publicação Independente, 2025. Disponível em:
+https://seu-site.com/livro. Acesso em: DD mmm. AAAA.
+```
+
+### Formato BibTeX
+
+```bibtex
+@book{fernandes2025confiabilidade,
+  title     = {Confiabilidade e Manutenção: Aplicações em R},
+  author    = {Fernandes, Rafael da Silva},
+  year      = {2025},
+  publisher = {Publicação Independente},
+  url       = {https://seu-site.com/livro},
+  note      = {Acesso em: DD/MM/AAAA}
+}
+```
+
+## Contribuições
+
+Contribuições são bem-vindas! Se você encontrou erros, tem sugestões ou quer contribuir com exemplos:
+
+1. **Reporte issues:** [GitHub Issues](https://github.com/seu-usuario/QuartoBook/issues)
+2. **Envie pull requests:** [GitHub](https://github.com/seu-usuario/QuartoBook)
+3. **Entre em contato:** rafael@example.com
+
+## Changelog
+
+### Versão 1.0 (Novembro 2025)
+
+- ✨ Lançamento inicial
+- 📚 12 capítulos principais
+- 📖 3 apêndices
+- 💻 Exemplos reproduzíveis em R
+- 📊 Estudos de caso industriais
+
+### Planejado para Versões Futuras
+
+- 🔄 Capítulo sobre análise bayesiana
+- 🤖 Machine learning avançado para manutenção preditiva
+- 📱 Aplicações Shiny interativas
+- 🌐 Tradução para inglês
+
+## Feedback
+
+Sua opinião é importante! Se você gostou do livro, encontrou algo útil ou tem sugestões de melhoria:
+
+- ⭐ Deixe uma estrela no [GitHub](https://github.com/seu-usuario/QuartoBook)
+- 💬 Compartilhe nas redes sociais
+- 📧 Envie feedback para rafael@example.com
+- 📝 Escreva uma review
+
+## Recursos Adicionais
+
+### Links Úteis
+
+- [Site do projeto](https://seu-site.com/livro)
+- [Repositório GitHub](https://github.com/seu-usuario/QuartoBook)
+- [Dados de exemplo](https://github.com/seu-usuario/QuartoBook/tree/main/resources/data)
+- [FAQ](https://seu-site.com/livro/faq)
+
+### Redes Sociais
+
+- Twitter/X: [@rafaelfernandes](https://twitter.com/rafaelfernandes)
+- LinkedIn: [Rafael Fernandes](https://linkedin.com/in/rafaelfernandes)
+
+---
+
+**Obrigado por ler!** 🙏
+
+Se este livro foi útil para você, considere:
+- ⭐ Dar uma estrela no GitHub
+- 📢 Compartilhar com colegas
+- 💬 Deixar feedback
+- 🤝 Contribuir com o projeto
+
+---
+
+*Última atualização: Novembro de 2025*
