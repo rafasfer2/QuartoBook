@@ -1,0 +1,51 @@
+{
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.formatOnSave": true,
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+
+  // R Configuration
+  "r.rterm.linux": "/usr/bin/R",
+  "r.bracketedPaste": true,
+  "r.sessionWatcher": true,
+  "r.alwaysUseActiveTerminal": true,
+  "r.rpath.linux": "/usr/bin/R",
+
+  // Quarto Configuration
+  "quarto.render.previewType": "internal",
+  "quarto.path": "/usr/local/bin/quarto",
+
+  "[quarto]": {
+    "editor.defaultFormatter": "quarto.quarto",
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "on"
+  },
+
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "on",
+      "strings": "on",
+      "other": "on"
+    }
+  },
+
+  // Files to exclude from explorer
+  "files.exclude": {
+    "**/.git": true,
+    "**/_book": true,
+    "**/.quarto": true,
+    "**/*_cache": true,
+    "**/*_files": true
+  },
+
+  // Search exclusions
+  "search.exclude": {
+    "**/_book": true,
+    "**/.quarto": true,
+    "**/*_cache": true,
+    "**/*_files": true
+  }
+}
