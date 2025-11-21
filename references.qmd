@@ -1,0 +1,11 @@
+# Referências {.unnumbered}
+
+::: {#refs}
+:::
+
+## Recursos Adicionais
+
+- [Documentação Quarto](https://quarto.org/)
+- [R for Data Science](https://r4ds.hadley.nz/)
+- [Shiny Documentation](https://shiny.posit.co/)
+- [Supabase Documentation](https://supabase.com/docs)

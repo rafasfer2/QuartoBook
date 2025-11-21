@@ -1,0 +1,20 @@
+# Bem-vindo ao SIAM
+
+Este é o livro de documentação e análises do **Sistema Integrado de Atendimento à Mulher (SIAM)**.
+
+## Sobre o Projeto
+
+O SIAM é uma aplicação Shiny desenvolvida em R para gestão integrada de atendimento a mulheres em situação de vulnerabilidade.
+
+## Estrutura deste Livro
+
+Este livro está organizado em capítulos que cobrem:
+
+- Introdução ao sistema
+- Análises e relatórios
+- Documentação técnica
+- Referências
+
+## Como Usar
+
+Navegue pelos capítulos usando o menu lateral. O código R pode ser visualizado clicando em "Show Code".

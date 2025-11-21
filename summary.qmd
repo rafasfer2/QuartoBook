@@ -1,0 +1,59 @@
+# Resumo e Análises {#summary}
+
+## Visão Geral dos Dados
+
+Neste capítulo apresentamos análises descritivas dos dados do SIAM.
+
+```{r}
+#| label: load-data
+#| echo: true
+#| message: false
+
+# Exemplo: carregando dados
+# library(DBI)
+# con <- dbConnect(RSQLite::SQLite(), "database/siam.sqlite")
+# dados <- dbGetQuery(con, "SELECT * FROM cadastro LIMIT 100")
+# dbDisconnect(con)
+
+# Por enquanto, dados de exemplo
+dados_exemplo <- data.frame(
+  mes = month.name[1:12],
+  atendimentos = sample(10:50, 12)
+)
+```
+
+## Atendimentos por Mês
+
+```{r}
+#| label: fig-atendimentos
+#| fig-cap: "Distribuição de atendimentos mensais"
+
+library(ggplot2)
+
+ggplot(dados_exemplo, aes(x = mes, y = atendimentos)) +
+  geom_col(fill = "steelblue") +
+  theme_minimal() +
+  labs(
+    x = "Mês",
+    y = "Número de Atendimentos",
+    title = "Atendimentos por Mês"
+  ) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+## Estatísticas Descritivas
+
+```{r}
+#| label: tbl-stats
+#| tbl-cap: "Estatísticas resumidas dos atendimentos"
+
+library(knitr)
+
+# Criar data frame com estatísticas
+stats_df <- data.frame(
+  Estatística = c("Mínimo", "1º Quartil", "Mediana", "Média", "3º Quartil", "Máximo"),
+  Valor = as.numeric(summary(dados_exemplo$atendimentos))
+)
+
+kable(stats_df, digits = 2)
+```
