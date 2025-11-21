@@ -57,6 +57,52 @@ Figuras, tabelas e equações são numeradas e referenciadas ao longo do texto:
 - **Tabelas:** @tbl-mtbf
 - **Equações:** @eq-confiabilidade
 
+```{r}
+#| label: fig-weibull
+#| fig-cap: "Exemplo de ajuste de distribuição Weibull"
+#| echo: false
+
+set.seed(123)
+library(ggplot2)
+library(dplyr)
+
+# Gerar dados sintéticos de tempos até falha (Weibull)
+n <- 200
+shape <- 2.1
+scale <- 1500
+falhas <- rweibull(n, shape = shape, scale = scale)
+
+df <- tibble(tempo = falhas)
+
+# Estimativa de parâmetros via método dos momentos simples
+weibull_shape_est <- 1 + sqrt(6)/pi * sd(log(df$tempo))
+weibull_scale_est <- exp(mean(log(df$tempo)))
+
+ggplot(df, aes(x = tempo)) +
+	geom_histogram(aes(y = ..density..), bins = 30, fill = "#2E86C1", alpha = 0.6) +
+	stat_function(fun = dweibull, args = list(shape = shape, scale = scale), color = "#E74C3C", size = 1) +
+	labs(x = "Tempo até falha", y = "Densidade") +
+	theme_minimal(base_size = 12)
+```
+
+```{r}
+#| label: tbl-mtbf
+#| tbl-cap: "Exemplo de cálculo de MTBF para três ativos"
+#| echo: false
+library(dplyr)
+
+set.seed(456)
+ativos <- data.frame(
+	Ativo = c("Caminhão A", "Caminhão B", "Caminhão C"),
+	Horas_Operacao = c(4200, 3800, 4500),
+	Falhas = c(7, 9, 6)
+)
+
+ativos <- ativos %>% mutate(MTBF = Horas_Operacao / Falhas)
+
+knitr::kable(ativos, format = "html", digits = 1, col.names = c("Ativo", "Horas de Operação", "Nº Falhas", "MTBF (h)"))
+```
+
 ## Requisitos de Software
 
 Para reproduzir os exemplos deste livro, você precisará de:
