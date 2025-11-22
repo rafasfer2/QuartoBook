@@ -61,12 +61,27 @@ format:
     theme:
       light: flatly
       dark: darkly
+    css: styles.css
     code-fold: true
     code-tools: true
     toc: true
     toc-depth: 3
     number-sections: true
     link-external-newwindow: true
+  pdf:
+    documentclass: book
+    geometry:
+      - top=3cm
+      - bottom=2cm
+      - left=3cm
+      - right=2cm
+    fontfamily: mathptmx
+    fontsize: 12pt
+    linestretch: 1.5
+    indent: true
+    number-sections: true
+    toc: true
+    toc-depth: 3
 
 execute:
   echo: true
