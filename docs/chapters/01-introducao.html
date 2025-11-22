@@ -129,7 +129,20 @@ document.addEventListener('DOMContentLoaded', function() {
   const header = document.getElementById('quarto-header');
   if (header) {
     const title = document.querySelector('title')?.textContent || 'Confiabilidade e Manutenção: Princípios e Prática';
-    header.innerHTML = '<div class="navbar-title">' + title + '</div>';
+    header.innerHTML = `
+      <div class="navbar-container">
+        <div class="quarto-navbar-tools quarto-navbar-tools-start">
+          <a href="#" title="Menu" aria-label="Menu"><i class="bi bi-list"></i></a>
+          <a href="#" title="Buscar" aria-label="Buscar"><i class="bi bi-search"></i></a>
+        </div>
+        <div class="navbar-title">${title}</div>
+        <div class="quarto-navbar-tools quarto-navbar-tools-end">
+          <a href="https://twitter.com" target="_blank" title="Twitter" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+          <a href="https://facebook.com" target="_blank" title="Facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" title="Compartilhar" aria-label="Compartilhar"><i class="bi bi-share"></i></a>
+        </div>
+      </div>
+    `;
   }
 });
 </script>

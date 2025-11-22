@@ -31,9 +31,9 @@ body, html {
 #quarto-sidebar {
   position: fixed !important;
   left: 0 !important;
-  top: 60px !important;
+  top: 0 !important;
   width: var(--sidebar-width) !important;
-  height: calc(100vh - 60px) !important;
+  height: 100vh !important;
   background: var(--color-teal) !important;
   overflow-y: auto;
   z-index: 100;
@@ -68,15 +68,39 @@ body, html {
   z-index: 99 !important;
   display: flex !important;
   align-items: center !important;
-  justify-content: center !important;
+  justify-content: space-between !important;
   padding: 0 2rem !important;
 }
 
 #quarto-header .navbar-title {
-  color: #7A4A4A !important;
+  color: var(--color-teal-dark) !important;
   font-size: 1.2rem !important;
   font-weight: normal !important;
+  flex: 1 !important;
   text-align: center !important;
+}
+
+#quarto-header .navbar-container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+}
+
+#quarto-header .quarto-navbar-tools {
+  display: flex !important;
+  gap: 1rem !important;
+  align-items: center !important;
+}
+
+#quarto-header .quarto-navbar-tools a {
+  color: #999 !important;
+  font-size: 1.2rem !important;
+  text-decoration: none !important;
+}
+
+#quarto-header .quarto-navbar-tools a:hover {
+  color: var(--color-teal) !important;
 }
 
 /* ===== CONTEÚDO CENTRAL ===== */
@@ -104,9 +128,9 @@ main.content {
 #quarto-margin-sidebar {
   position: fixed !important;
   right: 0 !important;
-  top: 60px !important;
+  top: 0 !important;
   width: var(--toc-width) !important;
-  height: calc(100vh - 60px) !important;
+  height: 100vh !important;
   background: var(--color-cream) !important;
   padding: 0.5rem !important;
   margin: 0 !important;
