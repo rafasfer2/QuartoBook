@@ -38,6 +38,7 @@ body, html {
   overflow-y: auto;
   z-index: 100;
   padding: 0.5rem !important;
+  margin: 0 !important;
 }
 
 #quarto-sidebar a,
@@ -59,11 +60,12 @@ body, html {
 body.nav-sidebar {
   padding-left: var(--sidebar-width) !important;
   padding-right: var(--toc-width) !important;
+  margin: 0 !important;
 }
 
 .page-columns {
   margin: 0 !important;
-  padding: 1rem !important;
+  padding: 0.5rem !important;
   max-width: 100% !important;
 }
 
@@ -83,13 +85,14 @@ main.content {
   height: 100vh !important;
   background: var(--color-cream) !important;
   padding: 0.5rem !important;
+  margin: 0 !important;
   overflow-y: auto;
   z-index: 100;
 }
 
 #TOC {
   margin: 0 !important;
-  padding: 0.5rem !important;
+  padding: 0.25rem !important;
 }
 
 #TOC a,
