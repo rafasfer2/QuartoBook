@@ -63,7 +63,12 @@ body, html {
   list-style: none !important;
 }
 
-#quarto-sidebar .sidebar-item > a {
+#quarto-sidebar .sidebar-item-container {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#quarto-sidebar .sidebar-item-container > a {
   display: block !important;
   width: 100% !important;
   padding: 0.75rem 1rem !important;
@@ -75,36 +80,54 @@ body, html {
   border: none !important;
 }
 
-/* Prefácio em destaque dourado (primeiro item sem número) */
-#quarto-sidebar .sidebar-item:nth-child(1) > a {
-  background: #f4d03f !important;
-  color: var(--color-teal-deep) !important;
-}
-
-#quarto-sidebar .sidebar-item:nth-child(1) .sidebar-item-text,
-#quarto-sidebar .sidebar-item:nth-child(1) .chapter-number {
-  color: var(--color-teal-deep) !important;
-}
-
-/* Alternância ímpares (1,3,5...) = branco, pares (2,4,6...) = teal */
-/* Ajuste: conta a partir do 2º item (índice 2) porque o 1º é prefácio */
-#quarto-sidebar .sidebar-item:nth-child(2n) > a {
-  background: #f5f5f5 !important;
-  color: var(--color-teal-dark) !important;
-}
-
-#quarto-sidebar .sidebar-item:nth-child(2n) .sidebar-item-text,
-#quarto-sidebar .sidebar-item:nth-child(2n) .chapter-number {
-  color: var(--color-teal-dark) !important;
-}
-
-#quarto-sidebar .sidebar-item:nth-child(2n+1):not(:first-child) > a {
+/* Todos os itens SEM chapter-number: fundo teal, texto branco */
+#quarto-sidebar .sidebar-item-container > a:not(:has(.chapter-number)) {
   background: var(--color-teal-dark) !important;
   color: white !important;
 }
 
-#quarto-sidebar .sidebar-item:nth-child(2n+1):not(:first-child) .sidebar-item-text,
-#quarto-sidebar .sidebar-item:nth-child(2n+1):not(:first-child) .chapter-number {
+/* Prefácio (preface.html): destaque dourado */
+#quarto-sidebar a[href*="preface"] {
+  background: #f4d03f !important;
+  color: var(--color-teal-deep) !important;
+}
+
+/* Capítulos COM chapter-number: alternância baseada no número */
+/* Capítulos ÍMPARES (1, 3, 5...): fundo branco, texto teal */
+#quarto-sidebar .chapter-number:first-child::before {
+  content: attr(data-chapter);
+}
+
+#quarto-sidebar a:has(.chapter-number) {
+  background: #f5f5f5 !important;
+  color: var(--color-teal-dark) !important;
+}
+
+#quarto-sidebar a:has(.chapter-number) .menu-text,
+#quarto-sidebar a:has(.chapter-number) .chapter-number {
+  color: var(--color-teal-dark) !important;
+}
+
+/* Capítulos PARES (2, 4, 6...): fundo teal, texto branco */
+#quarto-sidebar a[href*="02-"] ,
+#quarto-sidebar a[href*="04-"],
+#quarto-sidebar a[href*="06-"],
+#quarto-sidebar a[href*="08-"],
+#quarto-sidebar a[href*="10-"] {
+  background: var(--color-teal-dark) !important;
+  color: white !important;
+}
+
+#quarto-sidebar a[href*="02-"] .menu-text,
+#quarto-sidebar a[href*="02-"] .chapter-number,
+#quarto-sidebar a[href*="04-"] .menu-text,
+#quarto-sidebar a[href*="04-"] .chapter-number,
+#quarto-sidebar a[href*="06-"] .menu-text,
+#quarto-sidebar a[href*="06-"] .chapter-number,
+#quarto-sidebar a[href*="08-"] .menu-text,
+#quarto-sidebar a[href*="08-"] .chapter-number,
+#quarto-sidebar a[href*="10-"] .menu-text,
+#quarto-sidebar a[href*="10-"] .chapter-number {
   color: white !important;
 }
 
@@ -114,23 +137,14 @@ body, html {
   margin-right: 0.5rem !important;
 }
 
-/* Item ativo: mantém cor de fundo mas negrito extra forte */
-#quarto-sidebar .sidebar-item.active > a,
-#quarto-sidebar li.active > a {
+/* Item ativo: mantém cor de fundo mas negrito 900 */
+#quarto-sidebar .sidebar-link.active {
   font-weight: 900 !important;
 }
 
 /* Hover sutil */
-#quarto-sidebar .sidebar-item:nth-child(2n) > a:hover {
-  background: #e8e8e8 !important;
-}
-
-#quarto-sidebar .sidebar-item:nth-child(2n+1):not(:first-child) > a:hover {
-  background: var(--color-teal-deep) !important;
-}
-
-#quarto-sidebar .sidebar-item:nth-child(1) > a:hover {
-  background: #e6c84f !important;
+#quarto-sidebar .sidebar-item-container > a:hover {
+  opacity: 0.85 !important;
 }
 
 /* ===== CABEÇALHO GLOBAL ===== */
