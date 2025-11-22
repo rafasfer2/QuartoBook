@@ -54,7 +54,7 @@ body, html {
   margin: 0 !important;
 }
 
-/* Reset de espaçamento */
+/* Reset de espaçamento - sem margem entre itens */
 #quarto-sidebar .sidebar-item {
   display: block !important;
   width: 100% !important;
@@ -66,46 +66,46 @@ body, html {
 #quarto-sidebar .sidebar-item > a {
   display: block !important;
   width: 100% !important;
-  padding: 0.8rem 1rem !important;
+  padding: 0.75rem 1rem !important;
   margin: 0 !important;
   font-size: 1rem !important;
-  font-weight: bold !important;
+  font-weight: 600 !important;
   border-radius: 0 !important;
   transition: none !important;
   border: none !important;
 }
 
-/* Alternância de cores: ímpar (teal escuro) e par (branco) */
-#quarto-sidebar .sidebar-item:nth-child(odd) > a {
-  background: var(--color-teal-dark) !important;
-  color: white !important;
-}
-
-#quarto-sidebar .sidebar-item:nth-child(odd) .sidebar-item-text,
-#quarto-sidebar .sidebar-item:nth-child(odd) .chapter-number {
-  color: white !important;
-}
-
-#quarto-sidebar .sidebar-item:nth-child(even) > a {
-  background: white !important;
-  color: var(--color-teal-dark) !important;
-}
-
-#quarto-sidebar .sidebar-item:nth-child(even) .sidebar-item-text,
-#quarto-sidebar .sidebar-item:nth-child(even) .chapter-number {
-  color: var(--color-teal-dark) !important;
-}
-
-/* Prefácio em destaque dourado */
-#quarto-sidebar .sidebar-item:first-child > a,
-#quarto-sidebar .sidebar-item[data-type="preface"] > a {
+/* Prefácio em destaque dourado (primeiro item sem número) */
+#quarto-sidebar .sidebar-item:nth-child(1) > a {
   background: #f4d03f !important;
   color: var(--color-teal-deep) !important;
 }
 
-#quarto-sidebar .sidebar-item:first-child .sidebar-item-text,
-#quarto-sidebar .sidebar-item:first-child .chapter-number {
+#quarto-sidebar .sidebar-item:nth-child(1) .sidebar-item-text,
+#quarto-sidebar .sidebar-item:nth-child(1) .chapter-number {
   color: var(--color-teal-deep) !important;
+}
+
+/* Alternância ímpares (1,3,5...) = branco, pares (2,4,6...) = teal */
+/* Ajuste: conta a partir do 2º item (índice 2) porque o 1º é prefácio */
+#quarto-sidebar .sidebar-item:nth-child(2n) > a {
+  background: #f5f5f5 !important;
+  color: var(--color-teal-dark) !important;
+}
+
+#quarto-sidebar .sidebar-item:nth-child(2n) .sidebar-item-text,
+#quarto-sidebar .sidebar-item:nth-child(2n) .chapter-number {
+  color: var(--color-teal-dark) !important;
+}
+
+#quarto-sidebar .sidebar-item:nth-child(2n+1):not(:first-child) > a {
+  background: var(--color-teal-dark) !important;
+  color: white !important;
+}
+
+#quarto-sidebar .sidebar-item:nth-child(2n+1):not(:first-child) .sidebar-item-text,
+#quarto-sidebar .sidebar-item:nth-child(2n+1):not(:first-child) .chapter-number {
+  color: white !important;
 }
 
 /* Números de capítulo em destaque */
@@ -114,21 +114,23 @@ body, html {
   margin-right: 0.5rem !important;
 }
 
-/* Item ativo com borda esquerda */
+/* Item ativo: mantém cor de fundo mas negrito extra forte */
 #quarto-sidebar .sidebar-item.active > a,
 #quarto-sidebar li.active > a {
-  border-left: 4px solid #d4af37 !important;
-  padding-left: calc(1rem - 4px) !important;
   font-weight: 900 !important;
 }
 
-/* Hover mantém as cores originais mas escurece/clareia ligeiramente */
-#quarto-sidebar .sidebar-item:nth-child(odd) > a:hover {
+/* Hover sutil */
+#quarto-sidebar .sidebar-item:nth-child(2n) > a:hover {
+  background: #e8e8e8 !important;
+}
+
+#quarto-sidebar .sidebar-item:nth-child(2n+1):not(:first-child) > a:hover {
   background: var(--color-teal-deep) !important;
 }
 
-#quarto-sidebar .sidebar-item:nth-child(even) > a:hover {
-  background: #f5f5f5 !important;
+#quarto-sidebar .sidebar-item:nth-child(1) > a:hover {
+  background: #e6c84f !important;
 }
 
 /* ===== CABEÇALHO GLOBAL ===== */
@@ -336,7 +338,7 @@ body.nav-sidebar {
 main.content {
   width: 100% !important;
   max-width: 100% !important;
-  padding: 0 !important;
+  padding: 0 1rem !important;
   margin: 0 !important;
 }
 
