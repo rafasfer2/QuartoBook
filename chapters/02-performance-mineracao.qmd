@@ -15,7 +15,7 @@ O tempo total do ciclo influencia diretamente a produtividade da operação e é
 Como a medição é feita baseado em durações de tempo, os apontamentos são realizados sempre que o caminhão alterar o seu status de operação, estes, que são subdivididos em **4 classes**: apto para operação, liberado pela manutenção, em manutenção ou em parada operacional.
 
 Estas classes exercem um importante direcionamento das responsabilidades de acompanhamento dos indicadores chaves de desempenho (ICDs) e possuem problemas operacionais distintos. Por exemplo, quando o caminhão está:
-Por exemplo, quando o caminhão está:
+
 
 - "apto para operação": equipe de operação responsável e focada no ciclo de carregamento e transporte. Principal desafio: seleção e dimensionamento dos equipamentos. Segundo Mohtasham et al. (2021), relaciona-se à escolha adequada dos equipamentos para manuseio ideal de materiais, resultando em melhoria da produtividade.
 - "liberado pela manutenção": momento imediatamente posterior à execução da manutenção; transição de responsabilidade da manutenção para operação. Um acordo de nível de serviço (ANS) deve ser pré-estabelecido para eficiência na transição.
