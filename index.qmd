@@ -1,6 +1,6 @@
 # Bem-vindo {.unnumbered}
 
-Bem-vindo ao livro **"Confiabilidade e Manutenção: Aplicações em R"**!
+Bem-vindo ao livro **"Confiabilidade e Manutenção: Princípios e Prática"**!
 
 ::: {.callout-note appearance="simple"}
 ## Sobre este Livro

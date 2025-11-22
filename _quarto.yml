@@ -3,9 +3,10 @@ project:
   output-dir: docs
 
 book:
-  title: "Confiabilidade e Manutenção: Aplicações em R"
-  subtitle: "Análise de Dados de Falha, Modelagem de Vida Útil e Estratégias de Manutenção"
-  author: "Rafael da Silva Fernandes"
+  title: "Confiabilidade e Manutenção: Princípios e Prática"
+  author:
+    - name: "Rafael da Silva Fernandes"
+      affiliation: "Universidade Federal de Itajubá"
   date: today
   sidebar:
     style: docked

@@ -112,6 +112,33 @@ body {
   line-height: 1.5;
 }
 
+/* ===== TÍTULO DO LIVRO ===== */
+#title-block-header {
+  background: linear-gradient(135deg, var(--color-teal) 0%, var(--color-teal-dark) 100%) !important;
+  color: white !important;
+  padding: 2rem !important;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+#title-block-header .title {
+  color: white !important;
+  font-size: 2.5rem !important;
+  font-weight: bold !important;
+  margin-bottom: 1rem !important;
+  border: none !important;
+}
+
+#title-block-header .author,
+#title-block-header .affiliation {
+  color: white !important;
+  font-size: 1.2rem !important;
+}
+
+#title-block-header .quarto-title-meta {
+  color: white !important;
+}
+
 h1 {
   color: var(--color-brown-dark);
   border-bottom: 2px solid var(--color-brown);
