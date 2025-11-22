@@ -1,0 +1,152 @@
+/* Custom CSS for QuartoBook - ABNT-like formatting */
+
+/* Body text formatting */
+body {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 12pt;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* Paragraph indentation */
+.quarto-title-block ~ * p,
+.chapter-content p,
+main p {
+  text-indent: 1.25cm;
+  margin-bottom: 0;
+  text-align: justify;
+}
+
+/* Remove indentation from first paragraph after headings */
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p,
+.callout p:first-child {
+  text-indent: 0;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+h1 {
+  font-size: 18pt;
+}
+
+h2 {
+  font-size: 16pt;
+}
+
+h3 {
+  font-size: 14pt;
+}
+
+h4, h5, h6 {
+  font-size: 12pt;
+}
+
+/* Code blocks - maintain monospace */
+pre, code {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: left;
+}
+
+pre p {
+  text-indent: 0;
+}
+
+/* Lists */
+ul, ol {
+  text-align: justify;
+  margin-left: 1.25cm;
+}
+
+li p {
+  text-indent: 0;
+}
+
+/* Block quotes */
+blockquote {
+  margin-left: 4cm;
+  margin-right: 0;
+  font-size: 11pt;
+  text-align: justify;
+}
+
+blockquote p {
+  text-indent: 0;
+}
+
+/* Tables */
+table {
+  font-size: 11pt;
+  margin: 1em auto;
+}
+
+table p {
+  text-indent: 0;
+  text-align: left;
+}
+
+/* Figures */
+figure {
+  text-align: center;
+  margin: 1em 0;
+}
+
+figcaption {
+  font-size: 11pt;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 0.5em;
+}
+
+/* References section */
+#refs {
+  text-align: left;
+}
+
+#refs p {
+  text-indent: 0;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* Callout boxes - no indentation */
+.callout {
+  text-align: left;
+}
+
+.callout p {
+  text-indent: 0;
+}
+
+/* Print-specific adjustments */
+@media print {
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  /* Ensure page breaks */
+  h1, h2 {
+    page-break-after: avoid;
+  }
+
+  figure, table {
+    page-break-inside: avoid;
+  }
+}
