@@ -55,10 +55,12 @@ digraph status {
 
 ## Categoria de Horas {#sec-elementos-suporte}
 
-Categoria de horas corresponde à divisão do tempo em classes de serviços ou condição dos equipamentos, detalhando as horas na execução de atividades de operação e manutenção no equipamento. Para melhor cálculo dos indicadores, os tempos de funcionamento são agrupados em horas dependendo da ocorrência dos eventos e do conjunto de equipamentos que compõe o sistema. Estes podem ser subdivididos em 2 (duas) classes: funcionando e parado, em seguida são classificadas em categorias de horas, que são: horas efetivas (HEF); horas ociosas interna (HOI); horas ociosas externa (HOE); horas manutenção corretiva (HMC); horas preventiva sistemática (HPS) e horas preventiva não sistemática (HPNS). A @fig-categorias-horas ilustra o fluxo de relacionamento entre as categorias de horas:
+Categoria de horas corresponde à divisão do tempo em classes de serviços ou condição dos equipamentos, detalhando as horas na execução de atividades de operação e manutenção no equipamento. Para melhor cálculo dos indicadores, os tempos de funcionamento são agrupados em horas dependendo da ocorrência dos eventos e do conjunto de equipamentos que compõe o sistema.
+No ciclo de processos de transporte, os dados coletados em caminhões "off-highway" são obtidos dos horímetros instalados no sistema de medição e denominados tempos operacionais. A partir daí, estas são apontadas no banco de dados em categorias de horas, que são as: horas efetivas (HEF), horas de atraso operacional (HAO), horas trabalhadas diversas (HTD), horas trabalhadas de infraestrutura (HTI); horas ociosas interna (HOI); horas ociosas externa (HOE); horas de manutenção corretiva (HMC), horas de acidente (HAC); horas preventivas sistemática (MPS) e horas preventivas não sistemática (MPNS). Iremos denominar estes elementos com o tempo de primeiro nível.
+
+A @fig-categorias-horas ilustra o fluxo de relacionamento entre estas categorias:
 
 ![Fluxo de relacionamento entre categorias de horas](../images/figura-categorias-horas.png){#fig-categorias-horas}
-
 
 Para o cálculo de indicadores, é comum realizar a síntese de algumas categorias de horas ou, de outra forma, a junção de horas. Assim, os **elementos de tempo de segundo nível** são:
 
@@ -74,11 +76,16 @@ Por fim, para o **terceiro nível** temos:
 - **Horas em manutenção** (HM = HMC + HAC + MPS + MPNS)
 - **Horas ociosas** (HO)
 
-Em todos os níveis a soma das categorias representam as **horas calendário** (HC), por exemplo, temos que:
+Ao agrupar as categorias de horas em dia, semana, mês ou ano, o valor nominal será dado pela soma da duração de todos os apontamentos, cuja razão esteja configurada para contabilizar esta categoria. Em todos os níveis a soma das categorias representam as **horas calendário** (HC), por exemplo, temos que:
 
 $$
 HC = HT + HM + HO
 $$
+
+A @fig-categorias-horas ilustra o fluxo de relacionamento entre as categorias de horas:
+
+![Fluxo de relacionamento entre categorias de horas](../images/figura-categorias-horas.png){#fig-categorias-horas}
+
 
 ::: {.callout-note}
 ## Legenda das Categorias de Horas
@@ -97,7 +104,7 @@ $$
 
 ## Indicadores Chave de Desempenho (ICD) {#sec-icd}
 
-Desta forma, ao agrupar as categorias de horas em dia, semana, mês ou ano, o valor nominal será dado pela soma da duração de todos os apontamentos, cuja razão esteja configurada para contabilizar esta categoria. Como o principal produto do ciclo de transporte é a **massa transportada (MT)**, este configura-se como elemento quantitativo.
+O principal produto do ciclo de transporte é a **massa transportada (MT)**, este configura-se como elemento quantitativo.
 
 Os ICDs são derivados de elementos de medição, logo, como um elemento pode ser usado nas definições de vários ICDs, é improvável que eles sejam independentes entre si. De acordo com @kang2016, há dois tipos básicos de relacionamento, o primeiro dado pela relação de identidade dos ICDs, baseado em suas definições e, o outro, é a relevância com elementos de suporte compartilhados que podem ser obtidos por comparação aos pares e/ou por agrupamentos em níveis.
 
