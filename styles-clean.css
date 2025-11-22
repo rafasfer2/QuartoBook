@@ -224,6 +224,58 @@ body.theme-night h3 {
   color: var(--color-cyan-light) !important;
 }
 
+/* ===== RODAPÉ ===== */
+#quarto-footer {
+  position: relative !important;
+  background: linear-gradient(135deg, #5DADE2 0%, #3498DB 100%) !important;
+  color: white !important;
+  padding: 1.5rem 2rem !important;
+  margin-top: 3rem !important;
+  font-size: 0.9rem !important;
+  text-align: center !important;
+}
+
+#quarto-footer a {
+  color: white !important;
+  text-decoration: underline !important;
+}
+
+#quarto-footer a:hover {
+  color: #f0f0f0 !important;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-left, .footer-right {
+  flex: 1;
+}
+
+.footer-left {
+  text-align: left;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center !important;
+  }
+  .footer-left, .footer-right {
+    text-align: center !important;
+  }
+}
+
 /* ===== CONTEÚDO CENTRAL ===== */
 body.nav-sidebar {
   padding-left: var(--sidebar-width) !important;
