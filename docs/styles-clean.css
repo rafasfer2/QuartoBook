@@ -31,9 +31,9 @@ body, html {
 #quarto-sidebar {
   position: fixed !important;
   left: 0 !important;
-  top: 0 !important;
+  top: 60px !important;
   width: var(--sidebar-width) !important;
-  height: 100vh !important;
+  height: calc(100vh - 60px) !important;
   background: var(--color-teal) !important;
   overflow-y: auto;
   z-index: 100;
@@ -56,10 +56,34 @@ body, html {
   background: transparent !important;
 }
 
+/* ===== CABEÇALHO GLOBAL ===== */
+#quarto-header {
+  position: fixed !important;
+  top: 0 !important;
+  left: var(--sidebar-width) !important;
+  right: var(--toc-width) !important;
+  height: 60px !important;
+  background: white !important;
+  border-bottom: 1px solid #ddd !important;
+  z-index: 99 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 2rem !important;
+}
+
+#quarto-header .navbar-title {
+  color: #7A4A4A !important;
+  font-size: 1.2rem !important;
+  font-weight: normal !important;
+  text-align: center !important;
+}
+
 /* ===== CONTEÚDO CENTRAL ===== */
 body.nav-sidebar {
   padding-left: var(--sidebar-width) !important;
   padding-right: var(--toc-width) !important;
+  padding-top: 60px !important;
   margin: 0 !important;
 }
 
@@ -80,9 +104,9 @@ main.content {
 #quarto-margin-sidebar {
   position: fixed !important;
   right: 0 !important;
-  top: 0 !important;
+  top: 60px !important;
   width: var(--toc-width) !important;
-  height: 100vh !important;
+  height: calc(100vh - 60px) !important;
   background: var(--color-cream) !important;
   padding: 0.5rem !important;
   margin: 0 !important;

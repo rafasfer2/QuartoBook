@@ -47,6 +47,18 @@ format:
     toc-depth: 3
     number-sections: true
     link-external-newwindow: true
+    page-layout: custom
+    include-in-header:
+      - text: |
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            const header = document.getElementById('quarto-header');
+            if (header) {
+              const title = document.querySelector('title')?.textContent || 'Confiabilidade e Manutenção: Princípios e Prática';
+              header.innerHTML = '<div class="navbar-title">' + title + '</div>';
+            }
+          });
+          </script>
   pdf:
     documentclass: book
     geometry:

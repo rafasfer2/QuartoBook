@@ -64,7 +64,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/02-performance-mineracao.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -103,6 +102,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Procurar"
   }
 }</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const header = document.getElementById('quarto-header');
+  if (header) {
+    const title = document.querySelector('title')?.textContent || 'Confiabilidade e Manutenção: Princípios e Prática';
+    header.innerHTML = '<div class="navbar-title">' + title + '</div>';
+  }
+});
+</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -137,139 +145,14 @@ window.Quarto = {
 <link rel="stylesheet" href="../styles-clean.css">
 </head>
 
-<body class="nav-sidebar docked">
+<body class="nav-sidebar">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/01-introducao.html">Contexto e Aplicação em Mineração</a></li><li class="breadcrumb-item"><a href="../chapters/03-fatores-moderadores.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Fatores Moderadores da Manutenção</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
-</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-layout-custom">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="../">Confiabilidade e Manutenção: Princípios e Prática</a> 
-        <div class="sidebar-tools-main">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo escuro"><i class="bi"></i></a>
-</div>
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Procurar"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bem-vindo</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../preface.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Prefácio</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../requirements.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Como Usar este Livro</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Instalação e Ambiente</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Contexto e Aplicação em Mineração</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/01-introducao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/02-performance-mineracao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Medidas de Performance Operação na Mineração</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/03-fatores-moderadores.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Fatores Moderadores da Manutenção</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Índice</h2>
-   
-  <ul>
-  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução"><span class="header-section-number">3.1</span> Introdução</a></li>
-  <li><a href="#sec-gestao-manutencao" id="toc-sec-gestao-manutencao" class="nav-link" data-scroll-target="#sec-gestao-manutencao"><span class="header-section-number">3.2</span> Gestão da Manutenção</a>
-  <ul class="collapse">
-  <li><a href="#estrutura-organizacional" id="toc-estrutura-organizacional" class="nav-link" data-scroll-target="#estrutura-organizacional"><span class="header-section-number">3.2.1</span> Estrutura Organizacional</a></li>
-  <li><a href="#sistemas-de-informação" id="toc-sistemas-de-informação" class="nav-link" data-scroll-target="#sistemas-de-informação"><span class="header-section-number">3.2.2</span> Sistemas de Informação</a></li>
-  <li><a href="#gestão-de-estoque-de-peças" id="toc-gestão-de-estoque-de-peças" class="nav-link" data-scroll-target="#gestão-de-estoque-de-peças"><span class="header-section-number">3.2.3</span> Gestão de Estoque de Peças</a></li>
-  <li><a href="#capacitação-da-equipe" id="toc-capacitação-da-equipe" class="nav-link" data-scroll-target="#capacitação-da-equipe"><span class="header-section-number">3.2.4</span> Capacitação da Equipe</a></li>
-  </ul></li>
-  <li><a href="#sec-analise-dados-recorrentes" id="toc-sec-analise-dados-recorrentes" class="nav-link" data-scroll-target="#sec-analise-dados-recorrentes"><span class="header-section-number">3.3</span> Análise de Dados Recorrentes</a>
-  <ul class="collapse">
-  <li><a href="#eventos-recorrentes-em-manutenção" id="toc-eventos-recorrentes-em-manutenção" class="nav-link" data-scroll-target="#eventos-recorrentes-em-manutenção"><span class="header-section-number">3.3.1</span> Eventos Recorrentes em Manutenção</a></li>
-  <li><a href="#modelagem-de-processos-recorrentes" id="toc-modelagem-de-processos-recorrentes" class="nav-link" data-scroll-target="#modelagem-de-processos-recorrentes"><span class="header-section-number">3.3.2</span> Modelagem de Processos Recorrentes</a></li>
-  <li><a href="#tipos-de-reparo" id="toc-tipos-de-reparo" class="nav-link" data-scroll-target="#tipos-de-reparo"><span class="header-section-number">3.3.3</span> Tipos de Reparo</a></li>
-  <li><a href="#estimação-de-parâmetros" id="toc-estimação-de-parâmetros" class="nav-link" data-scroll-target="#estimação-de-parâmetros"><span class="header-section-number">3.3.4</span> Estimação de Parâmetros</a></li>
-  </ul></li>
-  <li><a href="#sec-politica-preventiva" id="toc-sec-politica-preventiva" class="nav-link" data-scroll-target="#sec-politica-preventiva"><span class="header-section-number">3.4</span> Política de Manutenção Preventiva Periódica</a>
-  <ul class="collapse">
-  <li><a href="#conceito" id="toc-conceito" class="nav-link" data-scroll-target="#conceito"><span class="header-section-number">3.4.1</span> Conceito</a></li>
-  <li><a href="#sec-disponibilidade-mantenabilidade" id="toc-sec-disponibilidade-mantenabilidade" class="nav-link" data-scroll-target="#sec-disponibilidade-mantenabilidade"><span class="header-section-number">3.4.2</span> Disponibilidade e Mantenabilidade</a></li>
-  <li><a href="#sec-periodicidade-otima" id="toc-sec-periodicidade-otima" class="nav-link" data-scroll-target="#sec-periodicidade-otima"><span class="header-section-number">3.4.3</span> Confiabilidade e Periodicidade Ótima</a></li>
-  </ul></li>
-  <li><a href="#sec-medidas-performance" id="toc-sec-medidas-performance" class="nav-link" data-scroll-target="#sec-medidas-performance"><span class="header-section-number">3.5</span> Medidas de Performance da Manutenção</a>
-  <ul class="collapse">
-  <li><a href="#conceito-de-impacto" id="toc-conceito-de-impacto" class="nav-link" data-scroll-target="#conceito-de-impacto"><span class="header-section-number">3.5.1</span> Conceito de Impacto</a></li>
-  <li><a href="#sec-impacto-corretivas" id="toc-sec-impacto-corretivas" class="nav-link" data-scroll-target="#sec-impacto-corretivas"><span class="header-section-number">3.5.2</span> Mensuração de Impacto na Incidência de Corretivas</a></li>
-  <li><a href="#sec-impacto-disponibilidade" id="toc-sec-impacto-disponibilidade" class="nav-link" data-scroll-target="#sec-impacto-disponibilidade"><span class="header-section-number">3.5.3</span> Mensuração de Impacto na Disponibilidade</a></li>
-  </ul></li>
-  <li><a href="#resumo" id="toc-resumo" class="nav-link" data-scroll-target="#resumo"><span class="header-section-number">3.6</span> Resumo</a></li>
-  </ul>
-</nav>
-    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/01-introducao.html">Contexto e Aplicação em Mineração</a></li><li class="breadcrumb-item"><a href="../chapters/03-fatores-moderadores.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Fatores Moderadores da Manutenção</span></a></li></ol></nav>
 <div class="quarto-title">
@@ -289,18 +172,51 @@ window.Quarto = {
 
 </header>
 
-
+<nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#introdução" id="toc-introdução"><span class="header-section-number">3.1</span> Introdução</a></li>
+  <li><a href="#sec-gestao-manutencao" id="toc-sec-gestao-manutencao"><span class="header-section-number">3.2</span> Gestão da Manutenção</a>
+  <ul>
+  <li><a href="#estrutura-organizacional" id="toc-estrutura-organizacional"><span class="header-section-number">3.2.1</span> Estrutura Organizacional</a></li>
+  <li><a href="#sistemas-de-informação" id="toc-sistemas-de-informação"><span class="header-section-number">3.2.2</span> Sistemas de Informação</a></li>
+  <li><a href="#gestão-de-estoque-de-peças" id="toc-gestão-de-estoque-de-peças"><span class="header-section-number">3.2.3</span> Gestão de Estoque de Peças</a></li>
+  <li><a href="#capacitação-da-equipe" id="toc-capacitação-da-equipe"><span class="header-section-number">3.2.4</span> Capacitação da Equipe</a></li>
+  </ul></li>
+  <li><a href="#sec-analise-dados-recorrentes" id="toc-sec-analise-dados-recorrentes"><span class="header-section-number">3.3</span> Análise de Dados Recorrentes</a>
+  <ul>
+  <li><a href="#eventos-recorrentes-em-manutenção" id="toc-eventos-recorrentes-em-manutenção"><span class="header-section-number">3.3.1</span> Eventos Recorrentes em Manutenção</a></li>
+  <li><a href="#modelagem-de-processos-recorrentes" id="toc-modelagem-de-processos-recorrentes"><span class="header-section-number">3.3.2</span> Modelagem de Processos Recorrentes</a></li>
+  <li><a href="#tipos-de-reparo" id="toc-tipos-de-reparo"><span class="header-section-number">3.3.3</span> Tipos de Reparo</a></li>
+  <li><a href="#estimação-de-parâmetros" id="toc-estimação-de-parâmetros"><span class="header-section-number">3.3.4</span> Estimação de Parâmetros</a></li>
+  </ul></li>
+  <li><a href="#sec-politica-preventiva" id="toc-sec-politica-preventiva"><span class="header-section-number">3.4</span> Política de Manutenção Preventiva Periódica</a>
+  <ul>
+  <li><a href="#conceito" id="toc-conceito"><span class="header-section-number">3.4.1</span> Conceito</a></li>
+  <li><a href="#sec-disponibilidade-mantenabilidade" id="toc-sec-disponibilidade-mantenabilidade"><span class="header-section-number">3.4.2</span> Disponibilidade e Mantenabilidade</a></li>
+  <li><a href="#sec-periodicidade-otima" id="toc-sec-periodicidade-otima"><span class="header-section-number">3.4.3</span> Confiabilidade e Periodicidade Ótima</a></li>
+  </ul></li>
+  <li><a href="#sec-medidas-performance" id="toc-sec-medidas-performance"><span class="header-section-number">3.5</span> Medidas de Performance da Manutenção</a>
+  <ul>
+  <li><a href="#conceito-de-impacto" id="toc-conceito-de-impacto"><span class="header-section-number">3.5.1</span> Conceito de Impacto</a></li>
+  <li><a href="#sec-impacto-corretivas" id="toc-sec-impacto-corretivas"><span class="header-section-number">3.5.2</span> Mensuração de Impacto na Incidência de Corretivas</a></li>
+  <li><a href="#sec-impacto-disponibilidade" id="toc-sec-impacto-disponibilidade"><span class="header-section-number">3.5.3</span> Mensuração de Impacto na Disponibilidade</a></li>
+  </ul></li>
+  <li><a href="#resumo" id="toc-resumo"><span class="header-section-number">3.6</span> Resumo</a></li>
+  </ul>
+</nav>
 <section id="introdução" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="introdução"><span class="header-section-number">3.1</span> Introdução</h2>
+<h2 data-number="3.1" data-anchor-id="introdução"><span class="header-section-number">3.1</span> Introdução</h2>
 <p>A efetividade das estratégias de manutenção não depende apenas da sua execução técnica, mas também de diversos fatores moderadores que influenciam os resultados. Este capítulo examina os principais fatores que afetam o desempenho da manutenção em caminhões fora de estrada.</p>
 </section>
 <section id="sec-gestao-manutencao" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="sec-gestao-manutencao"><span class="header-section-number">3.2</span> Gestão da Manutenção</h2>
+<h2 data-number="3.2" data-anchor-id="sec-gestao-manutencao"><span class="header-section-number">3.2</span> Gestão da Manutenção</h2>
 <section id="estrutura-organizacional" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="estrutura-organizacional"><span class="header-section-number">3.2.1</span> Estrutura Organizacional</h3>
+<h3 data-number="3.2.1" data-anchor-id="estrutura-organizacional"><span class="header-section-number">3.2.1</span> Estrutura Organizacional</h3>
 <p>A organização da função de manutenção impacta diretamente a efetividade:</p>
 <section id="modelos-de-gestão" class="level4" data-number="3.2.1.1">
-<h4 data-number="3.2.1.1" class="anchored" data-anchor-id="modelos-de-gestão"><span class="header-section-number">3.2.1.1</span> Modelos de Gestão</h4>
+<h4 data-number="3.2.1.1" data-anchor-id="modelos-de-gestão"><span class="header-section-number">3.2.1.1</span> Modelos de Gestão</h4>
 <ol type="1">
 <li><strong>Manutenção Centralizada</strong>
 <ul>
@@ -324,9 +240,9 @@ window.Quarto = {
 </section>
 </section>
 <section id="sistemas-de-informação" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="sistemas-de-informação"><span class="header-section-number">3.2.2</span> Sistemas de Informação</h3>
+<h3 data-number="3.2.2" data-anchor-id="sistemas-de-informação"><span class="header-section-number">3.2.2</span> Sistemas de Informação</h3>
 <section id="cmms-computerized-maintenance-management-system" class="level4" data-number="3.2.2.1">
-<h4 data-number="3.2.2.1" class="anchored" data-anchor-id="cmms-computerized-maintenance-management-system"><span class="header-section-number">3.2.2.1</span> CMMS (Computerized Maintenance Management System)</h4>
+<h4 data-number="3.2.2.1" data-anchor-id="cmms-computerized-maintenance-management-system"><span class="header-section-number">3.2.2.1</span> CMMS (Computerized Maintenance Management System)</h4>
 <p>Funcionalidades essenciais:</p>
 <ul>
 <li><strong>Gestão de ordens de serviço</strong>: Criação, priorização, atribuição, fechamento</li>
@@ -338,9 +254,9 @@ window.Quarto = {
 </section>
 </section>
 <section id="gestão-de-estoque-de-peças" class="level3" data-number="3.2.3">
-<h3 data-number="3.2.3" class="anchored" data-anchor-id="gestão-de-estoque-de-peças"><span class="header-section-number">3.2.3</span> Gestão de Estoque de Peças</h3>
+<h3 data-number="3.2.3" data-anchor-id="gestão-de-estoque-de-peças"><span class="header-section-number">3.2.3</span> Gestão de Estoque de Peças</h3>
 <section id="classificação-abc" class="level4" data-number="3.2.3.1">
-<h4 data-number="3.2.3.1" class="anchored" data-anchor-id="classificação-abc"><span class="header-section-number">3.2.3.1</span> Classificação ABC</h4>
+<h4 data-number="3.2.3.1" data-anchor-id="classificação-abc"><span class="header-section-number">3.2.3.1</span> Classificação ABC</h4>
 <p>Classificação de itens por valor e criticidade:</p>
 <ul>
 <li><strong>Classe A (20% dos itens, 80% do valor)</strong>
@@ -363,7 +279,7 @@ window.Quarto = {
 </ul>
 </section>
 <section id="estratégias-de-estoque" class="level4" data-number="3.2.3.2">
-<h4 data-number="3.2.3.2" class="anchored" data-anchor-id="estratégias-de-estoque"><span class="header-section-number">3.2.3.2</span> Estratégias de Estoque</h4>
+<h4 data-number="3.2.3.2" data-anchor-id="estratégias-de-estoque"><span class="header-section-number">3.2.3.2</span> Estratégias de Estoque</h4>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -397,7 +313,7 @@ window.Quarto = {
 </section>
 </section>
 <section id="capacitação-da-equipe" class="level3" data-number="3.2.4">
-<h3 data-number="3.2.4" class="anchored" data-anchor-id="capacitação-da-equipe"><span class="header-section-number">3.2.4</span> Capacitação da Equipe</h3>
+<h3 data-number="3.2.4" data-anchor-id="capacitação-da-equipe"><span class="header-section-number">3.2.4</span> Capacitação da Equipe</h3>
 <p>Competências essenciais:</p>
 <ol type="1">
 <li><strong>Técnicas</strong>: Diagnóstico, reparo, uso de ferramentas especializadas</li>
@@ -408,9 +324,9 @@ window.Quarto = {
 </section>
 </section>
 <section id="sec-analise-dados-recorrentes" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="sec-analise-dados-recorrentes"><span class="header-section-number">3.3</span> Análise de Dados Recorrentes</h2>
+<h2 data-number="3.3" data-anchor-id="sec-analise-dados-recorrentes"><span class="header-section-number">3.3</span> Análise de Dados Recorrentes</h2>
 <section id="eventos-recorrentes-em-manutenção" class="level3" data-number="3.3.1">
-<h3 data-number="3.3.1" class="anchored" data-anchor-id="eventos-recorrentes-em-manutenção"><span class="header-section-number">3.3.1</span> Eventos Recorrentes em Manutenção</h3>
+<h3 data-number="3.3.1" data-anchor-id="eventos-recorrentes-em-manutenção"><span class="header-section-number">3.3.1</span> Eventos Recorrentes em Manutenção</h3>
 <p>Diferente de análises de confiabilidade tradicionais que consideram tempo até primeira falha, a manutenção de equipamentos envolve <strong>eventos recorrentes</strong>:</p>
 <ul>
 <li>Múltiplas falhas do mesmo tipo</li>
@@ -419,9 +335,9 @@ window.Quarto = {
 </ul>
 </section>
 <section id="modelagem-de-processos-recorrentes" class="level3" data-number="3.3.2">
-<h3 data-number="3.3.2" class="anchored" data-anchor-id="modelagem-de-processos-recorrentes"><span class="header-section-number">3.3.2</span> Modelagem de Processos Recorrentes</h3>
+<h3 data-number="3.3.2" data-anchor-id="modelagem-de-processos-recorrentes"><span class="header-section-number">3.3.2</span> Modelagem de Processos Recorrentes</h3>
 <section id="processo-de-poisson-homogêneo-hpp" class="level4" data-number="3.3.2.1">
-<h4 data-number="3.3.2.1" class="anchored" data-anchor-id="processo-de-poisson-homogêneo-hpp"><span class="header-section-number">3.3.2.1</span> Processo de Poisson Homogêneo (HPP)</h4>
+<h4 data-number="3.3.2.1" data-anchor-id="processo-de-poisson-homogêneo-hpp"><span class="header-section-number">3.3.2.1</span> Processo de Poisson Homogêneo (HPP)</h4>
 <p>Assume taxa de falha constante:</p>
 <p><span class="math display">\[
 \lambda(t) = \lambda
@@ -433,13 +349,13 @@ window.Quarto = {
 <p><strong>Limitação</strong>: Não captura envelhecimento ou melhoria após reparos.</p>
 </section>
 <section id="processo-de-poisson-não-homogêneo-nhpp" class="level4" data-number="3.3.2.2">
-<h4 data-number="3.3.2.2" class="anchored" data-anchor-id="processo-de-poisson-não-homogêneo-nhpp"><span class="header-section-number">3.3.2.2</span> Processo de Poisson Não-Homogêneo (NHPP)</h4>
+<h4 data-number="3.3.2.2" data-anchor-id="processo-de-poisson-não-homogêneo-nhpp"><span class="header-section-number">3.3.2.2</span> Processo de Poisson Não-Homogêneo (NHPP)</h4>
 <p>Permite taxa de falha variável no tempo:</p>
 <p><span class="math display">\[
 \Lambda(t) = \int_0^t \lambda(s) \, ds
 \]</span></p>
 <section id="modelo-de-lei-de-potência-power-law-process" class="level5" data-number="3.3.2.2.1">
-<h5 data-number="3.3.2.2.1" class="anchored" data-anchor-id="modelo-de-lei-de-potência-power-law-process"><span class="header-section-number">3.3.2.2.1</span> Modelo de Lei de Potência (Power Law Process)</h5>
+<h5 data-number="3.3.2.2.1" data-anchor-id="modelo-de-lei-de-potência-power-law-process"><span class="header-section-number">3.3.2.2.1</span> Modelo de Lei de Potência (Power Law Process)</h5>
 <p><span class="math display">\[
 \lambda(t) = \frac{\beta}{\eta} \left(\frac{t}{\eta}\right)^{\beta-1}
 \]</span></p>
@@ -486,7 +402,7 @@ window.Quarto = {
 <span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-nhpp-taxa" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-nhpp-taxa" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-nhpp-taxa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="03-fatores-moderadores_files/figure-html/fig-nhpp-taxa-1.png" class="img-fluid figure-img" width="672">
@@ -502,9 +418,9 @@ Figura&nbsp;3.1: Função de taxa de falha do NHPP para diferentes valores de β
 </section>
 </section>
 <section id="tipos-de-reparo" class="level3" data-number="3.3.3">
-<h3 data-number="3.3.3" class="anchored" data-anchor-id="tipos-de-reparo"><span class="header-section-number">3.3.3</span> Tipos de Reparo</h3>
+<h3 data-number="3.3.3" data-anchor-id="tipos-de-reparo"><span class="header-section-number">3.3.3</span> Tipos de Reparo</h3>
 <section id="reparo-mínimo-minimal-repair" class="level4" data-number="3.3.3.1">
-<h4 data-number="3.3.3.1" class="anchored" data-anchor-id="reparo-mínimo-minimal-repair"><span class="header-section-number">3.3.3.1</span> Reparo Mínimo (Minimal Repair)</h4>
+<h4 data-number="3.3.3.1" data-anchor-id="reparo-mínimo-minimal-repair"><span class="header-section-number">3.3.3.1</span> Reparo Mínimo (Minimal Repair)</h4>
 <ul>
 <li>Restaura equipamento à condição imediatamente anterior à falha</li>
 <li>Não altera a taxa de falha subsequente</li>
@@ -512,7 +428,7 @@ Figura&nbsp;3.1: Função de taxa de falha do NHPP para diferentes valores de β
 </ul>
 </section>
 <section id="reparo-perfeito-perfect-repair" class="level4" data-number="3.3.3.2">
-<h4 data-number="3.3.3.2" class="anchored" data-anchor-id="reparo-perfeito-perfect-repair"><span class="header-section-number">3.3.3.2</span> Reparo Perfeito (Perfect Repair)</h4>
+<h4 data-number="3.3.3.2" data-anchor-id="reparo-perfeito-perfect-repair"><span class="header-section-number">3.3.3.2</span> Reparo Perfeito (Perfect Repair)</h4>
 <ul>
 <li>Restaura equipamento a condição “como novo”</li>
 <li>Reinicia o processo de envelhecimento</li>
@@ -520,7 +436,7 @@ Figura&nbsp;3.1: Função de taxa de falha do NHPP para diferentes valores de β
 </ul>
 </section>
 <section id="reparo-imperfeito-imperfect-repair" class="level4" data-number="3.3.3.3">
-<h4 data-number="3.3.3.3" class="anchored" data-anchor-id="reparo-imperfeito-imperfect-repair"><span class="header-section-number">3.3.3.3</span> Reparo Imperfeito (Imperfect Repair)</h4>
+<h4 data-number="3.3.3.3" data-anchor-id="reparo-imperfeito-imperfect-repair"><span class="header-section-number">3.3.3.3</span> Reparo Imperfeito (Imperfect Repair)</h4>
 <ul>
 <li>Melhora condição, mas não totalmente</li>
 <li>Redução parcial da idade efetiva</li>
@@ -529,9 +445,9 @@ Figura&nbsp;3.1: Função de taxa de falha do NHPP para diferentes valores de β
 </section>
 </section>
 <section id="estimação-de-parâmetros" class="level3" data-number="3.3.4">
-<h3 data-number="3.3.4" class="anchored" data-anchor-id="estimação-de-parâmetros"><span class="header-section-number">3.3.4</span> Estimação de Parâmetros</h3>
+<h3 data-number="3.3.4" data-anchor-id="estimação-de-parâmetros"><span class="header-section-number">3.3.4</span> Estimação de Parâmetros</h3>
 <section id="método-de-máxima-verossimilhança" class="level4" data-number="3.3.4.1">
-<h4 data-number="3.3.4.1" class="anchored" data-anchor-id="método-de-máxima-verossimilhança"><span class="header-section-number">3.3.4.1</span> Método de Máxima Verossimilhança</h4>
+<h4 data-number="3.3.4.1" data-anchor-id="método-de-máxima-verossimilhança"><span class="header-section-number">3.3.4.1</span> Método de Máxima Verossimilhança</h4>
 <p>Para NHPP com Lei de Potência, dados <span class="math inline">\(n\)</span> eventos nos tempos <span class="math inline">\(t_1, t_2, \ldots, t_n\)</span> em um período <span class="math inline">\([0, T]\)</span>:</p>
 <p>Log-verossimilhança:</p>
 <p><span class="math display">\[
@@ -616,16 +532,16 @@ Interpretação: β &gt; 1 indica DETERIORAÇÃO (taxa crescente)</code></pre>
 </section>
 </section>
 <section id="sec-politica-preventiva" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="sec-politica-preventiva"><span class="header-section-number">3.4</span> Política de Manutenção Preventiva Periódica</h2>
+<h2 data-number="3.4" data-anchor-id="sec-politica-preventiva"><span class="header-section-number">3.4</span> Política de Manutenção Preventiva Periódica</h2>
 <section id="conceito" class="level3" data-number="3.4.1">
-<h3 data-number="3.4.1" class="anchored" data-anchor-id="conceito"><span class="header-section-number">3.4.1</span> Conceito</h3>
+<h3 data-number="3.4.1" data-anchor-id="conceito"><span class="header-section-number">3.4.1</span> Conceito</h3>
 <p>Manutenção preventiva periódica consiste em intervenções programadas em intervalos fixos de tempo ou uso, independentemente da condição do equipamento.</p>
 <p><strong>Objetivos:</strong> - Reduzir probabilidade de falhas - Aumentar vida útil de componentes - Melhorar previsibilidade operacional</p>
 </section>
 <section id="sec-disponibilidade-mantenabilidade" class="level3" data-number="3.4.2">
-<h3 data-number="3.4.2" class="anchored" data-anchor-id="sec-disponibilidade-mantenabilidade"><span class="header-section-number">3.4.2</span> Disponibilidade e Mantenabilidade</h3>
+<h3 data-number="3.4.2" data-anchor-id="sec-disponibilidade-mantenabilidade"><span class="header-section-number">3.4.2</span> Disponibilidade e Mantenabilidade</h3>
 <section id="disponibilidade" class="level4" data-number="3.4.2.1">
-<h4 data-number="3.4.2.1" class="anchored" data-anchor-id="disponibilidade"><span class="header-section-number">3.4.2.1</span> Disponibilidade</h4>
+<h4 data-number="3.4.2.1" data-anchor-id="disponibilidade"><span class="header-section-number">3.4.2.1</span> Disponibilidade</h4>
 <p>A disponibilidade <span class="math inline">\(A\)</span> é a fração do tempo em que o equipamento está disponível para operar:</p>
 <p><span class="math display">\[
 A = \frac{MTBF}{MTBF + MTTR}
@@ -636,7 +552,7 @@ A = \frac{Tempo_{Operando} + Tempo_{Espera}}{Tempo_{Total}}
 \]</span></p>
 </section>
 <section id="mantenabilidade" class="level4" data-number="3.4.2.2">
-<h4 data-number="3.4.2.2" class="anchored" data-anchor-id="mantenabilidade"><span class="header-section-number">3.4.2.2</span> Mantenabilidade</h4>
+<h4 data-number="3.4.2.2" data-anchor-id="mantenabilidade"><span class="header-section-number">3.4.2.2</span> Mantenabilidade</h4>
 <p>Mantenabilidade <span class="math inline">\(M(t)\)</span> é a probabilidade de que um reparo seja completado no tempo <span class="math inline">\(t\)</span>:</p>
 <p><span class="math display">\[
 M(t) = P(T_{reparo} \leq t)
@@ -648,7 +564,7 @@ M(t) = 1 - e^{-\mu t}
 <p>Onde <span class="math inline">\(\mu = 1/MTTR\)</span> é a taxa de reparo.</p>
 </section>
 <section id="relação-com-manutenção-preventiva" class="level4" data-number="3.4.2.3">
-<h4 data-number="3.4.2.3" class="anchored" data-anchor-id="relação-com-manutenção-preventiva"><span class="header-section-number">3.4.2.3</span> Relação com Manutenção Preventiva</h4>
+<h4 data-number="3.4.2.3" data-anchor-id="relação-com-manutenção-preventiva"><span class="header-section-number">3.4.2.3</span> Relação com Manutenção Preventiva</h4>
 <p>Manutenções preventivas afetam:</p>
 <ul>
 <li><strong>MTBF</strong>: Pode aumentar ao prevenir falhas</li>
@@ -658,9 +574,9 @@ M(t) = 1 - e^{-\mu t}
 </section>
 </section>
 <section id="sec-periodicidade-otima" class="level3" data-number="3.4.3">
-<h3 data-number="3.4.3" class="anchored" data-anchor-id="sec-periodicidade-otima"><span class="header-section-number">3.4.3</span> Confiabilidade e Periodicidade Ótima</h3>
+<h3 data-number="3.4.3" data-anchor-id="sec-periodicidade-otima"><span class="header-section-number">3.4.3</span> Confiabilidade e Periodicidade Ótima</h3>
 <section id="função-objetivo" class="level4" data-number="3.4.3.1">
-<h4 data-number="3.4.3.1" class="anchored" data-anchor-id="função-objetivo"><span class="header-section-number">3.4.3.1</span> Função Objetivo</h4>
+<h4 data-number="3.4.3.1" data-anchor-id="função-objetivo"><span class="header-section-number">3.4.3.1</span> Função Objetivo</h4>
 <p>A periodicidade ótima da preventiva minimiza custos ou maximiza disponibilidade.</p>
 <p><strong>Custo total por unidade de tempo:</strong></p>
 <p><span class="math display">\[
@@ -669,7 +585,7 @@ C(T_p) = \frac{C_p \cdot R(T_p) + C_f \cdot [1 - R(T_p)]}{\int_0^{T_p} R(t) \, d
 <p>Onde: - <span class="math inline">\(C_p\)</span>: Custo da preventiva - <span class="math inline">\(C_f\)</span>: Custo da falha (corretiva) - <span class="math inline">\(R(T_p)\)</span>: Confiabilidade no intervalo <span class="math inline">\(T_p\)</span> - Denominador: Tempo médio de ciclo</p>
 </section>
 <section id="condição-de-otimalidade" class="level4" data-number="3.4.3.2">
-<h4 data-number="3.4.3.2" class="anchored" data-anchor-id="condição-de-otimalidade"><span class="header-section-number">3.4.3.2</span> Condição de Otimalidade</h4>
+<h4 data-number="3.4.3.2" data-anchor-id="condição-de-otimalidade"><span class="header-section-number">3.4.3.2</span> Condição de Otimalidade</h4>
 <p>A derivada deve ser zero:</p>
 <p><span class="math display">\[
 \frac{d C(T_p)}{d T_p} = 0
@@ -681,7 +597,7 @@ C(T_p) = \frac{C_p \cdot R(T_p) + C_f \cdot [1 - R(T_p)]}{\int_0^{T_p} R(t) \, d
 <p>Onde <span class="math inline">\(h(t) = \lambda(t)\)</span> é a taxa de falha.</p>
 </section>
 <section id="algoritmo-de-busca" class="level4" data-number="3.4.3.3">
-<h4 data-number="3.4.3.3" class="anchored" data-anchor-id="algoritmo-de-busca"><span class="header-section-number">3.4.3.3</span> Algoritmo de Busca</h4>
+<h4 data-number="3.4.3.3" data-anchor-id="algoritmo-de-busca"><span class="header-section-number">3.4.3.3</span> Algoritmo de Busca</h4>
 <div class="cell">
 <details class="code-fold">
 <summary>Código</summary>
@@ -758,7 +674,7 @@ C(T_p) = \frac{C_p \cdot R(T_p) + C_f \cdot [1 - R(T_p)]}{\int_0^{T_p} R(t) \, d
 </div>
 </section>
 <section id="sensibilidade-aos-parâmetros" class="level4" data-number="3.4.3.4">
-<h4 data-number="3.4.3.4" class="anchored" data-anchor-id="sensibilidade-aos-parâmetros"><span class="header-section-number">3.4.3.4</span> Sensibilidade aos Parâmetros</h4>
+<h4 data-number="3.4.3.4" data-anchor-id="sensibilidade-aos-parâmetros"><span class="header-section-number">3.4.3.4</span> Sensibilidade aos Parâmetros</h4>
 <p>O intervalo ótimo é sensível a:</p>
 <ol type="1">
 <li><strong>Razão de custos <span class="math inline">\(C_f/C_p\)</span></strong>: Maior razão → intervalos mais curtos</li>
@@ -773,9 +689,9 @@ C(T_p) = \frac{C_p \cdot R(T_p) + C_f \cdot [1 - R(T_p)]}{\int_0^{T_p} R(t) \, d
 </section>
 </section>
 <section id="sec-medidas-performance" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="sec-medidas-performance"><span class="header-section-number">3.5</span> Medidas de Performance da Manutenção</h2>
+<h2 data-number="3.5" data-anchor-id="sec-medidas-performance"><span class="header-section-number">3.5</span> Medidas de Performance da Manutenção</h2>
 <section id="conceito-de-impacto" class="level3" data-number="3.5.1">
-<h3 data-number="3.5.1" class="anchored" data-anchor-id="conceito-de-impacto"><span class="header-section-number">3.5.1</span> Conceito de Impacto</h3>
+<h3 data-number="3.5.1" data-anchor-id="conceito-de-impacto"><span class="header-section-number">3.5.1</span> Conceito de Impacto</h3>
 <p>Avaliar a efetividade da manutenção preventiva requer comparar cenários:</p>
 <ul>
 <li><strong>Com preventiva</strong> vs.&nbsp;<strong>Sem preventiva</strong></li>
@@ -784,15 +700,15 @@ C(T_p) = \frac{C_p \cdot R(T_p) + C_f \cdot [1 - R(T_p)]}{\int_0^{T_p} R(t) \, d
 </ul>
 </section>
 <section id="sec-impacto-corretivas" class="level3" data-number="3.5.2">
-<h3 data-number="3.5.2" class="anchored" data-anchor-id="sec-impacto-corretivas"><span class="header-section-number">3.5.2</span> Mensuração de Impacto na Incidência de Corretivas</h3>
+<h3 data-number="3.5.2" data-anchor-id="sec-impacto-corretivas"><span class="header-section-number">3.5.2</span> Mensuração de Impacto na Incidência de Corretivas</h3>
 <section id="taxa-de-falhas-observada" class="level4" data-number="3.5.2.1">
-<h4 data-number="3.5.2.1" class="anchored" data-anchor-id="taxa-de-falhas-observada"><span class="header-section-number">3.5.2.1</span> Taxa de Falhas Observada</h4>
+<h4 data-number="3.5.2.1" data-anchor-id="taxa-de-falhas-observada"><span class="header-section-number">3.5.2.1</span> Taxa de Falhas Observada</h4>
 <p><span class="math display">\[
 \lambda_{obs} = \frac{Número_{Falhas}}{Tempo_{Exposição}}
 \]</span></p>
 </section>
 <section id="comparação-de-taxas" class="level4" data-number="3.5.2.2">
-<h4 data-number="3.5.2.2" class="anchored" data-anchor-id="comparação-de-taxas"><span class="header-section-number">3.5.2.2</span> Comparação de Taxas</h4>
+<h4 data-number="3.5.2.2" data-anchor-id="comparação-de-taxas"><span class="header-section-number">3.5.2.2</span> Comparação de Taxas</h4>
 <p><strong>Razão de Taxas (Rate Ratio)</strong>:</p>
 <p><span class="math display">\[
 RR = \frac{\lambda_{com\_prev}}{\lambda_{sem\_prev}}
@@ -804,7 +720,7 @@ RR = \frac{\lambda_{com\_prev}}{\lambda_{sem\_prev}}
 </ul>
 </section>
 <section id="modelo-de-regressão-de-poisson" class="level4" data-number="3.5.2.3">
-<h4 data-number="3.5.2.3" class="anchored" data-anchor-id="modelo-de-regressão-de-poisson"><span class="header-section-number">3.5.2.3</span> Modelo de Regressão de Poisson</h4>
+<h4 data-number="3.5.2.3" data-anchor-id="modelo-de-regressão-de-poisson"><span class="header-section-number">3.5.2.3</span> Modelo de Regressão de Poisson</h4>
 <p>Para ajustar por covariáveis (idade do equipamento, condições operacionais):</p>
 <p><span class="math display">\[
 \log(\lambda_i) = \beta_0 + \beta_1 \cdot Preventiva_i + \beta_2 \cdot Idade_i + \ldots
@@ -844,9 +760,9 @@ RR = \frac{\lambda_{com\_prev}}{\lambda_{sem\_prev}}
 </section>
 </section>
 <section id="sec-impacto-disponibilidade" class="level3" data-number="3.5.3">
-<h3 data-number="3.5.3" class="anchored" data-anchor-id="sec-impacto-disponibilidade"><span class="header-section-number">3.5.3</span> Mensuração de Impacto na Disponibilidade</h3>
+<h3 data-number="3.5.3" data-anchor-id="sec-impacto-disponibilidade"><span class="header-section-number">3.5.3</span> Mensuração de Impacto na Disponibilidade</h3>
 <section id="diferença-de-disponibilidades" class="level4" data-number="3.5.3.1">
-<h4 data-number="3.5.3.1" class="anchored" data-anchor-id="diferença-de-disponibilidades"><span class="header-section-number">3.5.3.1</span> Diferença de Disponibilidades</h4>
+<h4 data-number="3.5.3.1" data-anchor-id="diferença-de-disponibilidades"><span class="header-section-number">3.5.3.1</span> Diferença de Disponibilidades</h4>
 <p><span class="math display">\[
 \Delta A = A_{com\_prev} - A_{sem\_prev}
 \]</span></p>
@@ -856,7 +772,7 @@ RR = \frac{\lambda_{com\_prev}}{\lambda_{sem\_prev}}
 \]</span></p>
 </section>
 <section id="análise-de-séries-temporais" class="level4" data-number="3.5.3.2">
-<h4 data-number="3.5.3.2" class="anchored" data-anchor-id="análise-de-séries-temporais"><span class="header-section-number">3.5.3.2</span> Análise de Séries Temporais</h4>
+<h4 data-number="3.5.3.2" data-anchor-id="análise-de-séries-temporais"><span class="header-section-number">3.5.3.2</span> Análise de Séries Temporais</h4>
 <p>Disponibilidade pode variar ao longo do tempo. Modelos de séries temporais permitem:</p>
 <ul>
 <li>Detectar tendências</li>
@@ -865,7 +781,7 @@ RR = \frac{\lambda_{com\_prev}}{\lambda_{sem\_prev}}
 </ul>
 </section>
 <section id="teste-de-hipóteses" class="level4" data-number="3.5.3.3">
-<h4 data-number="3.5.3.3" class="anchored" data-anchor-id="teste-de-hipóteses"><span class="header-section-number">3.5.3.3</span> Teste de Hipóteses</h4>
+<h4 data-number="3.5.3.3" data-anchor-id="teste-de-hipóteses"><span class="header-section-number">3.5.3.3</span> Teste de Hipóteses</h4>
 <p><strong>H₀</strong>: Não há diferença na disponibilidade média</p>
 <p><strong>H₁</strong>: Há diferença significativa</p>
 <p>Teste t para comparar médias de períodos:</p>
@@ -920,7 +836,7 @@ RR = \frac{\lambda_{com\_prev}}{\lambda_{sem\_prev}}
 </div>
 </section>
 <section id="análise-de-covariância-ancova" class="level4" data-number="3.5.3.4">
-<h4 data-number="3.5.3.4" class="anchored" data-anchor-id="análise-de-covariância-ancova"><span class="header-section-number">3.5.3.4</span> Análise de Covariância (ANCOVA)</h4>
+<h4 data-number="3.5.3.4" data-anchor-id="análise-de-covariância-ancova"><span class="header-section-number">3.5.3.4</span> Análise de Covariância (ANCOVA)</h4>
 <p>Para controlar efeitos de variáveis confundidoras:</p>
 <p><span class="math display">\[
 Disponibilidade = \beta_0 + \beta_1 \cdot Política + \beta_2 \cdot Idade + \beta_3 \cdot Demanda + \epsilon
@@ -929,7 +845,7 @@ Disponibilidade = \beta_0 + \beta_1 \cdot Política + \beta_2 \cdot Idade + \bet
 </section>
 </section>
 <section id="resumo" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="resumo"><span class="header-section-number">3.6</span> Resumo</h2>
+<h2 data-number="3.6" data-anchor-id="resumo"><span class="header-section-number">3.6</span> Resumo</h2>
 <p>🔔 <strong>Pontos-chave:</strong></p>
 <ul>
 <li>Gestão eficaz requer organização, sistemas de informação e equipes capacitadas</li>
@@ -943,636 +859,7 @@ Disponibilidade = \beta_0 + \beta_1 \cdot Política + \beta_2 \cdot Idade + \bet
 
 
 <!-- -->
-
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const disableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'prefetch';
-    }
-  }
-  const enableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'stylesheet';
-    }
-  }
-  const manageTransitions = (selector, allowTransitions) => {
-    const els = window.document.querySelectorAll(selector);
-    for (let i=0; i < els.length; i++) {
-      const el = els[i];
-      if (allowTransitions) {
-        el.classList.remove('notransition');
-      } else {
-        el.classList.add('notransition');
-      }
-    }
-  }
-  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-    let newTheme = '';
-    if(darkModeDefault) {
-      newTheme = isAlternate ? baseTheme : alternateTheme;
-    } else {
-      newTheme = isAlternate ? alternateTheme : baseTheme;
-    }
-    const changeGiscusTheme = () => {
-      // From: https://github.com/giscus/giscus/issues/336
-      const sendMessage = (message) => {
-        const iframe = document.querySelector('iframe.giscus-frame');
-        if (!iframe) return;
-        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-      }
-      sendMessage({
-        setConfig: {
-          theme: newTheme
-        }
-      });
-    }
-    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-    if (isGiscussLoaded) {
-      changeGiscusTheme();
-    }
-  }
-  const toggleColorMode = (alternate) => {
-    // Switch the stylesheets
-    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-    manageTransitions('#quarto-margin-sidebar .nav-link', false);
-    if (alternate) {
-      enableStylesheet(alternateStylesheets);
-      for (const sheetNode of alternateStylesheets) {
-        if (sheetNode.id === "quarto-bootstrap") {
-          toggleBodyColorMode(sheetNode);
-        }
-      }
-    } else {
-      disableStylesheet(alternateStylesheets);
-      toggleBodyColorPrimary();
-    }
-    manageTransitions('#quarto-margin-sidebar .nav-link', true);
-    // Switch the toggles
-    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-    for (let i=0; i < toggles.length; i++) {
-      const toggle = toggles[i];
-      if (toggle) {
-        if (alternate) {
-          toggle.classList.add("alternate");     
-        } else {
-          toggle.classList.remove("alternate");
-        }
-      }
-    }
-    // Hack to workaround the fact that safari doesn't
-    // properly recolor the scrollbar when toggling (#1455)
-    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-      manageTransitions("body", false);
-      window.scrollTo(0, 1);
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        manageTransitions("body", true);
-      }, 40);  
-    }
-  }
-  const isFileUrl = () => { 
-    return window.location.protocol === 'file:';
-  }
-  const hasAlternateSentinel = () => {  
-    let styleSentinel = getColorSchemeSentinel();
-    if (styleSentinel !== null) {
-      return styleSentinel === "alternate";
-    } else {
-      return false;
-    }
-  }
-  const setStyleSentinel = (alternate) => {
-    const value = alternate ? "alternate" : "default";
-    if (!isFileUrl()) {
-      window.localStorage.setItem("quarto-color-scheme", value);
-    } else {
-      localAlternateSentinel = value;
-    }
-  }
-  const getColorSchemeSentinel = () => {
-    if (!isFileUrl()) {
-      const storageValue = window.localStorage.getItem("quarto-color-scheme");
-      return storageValue != null ? storageValue : localAlternateSentinel;
-    } else {
-      return localAlternateSentinel;
-    }
-  }
-  const darkModeDefault = false;
-  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-  // Dark / light mode switch
-  window.quartoToggleColorScheme = () => {
-    // Read the current dark / light value 
-    let toAlternate = !hasAlternateSentinel();
-    toggleColorMode(toAlternate);
-    setStyleSentinel(toAlternate);
-    toggleGiscusIfUsed(toAlternate, darkModeDefault);
-  };
-  // Ensure there is a toggle, if there isn't float one in the top right
-  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-    const a = window.document.createElement('a');
-    a.classList.add('top-right');
-    a.classList.add('quarto-color-scheme-toggle');
-    a.href = "";
-    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-    const i = window.document.createElement("i");
-    i.classList.add('bi');
-    a.appendChild(i);
-    window.document.body.appendChild(a);
-  }
-  // Switch to dark mode if need be
-  if (hasAlternateSentinel()) {
-    toggleColorMode(true);
-  } else {
-    toggleColorMode(false);
-  }
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copiada");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copiada");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
-  const viewSource = window.document.getElementById('quarto-view-source') ||
-                     window.document.getElementById('quarto-code-tools-source');
-  if (viewSource) {
-    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
-    viewSource.addEventListener("click", function(e) {
-      if (sourceUrl) {
-        // rstudio viewer pane
-        if (/\bcapabilities=\b/.test(window.location)) {
-          window.open(sourceUrl);
-        } else {
-          window.location.href = sourceUrl;
-        }
-      } else {
-        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
-        modal.show();
-      }
-      return false;
-    });
-  }
-  function toggleCodeHandler(show) {
-    return function(e) {
-      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-      for (let i=0; i<detailsSrc.length; i++) {
-        const details = detailsSrc[i].parentElement;
-        if (show) {
-          details.open = true;
-        } else {
-          details.removeAttribute("open");
-        }
-      }
-      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
-      const fromCls = show ? "hidden" : "unhidden";
-      const toCls = show ? "unhidden" : "hidden";
-      for (let i=0; i<cellCodeDivs.length; i++) {
-        const codeDiv = cellCodeDivs[i];
-        if (codeDiv.classList.contains(fromCls)) {
-          codeDiv.classList.remove(fromCls);
-          codeDiv.classList.add(toCls);
-        } 
-      }
-      return false;
-    }
-  }
-  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
-  if (hideAllCode) {
-    hideAllCode.addEventListener("click", toggleCodeHandler(false));
-  }
-  const showAllCode = window.document.getElementById("quarto-show-all-code");
-  if (showAllCode) {
-    showAllCode.addEventListener("click", toggleCodeHandler(true));
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-          // target, if specified
-          link.setAttribute("target", "_blank");
-          if (link.getAttribute("rel") === null) {
-            link.setAttribute("rel", "noopener");
-          }
-      }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
-    };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
-          }
-        }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
-        }
-        return container.innerHTML
-      } else {
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(note);
-        }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
-      }
-    }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
-          }
-        } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
-          .then(res => res.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
-            if (note !== null) {
-              const html = processXRef(id, note);
-              instance.setContent(html);
-            } 
-          }).finally(() => {
-            instance.enable();
-            instance.show();
-          });
-        }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
-      });
-    }
-  }
-});
-</script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../chapters/02-performance-mineracao.html" class="pagination-link" aria-label="Medidas de Performance Operação na Mineração">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Medidas de Performance Operação na Mineração</span></span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-  </div>
-</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Código fonte</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Código fonte</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb26" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Fatores Moderadores da Manutenção {#sec-fatores-moderadores}</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Introdução</span></span>
@@ -2249,6 +1536,626 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb26-690"><a href="#cb26-690" aria-hidden="true" tabindex="-1"></a>**Próximo capítulo:** Fundamentos de Confiabilidade</span>
 </code><button title="Copiar para a área de transferência" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
+</section>
+
+
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiada");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiada");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
 </div> <!-- /content -->
 
 
