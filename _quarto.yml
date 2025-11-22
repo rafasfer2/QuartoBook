@@ -54,6 +54,7 @@ book:
     - credits.qmd
 
 bibliography: references.bib
+csl: ieee.csl
 
 format:
   html:
