@@ -304,14 +304,14 @@ body.nav-sidebar {
 
 .page-columns {
   margin: 0 !important;
-  padding: 0.3rem !important;
+  padding: 0 !important;
   max-width: 100% !important;
 }
 
 main.content {
   width: 100% !important;
   max-width: 100% !important;
-  padding: 0 !important;
+  padding: 0 0.5rem !important;
   margin: 0 !important;
 }
 
