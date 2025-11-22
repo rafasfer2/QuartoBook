@@ -129,32 +129,61 @@ figcaption {
   text-indent: 0;
 }
 
-/* Table of Contents - reduce indentation */
-nav[role="doc-toc"] ul,
-#TOC ul {
+/* Table of Contents - reduce indentation and increase space */
+.sidebar-navigation {
   padding-left: 0.5em !important;
+  padding-right: 0.5em !important;
+}
+
+nav[role="doc-toc"] ul,
+#TOC ul,
+.sidebar nav[role="navigation"] > ul {
+  padding-left: 0.25em !important;
   margin-left: 0 !important;
+  list-style: none;
 }
 
 nav[role="doc-toc"] ul ul,
-#TOC ul ul {
-  padding-left: 0.8em !important;
+#TOC ul ul,
+.sidebar nav[role="navigation"] ul ul {
+  padding-left: 0.5em !important;
 }
 
 nav[role="doc-toc"] ul ul ul,
-#TOC ul ul ul {
-  padding-left: 0.8em !important;
+#TOC ul ul ul,
+.sidebar nav[role="navigation"] ul ul ul {
+  padding-left: 0.5em !important;
 }
 
 nav[role="doc-toc"] li,
-#TOC li {
+#TOC li,
+.sidebar nav[role="navigation"] li {
   margin-bottom: 0.3em;
   margin-left: 0 !important;
   padding-left: 0 !important;
 }
 
 .sidebar nav[role="doc-toc"] ul {
-  padding-left: 0.5em !important;
+  padding-left: 0.25em !important;
+}
+
+/* Increase sidebar width to reduce text wrapping */
+.sidebar {
+  width: 300px !important;
+  max-width: 300px !important;
+}
+
+/* Adjust font size for better fit */
+.sidebar nav a {
+  font-size: 0.9rem;
+  line-height: 1.3;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Reduce chapter number spacing */
+.sidebar .chapter-number {
+  margin-right: 0.3em;
 }
 
 /* Print-specific adjustments */
