@@ -170,18 +170,16 @@ figcaption {
   padding-right: 0.5em !important;
 }
 
-nav[role="doc-toc"] ul,
-#TOC ul,
-.sidebar nav[role="navigation"] > ul {
-  padding-left: 0 !important;
-  margin-left: 0 !important;
-  list-style: none;
-}
-
 nav[role="doc-toc"] ul ul,
 #TOC ul ul,
 .sidebar nav[role="navigation"] ul ul {
-  padding-left: 0.25em !important;
+  padding-left: 0.25em !important; /* nível 2 */
+}
+
+nav[role="doc-toc"] ul ul ul,
+#TOC ul ul ul,
+.sidebar nav[role="navigation"] ul ul ul {
+  padding-left: 0.5em !important; /* nível 3 */
 }
 
 /* Remove extra indentation from chapter items */
@@ -191,11 +189,6 @@ nav[role="doc-toc"] ul ul,
   margin-left: 0 !important;
 }
 
-nav[role="doc-toc"] ul ul ul,
-#TOC ul ul ul,
-.sidebar nav[role="navigation"] ul ul ul {
-  padding-left: 0.25em !important;
-}
 
 nav[role="doc-toc"] li,
 #TOC li,
