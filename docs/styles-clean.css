@@ -74,9 +74,10 @@ body, html {
   font-size: 1rem !important;
   font-weight: normal !important;
   border-radius: 0 !important;
-  border: none !important;
   background: #e8e8e8 !important;
   color: var(--color-teal-dark) !important;
+  border-left: 3px solid transparent !important;
+  transition: all 0.3s ease !important;
 }
 
 /* Prefácio + Capítulos PARES (2, 4, 6, 8, 10): fundo teal escuro (marrom/vermelho) */
@@ -90,15 +91,17 @@ body, html {
   color: white !important;
 }
 
-/* Item ATIVO: texto amarelo ouro + negrito (mantém fundo) */
+/* Item ATIVO: texto amarelo ouro + negrito + borda esquerda (mantém fundo) */
 #quarto-sidebar .sidebar-item-text.active {
   color: #d4af37 !important;
   font-weight: bold !important;
+  border-left: 3px solid #d4af37 !important;
 }
 
-/* HOVER: opacidade para indicar interação */
+/* HOVER: borda esquerda + sombra suave */
 #quarto-sidebar .sidebar-item-text:hover {
-  opacity: 0.8;
+  border-left: 3px solid var(--color-teal) !important;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1) !important;
 }
 
 /* Hover sutil */
@@ -376,11 +379,16 @@ main.content {
   font-size: 1rem !important;
 }
 
-/* Subcapítulos (níveis 2, 3) sem traço */
+/* Subcapítulos (níveis 2, 3) sem linha embaixo */
 #TOC ul ul a {
   padding-left: 1.2rem !important;
   font-weight: normal !important;
   font-size: 0.95rem !important;
+  border-bottom: none !important;
+}
+
+#TOC ul ul li {
+  border-bottom: none !important;
 }
 
 /* ===== TIPOGRAFIA ===== */
