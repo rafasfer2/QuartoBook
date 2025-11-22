@@ -37,9 +37,8 @@
 
 #quarto-sidebar .active,
 .sidebar .active {
-  background: var(--color-cyan-mid) !important;
-  color: var(--color-brown-dark) !important;
   font-weight: bold !important;
+  background: transparent !important;
 }
 
 /* ===== TOC À DIREITA ===== */
@@ -60,6 +59,12 @@
 #TOC a:hover {
   color: var(--color-teal) !important;
   text-decoration: underline;
+
+#TOC .active,
+#TOC a.active {
+  font-weight: bold !important;
+  background: transparent !important;
+}
 }
 
 /* ===== CONTEÚDO ===== */
