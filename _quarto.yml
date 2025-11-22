@@ -47,7 +47,6 @@ format:
     toc-depth: 3
     number-sections: true
     link-external-newwindow: true
-    page-layout: custom
     include-in-header:
       - text: |
           <script>
