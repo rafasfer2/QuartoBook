@@ -53,7 +53,12 @@ digraph status {
 ")
 ```
 
-## Elementos de Suporte {#sec-elementos-suporte}
+## Categoria de Horas {#sec-elementos-suporte}
+
+Categoria de horas corresponde à divisão do tempo em classes de serviços ou condição dos equipamentos, detalhando as horas na execução de atividades de operação e manutenção no equipamento. Para melhor cálculo dos indicadores, os tempos de funcionamento são agrupados em horas dependendo da ocorrência dos eventos e do conjunto de equipamentos que compõe o sistema. Estes podem ser subdivididos em 2 (duas) classes: funcionando e parado, em seguida são classificadas em categorias de horas, que são: horas efetivas (HEF); horas ociosas interna (HOI); horas ociosas externa (HOE); horas manutenção corretiva (HMC); horas preventiva sistemática (HPS) e horas preventiva não sistemática (HPNS). A @fig-categorias-horas ilustra o fluxo de relacionamento entre as categorias de horas:
+
+![Fluxo de relacionamento entre categorias de horas](../images/figura-categorias-horas.png){#fig-categorias-horas}
+
 
 Para o cálculo de indicadores, é comum realizar a síntese de algumas categorias de horas ou, de outra forma, a junção de horas. Assim, os **elementos de tempo de segundo nível** são:
 
