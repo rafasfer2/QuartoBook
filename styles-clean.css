@@ -451,8 +451,22 @@ main.content blockquote {
 #TOC > ul > li > a {
   border: none !important;
   border-bottom: none !important;
+  border-top: none !important;
+  border-left: 3px solid transparent !important;
+  border-right: none !important;
   text-decoration: none !important;
   box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Remove bordas de pseudo-elementos */
+#TOC ul > li::before,
+#TOC ul > li::after,
+#TOC ul > li > a::before,
+#TOC ul > li > a::after {
+  display: none !important;
+  content: none !important;
+  border: none !important;
 }
 
 /* Subcapítulos (níveis 2, 3) sem linha embaixo */
@@ -497,8 +511,26 @@ main.content blockquote {
 #TOC ul ul > li > a:active {
   border: none !important;
   border-bottom: none !important;
+  border-top: none !important;
   text-decoration: none !important;
   outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Anula qualquer estilo do Quarto/Bootstrap que adicione bordas */
+#TOC a,
+#TOC li,
+#TOC ul,
+nav#TOC a,
+nav#TOC li,
+.sidebar-navigation a,
+.toc-active a {
+  border-bottom: 0 !important;
+  border-bottom-width: 0 !important;
+  border-bottom-style: none !important;
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  text-underline-offset: 0 !important;
 }
 
 /* ===== TIPOGRAFIA ===== */
