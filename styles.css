@@ -96,8 +96,13 @@ figcaption { font-size: 11pt; text-align: center; font-weight: bold; margin-top:
    CONTEÚDO PRINCIPAL
    ========================= */
 body.nav-sidebar { padding-left: 0 !important; }
-.page-columns, body .page-columns, html body .page-columns { margin-left: 305px !important; padding-left: 0.5em !important; }
-main.content { margin-left: 0 !important; }
+.page-columns, body .page-columns, html body .page-columns {
+  margin-left: 300px !important;
+  padding-left: 0.5em !important;
+}
+main.content {
+  margin-left: 0 !important;
+}
 
 /* =========================
    TOC E HIERARQUIA
