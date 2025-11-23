@@ -427,12 +427,13 @@ main.content blockquote {
   background: rgba(53, 151, 143, 0.1) !important;
 }
 
-/* Item ativo com barra lateral */
+/* Item ativo com barra lateral amarela */
 #TOC .active,
 #TOC li.active > a {
   font-weight: bold !important;
-  border-left: 3px solid var(--color-teal) !important;
-  background: rgba(53, 151, 143, 0.15) !important;
+  color: #d4af37 !important;
+  border-left: 3px solid #d4af37 !important;
+  background: rgba(212, 175, 55, 0.15) !important;
 }
 
 /* Capítulo atual (nível 1) sempre em negrito */
