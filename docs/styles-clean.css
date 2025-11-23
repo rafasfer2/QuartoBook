@@ -319,8 +319,13 @@ body.nav-sidebar {
 main.content {
   width: 100% !important;
   max-width: 100% !important;
-  padding: 0 0.5rem !important;
+  padding: 0 !important;
   margin: 0 !important;
+}
+
+main.content > * {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
 }
 
 /* ===== TOC DIREITA ===== */
