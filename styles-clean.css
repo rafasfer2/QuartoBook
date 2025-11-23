@@ -72,7 +72,7 @@ body, html {
   padding: 0.7rem 1rem !important;
   padding-left: 0.5rem !important;
   margin: 0 !important;
-  font-size: 1rem !important;
+  font-size: inherit !important; /* igual ao corpo do texto */
   font-weight: normal !important;
   border-radius: 0 !important;
   background: transparent !important;
@@ -132,10 +132,19 @@ body, html {
 
 #quarto-header .navbar-title {
   color: var(--color-teal-dark) !important;
-  font-size: 1.2rem !important;
+  font-size: 1.1rem !important;
   font-weight: bold !important;
   flex: 1 !important;
   text-align: center !important;
+}
+
+#quarto-header .edicao {
+  font-size: 0.7rem !important;
+  font-weight: normal !important;
+  color: #666 !important;
+  margin-left: 0.4rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
 }
 
 #quarto-header .navbar-container {
@@ -319,7 +328,7 @@ body.nav-sidebar {
 main.content {
   width: 100% !important;
   max-width: 100% !important;
-  padding: 0 4rem !important;
+  padding: 0 1rem !important;
   margin: 0 !important;
 }
 
@@ -357,7 +366,7 @@ main.content {
 /* Links do TOC - fonte maior */
 #TOC a {
   color: var(--color-teal-deep) !important;
-  font-size: 1rem !important;
+  font-size: inherit !important; /* igual ao corpo */
   padding: 0.4rem 0.5rem !important;
   display: block !important;
   border-left: 3px solid transparent !important;
@@ -381,16 +390,20 @@ main.content {
 #TOC > ul > li > a,
 #TOC .toc-section-number {
   font-weight: bold !important;
-  font-size: 1rem !important;
+  font-size: inherit !important;
 }
 
 /* Subcapítulos (níveis 2, 3) sem linha embaixo */
 #TOC ul ul a {
   padding-left: 1.2rem !important;
   font-weight: normal !important;
-  font-size: 0.95rem !important;
+  font-size: inherit !important;
   border-bottom: none !important;
 }
+
+/* Remove linha inferior indesejada abaixo do primeiro item ativo (ex: 2.1) */
+#TOC li.active > a { border-bottom: none !important; }
+#TOC > ul > li { border-bottom: none !important; }
 
 #TOC ul ul li {
   border-bottom: none !important;
