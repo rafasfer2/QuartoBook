@@ -432,6 +432,19 @@ main.content blockquote {
 #TOC .toc-section-number {
   font-weight: bold !important;
   font-size: 0.9rem !important;
+  border-bottom: none !important;
+  text-decoration: none !important;
+}
+
+/* Remove TODAS as bordas de TODOS os níveis */
+#TOC ul > li,
+#TOC ul > li > a,
+#TOC > ul > li,
+#TOC > ul > li > a {
+  border: none !important;
+  border-bottom: none !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
 }
 
 /* Subcapítulos (níveis 2, 3) sem linha embaixo */
