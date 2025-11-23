@@ -81,12 +81,21 @@ body, html {
   transition: all 0.3s ease !important;
 }
 
-/* Item ATIVO: fundo suave + borda teal + negrito */
+/* Numeração dos capítulos - branco */
+#quarto-sidebar .chapter-number {
+  color: white !important;
+}
+
+/* Item ATIVO: fundo suave + borda teal + texto ouro + negrito */
 #quarto-sidebar .sidebar-item-text.active {
   background: rgba(255, 255, 255, 0.15) !important;
-  color: white !important;
+  color: #d4af37 !important;
   font-weight: bold !important;
   border-left: 4px solid var(--color-teal) !important;
+}
+
+#quarto-sidebar .sidebar-item-text.active .chapter-number {
+  color: #d4af37 !important;
 }
 
 /* HOVER: fundo suave + borda teal */
