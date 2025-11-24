@@ -53,9 +53,15 @@ summary(data)
 
 Figuras, tabelas e equações são numeradas e referenciadas ao longo do texto:
 
-- **Figuras:** @fig-weibull
-- **Tabelas:** @tbl-mtbf
-- **Equações:** @eq-confiabilidade
+ - **Figuras:** `@fig-weibull`
+ - **Tabelas:** `@tbl-mtbf`
+ - **Equações:** `@eq-confiabilidade`
+
+Equação de confiabilidade (definição usada ao longo do livro):
+
+$$
+R(t) = e^{-\lambda t}
+$$ {#eq-confiabilidade}
 
 ```{r}
 #| label: fig-weibull
@@ -273,6 +279,7 @@ Para dúvidas, sugestões ou relato de erros:
 
 - **GitHub Issues:** [https://github.com/SEU_USER/QuartoBook/issues](https://github.com/SEU_USER/QuartoBook/issues)
 - **Email:** rafael@example.com
+ - **Email:** `rafael@example.com`
 
 ---
 

@@ -22,7 +22,6 @@ book:
 
     - part: "Medidas de Performance na Mineração"
       chapters:
-        - chapters/part1-01-ciclo-carregamento-transporte.qmd
         - chapters/part1-02-analise-dados-recorrentes.qmd
         - chapters/part1-03-aplicacao-pdca.qmd
         - chapters/part1-04-resumo.qmd
@@ -35,16 +34,10 @@ book:
         - chapters/part2-11-planejamento-controle-manutencao.qmd
         - chapters/part2-12-placeholder.qmd
 
-    # Observação: os arquivos originais `chapters/01-introducao.qmd`,
-    # `chapters/02-performance-mineracao.qmd` e `chapters/03-fatores-moderadores.qmd`
-    # foram mantidos no diretório `chapters/` como reservados. Quando quiser,
-    # posso copiar/colar o conteúdo desses arquivos para os novos esqueleto acima.
-
     - summary.qmd
     - references.qmd
 
 bibliography: references.bib
-csl: ieee.csl
 lang: pt-BR
 language:
   pt-BR:

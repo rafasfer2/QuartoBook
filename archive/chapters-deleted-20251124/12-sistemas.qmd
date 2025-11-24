@@ -1,0 +1,9 @@
+````quarto
+# Modelos de Confiabilidade de Sistema
+
+## Introdução
+
+Análise de confiabilidade de sistemas complexos com múltiplos componentes.
+
+... (arquivo arquivado na íntegra) ...
+````

@@ -1,0 +1,9 @@
+````quarto
+# Estimativa de Parâmetros e Inferência
+
+## Introdução
+
+Este capítulo aborda métodos para estimar parâmetros de distribuições de vida útil a partir de dados observados.
+
+... (arquivo arquivado na íntegra) ...
+````

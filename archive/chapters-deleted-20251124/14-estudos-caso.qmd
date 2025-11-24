@@ -1,0 +1,9 @@
+````quarto
+# Estudos de Caso Industriais
+
+## Introdução
+
+Este capítulo apresenta estudos de caso completos aplicando as técnicas de confiabilidade e manutenção em contextos industriais reais.
+
+... (arquivo arquivado na íntegra) ...
+````

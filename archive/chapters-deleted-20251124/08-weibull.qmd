@@ -1,0 +1,9 @@
+````quarto
+# Modelagem Weibull na Prática
+
+## Introdução
+
+Aplicação prática da distribuição Weibull em análise de confiabilidade industrial.
+
+... (arquivo arquivado na íntegra) ...
+````

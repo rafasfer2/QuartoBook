@@ -1,0 +1,9 @@
+````quarto
+# Simulação Monte Carlo Aplicada à Confiabilidade
+
+## Introdução
+
+Uso de simulação Monte Carlo para avaliar confiabilidade e políticas de manutenção sob incerteza.
+
+... (arquivo arquivado na íntegra) ...
+````

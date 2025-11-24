@@ -1,0 +1,9 @@
+````quarto
+# Manutenção Preventiva e Otimização de Políticas
+
+## Introdução
+
+Otimização de intervalos de manutenção preventiva baseada em modelos de confiabilidade.
+
+... (arquivo arquivado na íntegra) ...
+````

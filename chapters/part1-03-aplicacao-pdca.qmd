@@ -2,9 +2,41 @@
 title: "Aplicação do ciclo PDCA"
 ---
 
-# Aplicação do ciclo PDCA
-
 ## Identificação do problema
+O caminhão fora de estrada CAT® 797F é responsável pelo transporte do minério lavrado do ponto de extração, nesse caso, as cavas de minério, onde é carregado por uma escavadeira. Esse material é levado até os pontos de descarga, que são os britadores semimóveis, cumprindo a função atribuída.
+
+Com uma demanda de até 23h/dia de operação, sua disponibilidade é o estado de capacidade em desempenhar sua função requerida. O tempo de disponibilidade (horas disponíveis – HD), refere-se às horas calendário (HC) subtraída do somatório das horas em manutenção (HM). As horas trabalhadas (HT) é parte de HD que efetivamente exerce sua função requerida e, complementarmente, a horas ociosas (HO) refere-se ao tempo não utilizado.
+
+
+Figura 1 – Gráfico de horas calendário: mostra as 10 categorias de horas para um total CH = 315.360, referente aos 36 caminhões. Em particular, podemos analisar as categorias referentes à manutenção: HMC = 28.023; HAC = 2.771; MPS = 26.966; MPNS = 10.166.
+
+![](../images/Figura08_artigo_horas.png){fig-cap="Figura 1 – Gráfico de horas calendário – HC" width="80%"}
+
+Figura 2 – Exemplo de teste de referência cruzada.
+![](../images/Figura08_artigo_horas.png){fig-cap="Figura 2 – Exemplo de teste de referência cruzada" width="40%"}
+
+O plano de produção é feito antecipadamente com o intuito de cobrir o período anual, explorando ao máximo as possibilidades dos recursos da empresa e proporcionando condições ideais de eficiência e eficácia.
+
+
+
+Tabela 1: Indicadores de produção dos caminhões CAT® 797F em 2022
+
+| Indicadores de produção | Programado | Realizado |
+|---|---:|---:|
+| Disponibilidade física – DF | 81,54% | 78,46% ↓ |
+| Utilização física – UF | 83,91% | 81,25% ↓ |
+| Produtividade | 465,64 𝑡𝑜𝑛/ℎ | 523,27 𝑡𝑜𝑛/ℎ ↑ |
+| Produção | 100.471.267 𝑡𝑜𝑛/a | 105.200.782 𝑡𝑜𝑛/a ↑ |
+
+
+Quando comparamos o programado com o realizado, nota-se que a produção e a produtividade ficaram acima do previsto, enquanto os indicadores de disponibilidade (DF) e utilização (UF) apresentaram queda — DF caiu 3,08 p.p. (78,46% realizado) e UF caiu 2,66 p.p. (81,25% realizado).
+
+
+Figura 3 – Build-up das perdas de produção por indicador: apresenta a representatividade em toneladas de cada fonte de perda.
+
+![](../images/Figura9_artigo_buildup.png){fig-cap="Figura 3 – Build-up das perdas de produção por indicador" width="80%"}
+
+O indicador DF foi o principal problema em 2022 para os 36 caminhões analisados: a perda total de produção foi de -5.086.957 ton/a e a indisponibilidade total foi de 9.722,88 h.
 
 ## Análise do fenômeno
 

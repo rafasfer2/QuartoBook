@@ -1,0 +1,9 @@
+````quarto
+# Manutenção Preditiva com Dados Sensor
+
+## Introdução
+
+Uso de dados de sensores e machine learning para predição de falhas.
+
+... (arquivo arquivado na íntegra) ...
+````

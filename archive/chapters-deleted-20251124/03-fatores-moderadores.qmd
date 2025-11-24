@@ -1,0 +1,9 @@
+````quarto
+# Fundamentos da Gestão da Manutenção {#sec-fatores-moderadores}
+
+## Introdução
+
+De acordo com a definição de @kardecnascif2009, a manutenção compreende todas as atividades técnicas, gerenciais e administrativas que visam manter ou restaurar um ativo ao seu estado operacional, para que possa atender suas funções de maneira adequada ao longo do seu ciclo de vida. Especificamente, a missão da manutenção é assegurar a disponibilidade dos ativos para que o plano de produção seja cumprido, com segurança, preservação do meio ambiente e custos adequados, evitando que falhas possam interromper o processo produtivo e gerar perdas [@kardecnascif2009; @zampolli2019].
+
+... (arquivo arquivado na íntegra) ...
+````

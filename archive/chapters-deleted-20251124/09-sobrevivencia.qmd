@@ -1,0 +1,9 @@
+````quarto
+# Análise de Sobrevivência e Modelos Semiparamétricos
+
+## Introdução
+
+Análise de sobrevivência com modelos de regressão, incluindo Kaplan-Meier e Cox.
+
+... (arquivo arquivado na íntegra) ...
+````

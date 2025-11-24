@@ -2,6 +2,4 @@
 title: "Resumo"
 ---
 
-# Resumo
-
 (Resumo da Parte I — a ser preenchido.)

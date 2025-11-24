@@ -1,0 +1,9 @@
+````quarto
+# Fundamentos de Confiabilidade
+
+## Introdução
+
+A **confiabilidade** é a probabilidade de um item desempenhar sua função de forma adequada, sob condições estabelecidas, durante um intervalo de tempo especificado. Este conceito fundamental é a base para todas as análises de manutenção e gestão de ativos.
+
+... (arquivo arquivado na íntegra) ...
+````

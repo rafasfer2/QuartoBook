@@ -1,0 +1,10 @@
+---
+title: "Exemplo de referência cruzada"
+lang: pt-BR
+---
+
+A Figura @ref(fig:teste) deveria ser numerada automaticamente.
+
+![](figura.png){#fig:teste fig-cap="Figura de teste crossref" width="60%"}
+
+Texto adicional para contexto.

@@ -1,0 +1,9 @@
+````quarto
+# Análise de Dados de Falha com R
+
+## Introdução
+
+Análise prática de dados de falha incluindo censura, tabelas de vida e visualizações.
+
+... (arquivo arquivado na íntegra) ...
+````

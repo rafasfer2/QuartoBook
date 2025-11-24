@@ -1,0 +1,9 @@
+````quarto
+# Probabilidades e Distribuições para Vida Útil
+
+## Introdução
+
+Este capítulo apresenta as principais distribuições de probabilidade utilizadas para modelar o tempo até a falha de componentes e sistemas.
+
+... (arquivo arquivado na íntegra) ...
+````
