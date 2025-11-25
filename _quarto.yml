@@ -39,7 +39,7 @@ book:
     - references.qmd
 
 ## bibliography: references.bib
-lang: pt-BR
+# lang: pt-BR # Esta linha é redundante, a configuração abaixo é superior
 language:
   pt-BR:
     fig: "Figura"
@@ -47,6 +47,7 @@ language:
     table: "Tabela"
     tables: "Tabelas"
 
+# A seção 'format' foi movida para o nível global, fora dos capítulos
 format:
   html:
     theme:
@@ -191,90 +192,21 @@ format:
                   <div class="quarto-navbar-tools quarto-navbar-tools-end">
                     <a href="https://twitter.com" target="_blank" title="Twitter" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
                     <a href="https://facebook.com" target="_blank" title="Facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                    <a href="#" title="Compartilhar" aria-label="Compartilhar"><i class="bi bi-share"></i></a>
+                    <a href="#" class="btn btn-link pe-2" data-bs-toggle="modal" data-bs-target="#quarto-search-modal" aria-label="Search"><i class="bi bi-search"></i></a>
                   </div>
                 </div>
               `;
-
-              // Format Menu Dropdown - com timeout para garantir que elementos existam
-              setTimeout(function() {
-                const formatBtn = document.querySelector('#format-menu .dropdown-toggle');
-                const formatContent = document.querySelector('#format-menu .dropdown-content');
-
-                if (formatBtn && formatContent) {
-                  formatBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    const isVisible = formatContent.style.display === 'block';
-                    formatContent.style.display = isVisible ? 'none' : 'block';
-                  });
-
-                  document.addEventListener('click', function(e) {
-                    if (!e.target.closest('#format-menu')) {
-                      formatContent.style.display = 'none';
-                    }
-                  });
-                }
-              }, 100);
-
-              // Font change
-              document.querySelectorAll('[data-font]').forEach(btn => {
-                btn.addEventListener('click', function() {
-                  document.querySelectorAll('[data-font]').forEach(b => b.classList.remove('active'));
-                  this.classList.add('active');
-                  document.body.style.fontFamily = this.dataset.font === 'serif' ?
-                    "'Times New Roman', Times, serif" :
-                    "Arial, Helvetica, sans-serif";
-                });
-              });
-
-              // Theme change with sidebar and TOC
-              document.querySelectorAll('[data-theme]').forEach(btn => {
-                btn.addEventListener('click', function() {
-                  document.querySelectorAll('[data-theme]').forEach(b => b.classList.remove('active'));
-                  this.classList.add('active');
-
-                  const theme = this.dataset.theme;
-                  const sidebar = document.getElementById('quarto-sidebar');
-                  const toc = document.getElementById('quarto-margin-sidebar');
-
-                  document.body.classList.remove('theme-white', 'theme-sepia', 'theme-night');
-                  document.body.classList.add('theme-' + theme);
-
-                  if (theme === 'night') {
-                    if (sidebar) sidebar.style.background = '#1e1e1e';
-                    if (toc) toc.style.background = '#2d2d2d';
-                  } else if (theme === 'sepia') {
-                    if (sidebar) sidebar.style.background = '#5b4636';
-                    if (toc) toc.style.background = '#e8dcc8';
-                  } else {
-                    if (sidebar) sidebar.style.background = '';
-                    if (toc) toc.style.background = '';
-                  }
-                });
-              });
-
-              // Spacing change
-              document.querySelectorAll('[data-spacing]').forEach(btn => {
-                btn.addEventListener('click', function() {
-                  const content = document.querySelector('main.content');
-                  if (content) {
-                    const currentSize = parseFloat(window.getComputedStyle(content).fontSize);
-                    const newSize = this.dataset.spacing === 'plus' ? currentSize + 1 : currentSize - 1;
-                    content.style.fontSize = newSize + 'px';
-                  }
-                });
-              });
             }
           });
           </script>
+
   pdf:
     documentclass: book
     geometry:
       - top=3cm
       - bottom=2cm
       - left=3cm
-      - right=2cm
+      - right=3cm
     fontfamily: mathptmx
     fontsize: 12pt
     linestretch: 1.5
@@ -282,12 +214,3 @@ format:
     number-sections: true
     toc: true
     toc-depth: 3
-
-execute:
-  echo: true
-  warning: false
-  message: false
-  cache: true
-  freeze: auto
-
-editor: source

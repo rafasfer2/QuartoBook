@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.39">
@@ -91,17 +91,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "Nenhum resultado",
-    "search-matching-documents-text": "documentos correspondentes",
-    "search-copy-link-title": "Copiar link para a busca",
-    "search-hide-matches-text": "Esconder correspondências adicionais",
-    "search-more-match-text": "mais correspondência neste documento",
-    "search-more-matches-text": "mais correspondências neste documento",
-    "search-clear-button-title": "Limpar",
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancelar",
-    "search-submit-button-title": "Enviar",
-    "search-label": "Procurar"
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
@@ -155,80 +155,10 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="quarto-navbar-tools quarto-navbar-tools-end">
           <a href="https://twitter.com" target="_blank" title="Twitter" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
           <a href="https://facebook.com" target="_blank" title="Facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" title="Compartilhar" aria-label="Compartilhar"><i class="bi bi-share"></i></a>
+          <a href="#" class="btn btn-link pe-2" data-bs-toggle="modal" data-bs-target="#quarto-search-modal" aria-label="Search"><i class="bi bi-search"></i></a>
         </div>
       </div>
     `;
-
-    // Format Menu Dropdown - com timeout para garantir que elementos existam
-    setTimeout(function() {
-      const formatBtn = document.querySelector('#format-menu .dropdown-toggle');
-      const formatContent = document.querySelector('#format-menu .dropdown-content');
-
-      if (formatBtn && formatContent) {
-        formatBtn.addEventListener('click', function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-          const isVisible = formatContent.style.display === 'block';
-          formatContent.style.display = isVisible ? 'none' : 'block';
-        });
-
-        document.addEventListener('click', function(e) {
-          if (!e.target.closest('#format-menu')) {
-            formatContent.style.display = 'none';
-          }
-        });
-      }
-    }, 100);
-
-    // Font change
-    document.querySelectorAll('[data-font]').forEach(btn => {
-      btn.addEventListener('click', function() {
-        document.querySelectorAll('[data-font]').forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-        document.body.style.fontFamily = this.dataset.font === 'serif' ?
-          "'Times New Roman', Times, serif" :
-          "Arial, Helvetica, sans-serif";
-      });
-    });
-
-    // Theme change with sidebar and TOC
-    document.querySelectorAll('[data-theme]').forEach(btn => {
-      btn.addEventListener('click', function() {
-        document.querySelectorAll('[data-theme]').forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-
-        const theme = this.dataset.theme;
-        const sidebar = document.getElementById('quarto-sidebar');
-        const toc = document.getElementById('quarto-margin-sidebar');
-
-        document.body.classList.remove('theme-white', 'theme-sepia', 'theme-night');
-        document.body.classList.add('theme-' + theme);
-
-        if (theme === 'night') {
-          if (sidebar) sidebar.style.background = '#1e1e1e';
-          if (toc) toc.style.background = '#2d2d2d';
-        } else if (theme === 'sepia') {
-          if (sidebar) sidebar.style.background = '#5b4636';
-          if (toc) toc.style.background = '#e8dcc8';
-        } else {
-          if (sidebar) sidebar.style.background = '';
-          if (toc) toc.style.background = '';
-        }
-      });
-    });
-
-    // Spacing change
-    document.querySelectorAll('[data-spacing]').forEach(btn => {
-      btn.addEventListener('click', function() {
-        const content = document.querySelector('main.content');
-        if (content) {
-          const currentSize = parseFloat(window.getComputedStyle(content).fontSize);
-          const newSize = this.dataset.spacing === 'plus' ? currentSize + 1 : currentSize - 1;
-          content.style.fontSize = newSize + 'px';
-        }
-      });
-    });
   }
 });
 </script>
@@ -272,13 +202,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/part1-01-ciclo-carregamento-transporte.html">Medidas de Performance na Mineração</a></li><li class="breadcrumb-item"><a href="../chapters/part1-02-analise-dados-recorrentes.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Análise de dados recorrentes</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -292,13 +222,13 @@ window.Quarto = {
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Manutenção e Confiabilidade: Aplicação em R</a> 
         <div class="sidebar-tools-main">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo escuro"><i class="bi"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Procurar"></div>
+        <div id="quarto-search" class="" title="Search"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -331,7 +261,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Medidas de Performance na Mineração</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -372,7 +302,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Fundamento da Gestão da Manutenção</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -422,7 +352,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Índice</h2>
+    <h2 id="toc-title">Table of contents</h2>
    
   <ul>
   <li><a href="#estrutura-de-banco-de-dados" id="toc-estrutura-de-banco-de-dados" class="nav-link active" data-scroll-target="#estrutura-de-banco-de-dados"><span class="header-section-number">2.1</span> Estrutura de banco de dados</a>
@@ -463,7 +393,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/part1-01-ciclo-carregamento-transporte.html">Medidas de Performance na Mineração</a></li><li class="breadcrumb-item"><a href="../chapters/part1-02-analise-dados-recorrentes.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Análise de dados recorrentes</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Análise de dados recorrentes</span></h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Código</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Mostrar o código</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Esconder o código</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">Ver o código fonte</a></li></ul></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Análise de dados recorrentes</span></h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 </div>
 
 
@@ -630,7 +560,7 @@ PP_{PR} = (PR_{programado} - PR_{realizado}) \times (HD_{programado} - HO_{reali
 \tag{2.3}\]</span></span></p>
 <div class="cell">
 <details class="code-fold">
-<summary>Código</summary>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -684,7 +614,7 @@ PP_{PR} = (PR_{programado} - PR_{realizado}) \times (HD_{programado} - HO_{reali
 <span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="co"># Apresentar resultados</span></span>
 <span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(dados, <span class="at">caption =</span> <span class="st">"Dados Programados vs Realizados"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">"striped"</span>, <span class="st">"hover"</span>), <span class="at">full_width =</span> <span class="cn">FALSE</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">"striped"</span>, <span class="st">"hover"</span>), <span class="at">full_width =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <table class="table table-striped table-hover caption-top table-sm small" data-quarto-postprocess="true">
@@ -740,9 +670,9 @@ PP_{PR} = (PR_{programado} - PR_{realizado}) \times (HD_{programado} - HO_{reali
 
 </div>
 <details class="code-fold">
-<summary>Código</summary>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(icds, <span class="at">caption =</span> <span class="st">"Indicadores-Chave de Desempenho"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">"striped"</span>, <span class="st">"hover"</span>), <span class="at">full_width =</span> <span class="cn">FALSE</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">"striped"</span>, <span class="st">"hover"</span>), <span class="at">full_width =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <table class="table table-striped table-hover caption-top table-sm small" data-quarto-postprocess="true">
@@ -780,12 +710,12 @@ PP_{PR} = (PR_{programado} - PR_{realizado}) \times (HD_{programado} - HO_{reali
 
 </div>
 <details class="code-fold">
-<summary>Código</summary>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(perdas,</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Análise de Perda de Produção"</span>,</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Tipo de Perda"</span>, <span class="st">"Cálculo"</span>, <span class="st">"Perda (t)"</span>)</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">"striped"</span>, <span class="st">"hover"</span>), <span class="at">full_width =</span> <span class="cn">FALSE</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">"striped"</span>, <span class="st">"hover"</span>), <span class="at">full_width =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <table class="table table-striped table-hover caption-top table-sm small" data-quarto-postprocess="true">
@@ -1046,12 +976,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copiada");
+    button.setAttribute("title", "Copied!");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copiada");
+      button.setAttribute("data-bs-title", "Copied!");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
@@ -1487,7 +1417,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Aplicação do ciclo PDCA</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
-</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Código fonte</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb4" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Análise de dados recorrentes"</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
@@ -1724,7 +1654,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb4-236"><a href="#cb4-236" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb4-237"><a href="#cb4-237" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-238"><a href="#cb4-238" aria-hidden="true" tabindex="-1"></a>**Próximo capítulo:** Fundamentos da Gestão da Manutenção</span>
-</code><button title="Copiar para a área de transferência" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer id="quarto-footer">
