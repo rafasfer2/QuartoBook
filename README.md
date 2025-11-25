@@ -1,4 +1,4 @@
-# 📚 Confiabilidade e Manutenção: Aplicações em R
+# Confiabilidade em R
 
 📖 Livro interativo sobre análise de confiabilidade e estratégias de manutenção usando R
 
