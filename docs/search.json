@@ -1,0 +1,101 @@
+[
+  {
+    "objectID": "chapters/part1-02-analise-dados-recorrentes.html",
+    "href": "chapters/part1-02-analise-dados-recorrentes.html",
+    "title": "2  Análise de dados recorrentes",
+    "section": "",
+    "text": "2.1 Estrutura de banco de dados",
+    "crumbs": [
+      "Medidas de Performance na Mineração",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Análise de dados recorrentes</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/part1-02-analise-dados-recorrentes.html#estrutura-de-banco-de-dados",
+    "href": "chapters/part1-02-analise-dados-recorrentes.html#estrutura-de-banco-de-dados",
+    "title": "2  Análise de dados recorrentes",
+    "section": "",
+    "text": "2.1.1 Exemplos de histórico de dados\n\n\n2.1.2 Tipos e classes dos dados\n\n\n2.1.3 Categoria de horas\nCategoria de horas corresponde à divisão do tempo em classes de serviços ou condição dos equipamentos, detalhando as horas na execução de atividades de operação e manutenção no equipamento. Para melhor cálculo dos indicadores, os tempos de funcionamento são agrupados em horas dependendo da ocorrência dos eventos e do conjunto de equipamentos que compõe o sistema.\nNo ciclo de processos de transporte, os dados coletados em caminhões “off-highway” são obtidos dos horímetros instalados no sistema de medição e denominados tempos operacionais.\n\n\n\nFluxo de relacionamento entre categorias de horas.\n\n\nA partir daí, estas são apontadas no banco de dados em categorias de horas, que são as: horas efetivas (HEF), horas de atraso operacional (HAO), horas trabalhadas diversas (HTD), horas trabalhadas de infraestrutura (HTI); horas ociosas interna (HOI); horas ociosas externa (HOE); horas de manutenção corretiva (HMC), horas de acidente (HAC); horas preventivas sistemática (MPS) e horas preventivas não sistemática (MPNS). Iremos denominar estes elementos com o tempo de primeiro nível. Como mostrado na Figura @ref(fig-categorias-horas), o fluxo de relacionamento entre estas categorias é ilustrado.\nPara o cálculo de indicadores, é comum realizar a síntese de algumas categorias de horas ou, de outra forma, a junção de horas. Assim, os elementos de tempo de segundo nível são:\n\nHoras de manutenção corretiva total (HMCT = HMC + HAC)\nHoras de manutenção preventiva (HMP = MPS)\nHoras trabalhadas não produtivas (HNTP = HTI + HTD)\nHoras ociosas (HO = HOI + HOE)\nHoras trabalhadas produtivas (HTP = HEF + HAO)\n\nPor fim, para o terceiro nível temos:\n\nHoras trabalhadas (HT = HEF + HAO + HTD + HTI)\nHoras em manutenção (HM = HMC + HAC + MPS + MPNS)\nHoras ociosas (HO)\n\nAo agrupar as categorias de horas em dia, semana, mês ou ano, o valor nominal será dado pela soma da duração de todos os apontamentos, cuja razão esteja configurada para contabilizar esta categoria. Em todos os níveis a soma das categorias representam as horas calendário (HC), por exemplo, temos que:\n\\[\nHC = HT + HM + HO\n\\]\n\n\n\n\n\n\nLegenda das Categorias de Horas\n\n\n\n\nHMC: Horas de Manutenção Corretiva\nHAC: Horas de Aguardo Corretiva\nMPS: Manutenção Preventiva Sistemática\nMPNS: Manutenção Preventiva Não Sistemática\nHTI: Horas de Trabalho Improdutivo\nHTD: Horas de Trabalho em Deslocamento\nHOI: Horas Ociosas Internas\nHOE: Horas Ociosas Externas\nHEF: Horas Efetivas\nHAO: Horas de Apoio à Operação\n\n\n\n\n\n2.1.4 Indicadores chave de desempenho (ICD)\n\n\n2.1.5 Diagrama de build-up",
+    "crumbs": [
+      "Medidas de Performance na Mineração",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Análise de dados recorrentes</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/part1-02-analise-dados-recorrentes.html#política-de-manutenção",
+    "href": "chapters/part1-02-analise-dados-recorrentes.html#política-de-manutenção",
+    "title": "2  Análise de dados recorrentes",
+    "section": "2.2 Política de manutenção",
+    "text": "2.2 Política de manutenção\n\n2.2.1 Manutenção corretiva\n\n\n2.2.2 Manutenção preventiva\n\n\n2.2.3 Dinâmica de ocorrência de falhas\n\n\n2.2.4 Notações e terminologia\n\n\n2.2.5 Gráfico de processo de contagem",
+    "crumbs": [
+      "Medidas de Performance na Mineração",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Análise de dados recorrentes</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/part1-02-analise-dados-recorrentes.html#confiabilidade-e-periodicidade",
+    "href": "chapters/part1-02-analise-dados-recorrentes.html#confiabilidade-e-periodicidade",
+    "title": "2  Análise de dados recorrentes",
+    "section": "2.3 Confiabilidade e periodicidade",
+    "text": "2.3 Confiabilidade e periodicidade\n\n2.3.1 Performance da manutenção\n\n\n2.3.2 Mensuração de impacto na incidência de corretivas\n\n\n2.3.3 Mensuração de impacto na disponibilidade",
+    "crumbs": [
+      "Medidas de Performance na Mineração",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Análise de dados recorrentes</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/part1-02-analise-dados-recorrentes.html#sec-icd",
+    "href": "chapters/part1-02-analise-dados-recorrentes.html#sec-icd",
+    "title": "2  Análise de dados recorrentes",
+    "section": "2.4 Indicadores Chave de Desempenho (ICD)",
+    "text": "2.4 Indicadores Chave de Desempenho (ICD)\nO principal produto do ciclo de transporte é a massa transportada (MT), este configura-se como elemento quantitativo.\nOs ICDs são derivados de elementos de medição, logo, como um elemento pode ser usado nas definições de vários ICDs, é improvável que eles sejam independentes entre si. De acordo com @kang2016, há dois tipos básicos de relacionamento, o primeiro dado pela relação de identidade dos ICDs, baseado em suas definições e, o outro, é a relevância com elementos de suporte compartilhados que podem ser obtidos por comparação aos pares e/ou por agrupamentos em níveis.\nCada ICD revela um aspecto de desempenho para uma unidade de trabalho ou sistema, derivado de dados monitorados de elementos de suporte. Os ICDs podem ser agrupados por aqueles que representam um grupo de aspectos com atributos semelhantes.\n\n2.4.1 Disponibilidade Física (DF)\nO ICD de DF indica a capacidade de um sistema estar em condições de executar uma certa função, e sua indisponibilidade é devido às horas de manutenção (HM), isto é, o indicador aponta para oportunidades de melhoria relacionados à manutenção, e associados ao status de “em manutenção”.\n\\[\nDF = \\frac{HD}{HC} = \\frac{HC - HM}{HC} \\times 100\\%\n\\]\nOnde:\n\nHD: Horas Disponíveis\nHC: Horas Calendário\nHM: Horas de Manutenção\n\n\n\n2.4.2 Utilização Física (UF)\nDe forma diferente, a taxa de utilização física (UF) leva em consideração aspectos operacionais, sobre os quais a equipe de manutenção não tem influência, ou seja, indica o quanto da disponibilidade (HD) é utilizada efetivamente para operação (HT), logo, o tempo não utilizado para operação corresponde à ociosidade do equipamento (HO). Desta forma, temos que a ociosidade ocorre quando o equipamento está em “liberado pela manutenção” ou “parada operacional”.\n\\[\nUF = \\frac{HT}{HD} \\times 100\\%\n\\]\n\n\n2.4.3 Produtividade (PR)\nAs horas trabalhadas (HT), são resultantes das ações de melhoria nos demais indicadores e utilizadas para calcular tanto UF quanto o indicador de Produtividade (PR), este último, dado pelo resultado da massa total transportada (MT) dividida por horas trabalhadas (HT). Por conseguinte, a PR aponta para o ciclo dos processos de carregamento e transporte, e está associado ao status “apto para operação”.\n\\[\nPR = \\frac{MT}{HT}\n\\]\nOnde MT é a massa total transportada (em toneladas).\n\n\n2.4.4 Perda de Produção por Indicadores\nPor fim, para o caso em que um sistema produtivo não cumpre as metas de produção, é possível ainda calcular a perda de produção por indicadores de desempenho, verificando a representatividade em toneladas para cada indicador.\nAs equações de cálculo da perda de produção para cada indicador são descritas a seguir:\nPerda de Produção por Disponibilidade Física:\n\\[\nPP_{DF} = (HD_{programado} - HD_{realizado}) \\times PR_{realizado}\n\\tag{2.1}\\]\nPerda de Produção por Utilização:\n\\[\nPP_{UF} = (HO_{realizado} - HO_{programado}) \\times PR_{programado}\n\\tag{2.2}\\]\nPerda de Produção por Produtividade:\n\\[\nPP_{PR} = (PR_{programado} - PR_{realizado}) \\times (HD_{programado} - HO_{realizado})\n\\tag{2.3}\\]\n\n\nCode\nlibrary(dplyr)\nlibrary(kableExtra)\n\n# Dados programados vs realizados\ndados &lt;- data.frame(\n  Indicador = c(\n    \"Horas Calendário (HC)\", \"Horas Manutenção (HM)\",\n    \"Horas Disponíveis (HD)\", \"Horas Ociosas (HO)\",\n    \"Horas Trabalhadas (HT)\", \"Massa Transportada (MT)\"\n  ),\n  Programado = c(720, 72, 648, 65, 583, 140000),\n  Realizado = c(720, 95, 625, 88, 537, 125000),\n  Unidade = c(\"h\", \"h\", \"h\", \"h\", \"h\", \"t\")\n)\n\n# Calcular ICDs\nicds &lt;- data.frame(\n  Indicador = c(\n    \"Disponibilidade Física (DF)\",\n    \"Utilização Física (UF)\",\n    \"Produtividade (PR)\"\n  ),\n  Programado = c(\n    round((648 / 720) * 100, 1),\n    round((583 / 648) * 100, 1),\n    round(140000 / 583, 1)\n  ),\n  Realizado = c(\n    round((625 / 720) * 100, 1),\n    round((537 / 625) * 100, 1),\n    round(125000 / 537, 1)\n  ),\n  Unidade = c(\"%\", \"%\", \"t/h\")\n)\n\n# Calcular perdas\nPR_real &lt;- 125000 / 537\nperdas &lt;- data.frame(\n  Tipo_Perda = c(\"Perda por DF\", \"Perda por UF\", \"Perda por PR\"),\n  Calculo = c(\n    paste0(\"(\", 648, \" - \", 625, \") × \", round(PR_real, 1)),\n    paste0(\"(\", 88, \" - \", 65, \") × \", round(PR_real, 1)),\n    paste0(\"(\", round(140000 / 583, 1), \" - \", round(PR_real, 1), \") × \", 583)\n  ),\n  Perda_ton = c(\n    round((648 - 625) * PR_real, 0),\n    round((88 - 65) * PR_real, 0),\n    round((140000 / 583 - PR_real) * 583, 0)\n  )\n)\n\n# Apresentar resultados\nkable(dados, caption = \"Dados Programados vs Realizados\") %&gt;%\n  kable_styling(bootstrap_options = c(\"striped\", \"hover\"), full_width = FALSE)\n\n\n\nDados Programados vs Realizados\n\n\nIndicador\nProgramado\nRealizado\nUnidade\n\n\n\n\nHoras Calendário (HC)\n720\n720\nh\n\n\nHoras Manutenção (HM)\n72\n95\nh\n\n\nHoras Disponíveis (HD)\n648\n625\nh\n\n\nHoras Ociosas (HO)\n65\n88\nh\n\n\nHoras Trabalhadas (HT)\n583\n537\nh\n\n\nMassa Transportada (MT)\n140000\n125000\nt\n\n\n\n\n\n\n\nCode\nkable(icds, caption = \"Indicadores-Chave de Desempenho\") %&gt;%\n  kable_styling(bootstrap_options = c(\"striped\", \"hover\"), full_width = FALSE)\n\n\n\nIndicadores-Chave de Desempenho\n\n\nIndicador\nProgramado\nRealizado\nUnidade\n\n\n\n\nDisponibilidade Física (DF)\n90.0\n86.8\n%\n\n\nUtilização Física (UF)\n90.0\n85.9\n%\n\n\nProdutividade (PR)\n240.1\n232.8\nt/h\n\n\n\n\n\n\n\nCode\nkable(perdas,\n  caption = \"Análise de Perda de Produção\",\n  col.names = c(\"Tipo de Perda\", \"Cálculo\", \"Perda (t)\")\n) %&gt;%\n  kable_styling(bootstrap_options = c(\"striped\", \"hover\"), full_width = FALSE)\n\n\n\nAnálise de Perda de Produção\n\n\nTipo de Perda\nCálculo\nPerda (t)\n\n\n\n\nPerda por DF\n(648 - 625) × 232.8\n5354\n\n\nPerda por UF\n(88 - 65) × 232.8\n5354\n\n\nPerda por PR\n(240.1 - 232.8) × 583\n4292\n\n\n\n\n\n\nExemplo de cálculo de ICDs e perda de produção\n\n\n\n\n\n\n\nInterpretação das Perdas\n\n\n\nA análise de perda de produção permite identificar qual indicador teve maior impacto negativo na produção realizada, direcionando as ações de melhoria:\n\nPerda por DF: Indica problemas de manutenção\nPerda por UF: Indica problemas operacionais (ociosidade)\nPerda por PR: Indica problemas de eficiência do ciclo",
+    "crumbs": [
+      "Medidas de Performance na Mineração",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Análise de dados recorrentes</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/part1-02-analise-dados-recorrentes.html#resumo",
+    "href": "chapters/part1-02-analise-dados-recorrentes.html#resumo",
+    "title": "2  Análise de dados recorrentes",
+    "section": "2.5 Resumo",
+    "text": "2.5 Resumo\n🔔 Pontos-chave:\n\nO ciclo de carregamento e transporte é composto por etapas sequenciais\nStatus do equipamento define responsabilidades entre operação e manutenção\nElementos de suporte estruturam o cálculo dos ICDs através de categorias de horas\nDF, UF e PR são os principais indicadores de desempenho\nPerdas de produção podem ser mensuradas por indicador\n\n\nPróximo capítulo: Fundamentos da Gestão da Manutenção",
+    "crumbs": [
+      "Medidas de Performance na Mineração",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Análise de dados recorrentes</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/part1-01-ciclo-carregamento-transporte.html",
+    "href": "chapters/part1-01-ciclo-carregamento-transporte.html",
+    "title": "1  Ciclo dos processos de carregamento e transporte",
+    "section": "",
+    "text": "1.1 Status do Equipamento\nComo mostrado na Figura @ref(fig:ciclo-processos), o ciclo inicia no direcionamento do caminhão, que percorre vazio até o ponto de carga (TVV – tempo de viagem vazio), aguarda na fila para carga (TFC – tempo de fila para carga), e realiza a manobra (TMC – tempo de manobra para carregar) para o carregamento pela escavadeira (TC – tempo de carregamento). Com o caminhão cheio, ocorre o transporte (TVC – tempo de viagem cheio), aguarda na fila para basculamento (TFB – tempo de fila para bascular) e, finalmente, o basculamento (TB– tempo de basculamento). Para um único turno de trabalho da operação, um determinado número de ciclos (NC) é realizado.\nComo a medição é feita baseado em durações de tempo, os apontamentos são realizados sempre que o caminhão alterar o seu status de operação, estes, que são subdivididos em 4 classes: apto para operação, liberado pela manutenção, em manutenção ou em parada operacional.\nEstas classes exercem um importante direcionamento das responsabilidades de acompanhamento dos indicadores chaves de desempenho (ICDs) e possuem problemas operacionais distintos. Por exemplo, quando o caminhão está:",
+    "crumbs": [
+      "Medidas de Performance na Mineração",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Ciclo dos processos de carregamento e transporte</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/part1-01-ciclo-carregamento-transporte.html#sec-status-equipamento",
+    "href": "chapters/part1-01-ciclo-carregamento-transporte.html#sec-status-equipamento",
+    "title": "1  Ciclo dos processos de carregamento e transporte",
+    "section": "",
+    "text": "“apto para operação”: equipe de operação responsável e focada no ciclo de carregamento e transporte. Principal desafio: seleção e dimensionamento dos equipamentos. Segundo Mohtasham et al. (2021), relaciona-se à escolha adequada dos equipamentos para manuseio ideal de materiais, resultando em melhoria da produtividade.\n“liberado pela manutenção”: momento imediatamente posterior à execução da manutenção; transição de responsabilidade da manutenção para operação. Um acordo de nível de serviço (ANS) deve ser pré-estabelecido para eficiência na transição.\n“em manutenção”: responsabilidade da equipe de manutenção, envolvendo planejamento, inspeção, programação e confiabilidade.\n“parada operacional”: grandes paradas planejadas e gerenciadas considerando contingências; embora pertença à operação, o planejamento é conduzido pela gerência considerando toda a cadeia produtiva.",
+    "crumbs": [
+      "Medidas de Performance na Mineração",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Ciclo dos processos de carregamento e transporte</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/part1-01-ciclo-carregamento-transporte.html#descrição-dos-equipamentos",
+    "href": "chapters/part1-01-ciclo-carregamento-transporte.html#descrição-dos-equipamentos",
+    "title": "1  Ciclo dos processos de carregamento e transporte",
+    "section": "1.2 Descrição dos equipamentos",
+    "text": "1.2 Descrição dos equipamentos\n\n1.2.1 Equipamentos de transporte\n\n\n\nCaminhão de mineração Caterpillar CAT® 797F. Fonte: Caterpillar 2022.\n\n\nComo mostrado na Figura @ref(fig:caminhao-797), o caminhão de mineração Caterpillar CAT® 797F é objeto de estudo, impulsionado por motor de combustível diesel, com capacidade de carga nominal útil (“payload”) de 400 toneladas — é um dos caminhões mais presentes nas frotas do mercado brasileiro.\nLogo, para identificar as principais causas que acarretam o baixo desempenho dos indicadores de performance da manutenção dos caminhões CAT® 797F, é preciso compreender os níveis de intervenção que são as subdivisões de um sistema para os quais são realizadas as ações de manutenção.\n\n\n\nNíveis de intervenção dos caminhões. Fonte: Medeiros 2022.\n\n\nComo mostrado na Figura @ref(fig:niveis-intervencoes), os níveis de intervenção dos caminhões são subdivididos em quatro níveis, sendo o nível 1 o “setor”, o nível 2 o “conjunto de itens” e o nível 3 “itens”. O primeiro nível de intervenção refere-se ao setor de intervenção (“locomoção”, “motor de combustão”, “elétrico” são exemplo de um total de 43 setores apontados). É a partir dos setores que as equipes de execução da manutenção são formadas, caracterizada pela competência do pessoal, recursos disponíveis, local e outros.\nNo segundo nível, o sistema é subdividido em conjuntos de itens (“roda”, “arrefecimento”, “lubrificação”, “combustível”, “cabine”, “tanque de óleo” são exemplos de um total de 122 conjuntos de itens apontados) e que, por sua vez, cada conjunto de itens é subdividido em itens num terceiro nível (“pneu”, “óleo”, “líquido de arrefecimento”, “suspensão”, “cabo/fiação” são exemplos de um total de 363 itens apontados).\nUma vez classificados os itens, este é considerado um item reparável que será de fato reparado depois da ocorrência de uma falha. A descrição da falha pode ser considerado o nível 4 (“avaria”, “vazamento”, “nível baixo”, “mau contato” são exemplos de um total de 119 apontamentos).\n\n\n1.2.2 Equipamentos de carga\n\n\n1.2.3 Equipamentos de infraestrutura",
+    "crumbs": [
+      "Medidas de Performance na Mineração",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Ciclo dos processos de carregamento e transporte</span>"
+    ]
+  }
+]
