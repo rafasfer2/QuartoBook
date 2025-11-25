@@ -426,7 +426,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </header>
 
 
-<p><img src="../images/fig-ciclo-processos.png" id="fig:ciclo-processos" class="img-fluid" data-fig-cap="Ciclo de processos de carregamento e transporte"></p>
+<p>Figura 1 – Ciclo de processos de carregamento e transporte: mostra que o ciclo inicia no direcionamento do caminhão, que percorre vazio até o ponto de carga (TVV – tempo de viagem vazio), aguarda na fila para carga (TFC – tempo de fila para carga), e realiza a manobra (TMC – tempo de manobra para carregar) para o carregamento pela escavadeira (TC – tempo de carregamento). Com o caminhão cheio, ocorre o transporte (TVC – tempo de viagem cheio), aguarda na fila para basculamento (TFB – tempo de fila para bascular) e, finalmente, o basculamento (TB– tempo de basculamento). Para um único turno de trabalho da operação, um determinado número de ciclos (NC) é realizado. <img src="../images/fig-ciclo-processos.png" id="fig:ciclo-processos" class="img-fluid" data-fig-cap="Ciclo de processos de carregamento e transporte"></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -455,9 +455,11 @@ Nota
 <h2 data-number="1.2" class="anchored" data-anchor-id="descrição-dos-equipamentos"><span class="header-section-number">1.2</span> Descrição dos equipamentos</h2>
 <section id="equipamentos-de-transporte" class="level3" data-number="1.2.1">
 <h3 data-number="1.2.1" class="anchored" data-anchor-id="equipamentos-de-transporte"><span class="header-section-number">1.2.1</span> Equipamentos de transporte</h3>
-<p><img src="../images/fig-caminhao-797.png" id="fig:caminhao-797" class="img-fluid" data-fig-cap="Caminhão de mineração Caterpillar CAT® 797F. Fonte: Caterpillar 2022."></p>
+<p>Figura 2 – Caminhão de mineração Caterpillar CAT® 797F: objeto de estudo, impulsionado por motor de combustível diesel, com capacidade de carga nominal útil (“payload”) de 400 toneladas — é um dos caminhões mais presentes nas frotas do mercado brasileiro. <img src="../images/fig-caminhao-797.png" id="fig:caminhao-797" class="img-fluid" data-fig-cap="Caminhão de mineração Caterpillar CAT® 797F. Fonte: Caterpillar 2022."></p>
 <p>Logo, para identificar as principais causas que acarretam o baixo desempenho dos indicadores de performance da manutenção dos caminhões CAT® 797F, é preciso compreender os níveis de intervenção que são as subdivisões de um sistema para os quais são realizadas as ações de manutenção.</p>
-<p><img src="../images/fig-niveis-intervencoes.png" id="fig:niveis-intervencoes" class="img-fluid" data-fig-cap="Níveis de intervenção dos caminhões. Fonte: Medeiros 2022."></p>
+<p>Figura 3 – Níveis de intervenção dos caminhões: subdivididos em quatro níveis, sendo o nível 1 o “setor”, o nível 2 o “conjunto de itens” e o nível 3 “itens”. O primeiro nível de intervenção refere-se ao setor de intervenção (“locomoção”, “motor de combustão”, “elétrico” são exemplo de um total de 43 setores apontados). É a partir dos setores que as equipes de execução da manutenção são formadas, caracterizada pela competência do pessoal, recursos disponíveis, local e outros.</p>
+<p>No segundo nível, o sistema é subdividido em conjuntos de itens (“roda”, “arrefecimento”, “lubrificação”, “combustível”, “cabine”, “tanque de óleo” são exemplos de um total de 122 conjuntos de itens apontados) e que, por sua vez, cada conjunto de itens é subdividido em itens num terceiro nível (“pneu”, “óleo”, “líquido de arrefecimento”, “suspensão”, “cabo/fiação” são exemplos de um total de 363 itens apontados).</p>
+<p>Uma vez classificados os itens, este é considerado um item reparável que será de fato reparado depois da ocorrência de uma falha. A descrição da falha pode ser considerado o nível 4 (“avaria”, “vazamento”, “nível baixo”, “mau contato” são exemplos de um total de 119 apontamentos). <img src="../images/fig-niveis-intervencoes.png" id="fig:niveis-intervencoes" class="img-fluid" data-fig-cap="Níveis de intervenção dos caminhões. Fonte: Medeiros 2022."></p>
 </section>
 <section id="equipamentos-de-carga" class="level3" data-number="1.2.2">
 <h3 data-number="1.2.2" class="anchored" data-anchor-id="equipamentos-de-carga"><span class="header-section-number">1.2.2</span> Equipamentos de carga</h3>
@@ -1106,71 +1108,81 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="al">![](../images/fig-ciclo-processos.png)</span>{#fig:ciclo-processos fig-cap="Ciclo de processos de carregamento e transporte"}</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>O tempo total do ciclo influencia diretamente a produtividade da operação e é afetado por fatores como distância de transporte, condições da pista, eficiência do equipamento de carga e organização do tráfego.</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## Status do Equipamento {#sec-status-equipamento}</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>Figura 1 – Ciclo de processos de carregamento e transporte: mostra que o ciclo inicia no direcionamento do caminhão, que percorre vazio até o ponto de carga (TVV – tempo de viagem vazio), aguarda na fila para carga (TFC – tempo de fila para carga), e realiza a manobra (TMC – tempo de manobra para carregar) para o carregamento pela escavadeira (TC – tempo de carregamento). Com o caminhão cheio, ocorre o transporte (TVC – tempo de viagem cheio), aguarda na fila para basculamento (TFB – tempo de fila para bascular) e, finalmente, o basculamento (TB– tempo de basculamento). Para um único turno de trabalho da operação, um determinado número de ciclos (NC) é realizado.</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="al">![](../images/fig-ciclo-processos.png)</span>{#fig:ciclo-processos fig-cap="Ciclo de processos de carregamento e transporte"}</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>O tempo total do ciclo influencia diretamente a produtividade da operação e é afetado por fatores como distância de transporte, condições da pista, eficiência do equipamento de carga e organização do tráfego.</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>Como a medição é feita baseado em durações de tempo, os apontamentos são realizados sempre que o caminhão alterar o seu status de operação, estes, que são subdivididos em **4 classes**: apto para operação, liberado pela manutenção, em manutenção ou em parada operacional.</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## Status do Equipamento {#sec-status-equipamento}</span></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>Estas classes exercem um importante direcionamento das responsabilidades de acompanhamento dos indicadores chaves de desempenho (ICDs) e possuem problemas operacionais distintos. Por exemplo, quando o caminhão está:</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>Como a medição é feita baseado em durações de tempo, os apontamentos são realizados sempre que o caminhão alterar o seu status de operação, estes, que são subdivididos em **4 classes**: apto para operação, liberado pela manutenção, em manutenção ou em parada operacional.</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**"apto para operação":** equipe de operação responsável e focada no ciclo de carregamento e transporte. Principal desafio: seleção e dimensionamento dos equipamentos. Segundo Mohtasham et al. (2021), relaciona-se à escolha adequada dos equipamentos para manuseio ideal de materiais, resultando em melhoria da produtividade.</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>Estas classes exercem um importante direcionamento das responsabilidades de acompanhamento dos indicadores chaves de desempenho (ICDs) e possuem problemas operacionais distintos. Por exemplo, quando o caminhão está:</span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**"liberado pela manutenção":** momento imediatamente posterior à execução da manutenção; transição de responsabilidade da manutenção para operação. Um acordo de nível de serviço (ANS) deve ser pré-estabelecido para eficiência na transição.</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**"apto para operação":** equipe de operação responsável e focada no ciclo de carregamento e transporte. Principal desafio: seleção e dimensionamento dos equipamentos. Segundo Mohtasham et al. (2021), relaciona-se à escolha adequada dos equipamentos para manuseio ideal de materiais, resultando em melhoria da produtividade.</span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**"em manutenção":** responsabilidade da equipe de manutenção, envolvendo planejamento, inspeção, programação e confiabilidade.</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**"liberado pela manutenção":** momento imediatamente posterior à execução da manutenção; transição de responsabilidade da manutenção para operação. Um acordo de nível de serviço (ANS) deve ser pré-estabelecido para eficiência na transição.</span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**"parada operacional":** grandes paradas planejadas e gerenciadas considerando contingências; embora pertença à operação, o planejamento é conduzido pela gerência considerando toda a cadeia produtiva.</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**"em manutenção":** responsabilidade da equipe de manutenção, envolvendo planejamento, inspeção, programação e confiabilidade.</span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-status-equipamento</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Transições entre status do equipamento"</span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DiagrammeR)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**"parada operacional":** grandes paradas planejadas e gerenciadas considerando contingências; embora pertença à operação, o planejamento é conduzido pela gerência considerando toda a cadeia produtiva.</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-status-equipamento</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Transições entre status do equipamento"</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
 <span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="fu">grViz</span>(<span class="st">"</span></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="st">digraph status {</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="st">    graph [rankdir = TB, bgcolor = transparent]</span></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="st">    node [shape = box, style = 'filled,rounded', fontname = Helvetica]</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DiagrammeR)</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="fu">grViz</span>(<span class="st">"</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="st">digraph status {</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="st">    graph [rankdir = TB, bgcolor = transparent]</span></span>
 <span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="st">    APO [label = 'Apto para</span><span class="sc">\\</span><span class="st">nOperação', fillcolor = '#2ECC71']</span></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="st">    LIB [label = 'Liberado pela</span><span class="sc">\\</span><span class="st">nManutenção', fillcolor = '#3498DB']</span></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="st">    MAN [label = 'Em</span><span class="sc">\\</span><span class="st">nManutenção', fillcolor = '#E74C3C']</span></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="st">    PAR [label = 'Parada</span><span class="sc">\\</span><span class="st">nOperacional', fillcolor = '#95A5A6']</span></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="st">    LIB -&gt; APO [label = '  operação</span><span class="sc">\\</span><span class="st">n  assume  ']</span></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="st">    APO -&gt; MAN [label = '  falha ou</span><span class="sc">\\</span><span class="st">n  preventiva  ']</span></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="st">    MAN -&gt; LIB [label = '  conclusão</span><span class="sc">\\</span><span class="st">n  serviço  ']</span></span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="st">    APO -&gt; PAR [label = '  parada</span><span class="sc">\\</span><span class="st">n  planejada  ']</span></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="st">    PAR -&gt; APO [label = '  retomada</span><span class="sc">\\</span><span class="st">n  operação  ']</span></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="st">}</span></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="st">"</span>)</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="fu">## Descrição dos equipamentos</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="st">    node [shape = box, style = 'filled,rounded', fontname = Helvetica]</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="st">    APO [label = 'Apto para</span><span class="sc">\\</span><span class="st">nOperação', fillcolor = '#2ECC71']</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="st">    LIB [label = 'Liberado pela</span><span class="sc">\\</span><span class="st">nManutenção', fillcolor = '#3498DB']</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="st">    MAN [label = 'Em</span><span class="sc">\\</span><span class="st">nManutenção', fillcolor = '#E74C3C']</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="st">    PAR [label = 'Parada</span><span class="sc">\\</span><span class="st">nOperacional', fillcolor = '#95A5A6']</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="st">    LIB -&gt; APO [label = '  operação</span><span class="sc">\\</span><span class="st">n  assume  ']</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="st">    APO -&gt; MAN [label = '  falha ou</span><span class="sc">\\</span><span class="st">n  preventiva  ']</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="st">    MAN -&gt; LIB [label = '  conclusão</span><span class="sc">\\</span><span class="st">n  serviço  ']</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="st">    APO -&gt; PAR [label = '  parada</span><span class="sc">\\</span><span class="st">n  planejada  ']</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="st">    PAR -&gt; APO [label = '  retomada</span><span class="sc">\\</span><span class="st">n  operação  ']</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="st">}</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="st">"</span>)</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="fu">### Equipamentos de transporte</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="fu">## Descrição dos equipamentos</span></span>
 <span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="al">![](../images/fig-caminhao-797.png)</span>{#fig:caminhao-797 fig-cap="Caminhão de mineração Caterpillar CAT® 797F. Fonte: Caterpillar 2022."}</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="fu">### Equipamentos de transporte</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>Logo, para identificar as principais causas que acarretam o baixo desempenho dos indicadores de performance da manutenção dos caminhões CAT® 797F, é preciso compreender os níveis de intervenção que são as subdivisões de um sistema para os quais são realizadas as ações de manutenção.</span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="al">![](../images/fig-niveis-intervencoes.png)</span>{#fig:niveis-intervencoes fig-cap="Níveis de intervenção dos caminhões. Fonte: Medeiros 2022."}</span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="fu">### Equipamentos de carga</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>Figura 2 – Caminhão de mineração Caterpillar CAT® 797F: objeto de estudo, impulsionado por motor de combustível diesel, com capacidade de carga nominal útil ("payload") de 400 toneladas — é um dos caminhões mais presentes nas frotas do mercado brasileiro.</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="al">![](../images/fig-caminhao-797.png)</span>{#fig:caminhao-797 fig-cap="Caminhão de mineração Caterpillar CAT® 797F. Fonte: Caterpillar 2022."}</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>Logo, para identificar as principais causas que acarretam o baixo desempenho dos indicadores de performance da manutenção dos caminhões CAT® 797F, é preciso compreender os níveis de intervenção que são as subdivisões de um sistema para os quais são realizadas as ações de manutenção.</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="fu">### Equipamentos de infraestrutura</span></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>Figura 3 – Níveis de intervenção dos caminhões: subdivididos em quatro níveis, sendo o nível 1 o “setor”, o nível 2 o “conjunto de itens” e o nível 3 “itens”. O primeiro nível de intervenção refere-se ao setor de intervenção ("locomoção", "motor de combustão", "elétrico" são exemplo de um total de 43 setores apontados). É a partir dos setores que as equipes de execução da manutenção são formadas, caracterizada pela competência do pessoal, recursos disponíveis, local e outros.</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>No segundo nível, o sistema é subdividido em conjuntos de itens (“roda”, “arrefecimento”, “lubrificação”, “combustível”, “cabine”, “tanque de óleo” são exemplos de um total de 122 conjuntos de itens apontados) e que, por sua vez, cada conjunto de itens é subdividido em itens num terceiro nível (“pneu”, “óleo”, “líquido de arrefecimento”, “suspensão”, “cabo/fiação” são exemplos de um total de 363 itens apontados).</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>Uma vez classificados os itens, este é considerado um item reparável que será de fato reparado depois da ocorrência de uma falha. A descrição da falha pode ser considerado o nível 4 (“avaria”, “vazamento”, “nível baixo”, “mau contato” são exemplos de um total de 119 apontamentos).</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="al">![](../images/fig-niveis-intervencoes.png)</span>{#fig:niveis-intervencoes fig-cap="Níveis de intervenção dos caminhões. Fonte: Medeiros 2022."}</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="fu">### Equipamentos de carga</span></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="fu">### Equipamentos de infraestrutura</span></span>
 </code><button title="Copiar para a área de transferência" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
