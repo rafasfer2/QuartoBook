@@ -430,9 +430,8 @@ document.addEventListener('DOMContentLoaded', function() {
 <h2 data-number="3.1" class="anchored" data-anchor-id="identificação-do-problema"><span class="header-section-number">3.1</span> Identificação do problema</h2>
 <p>O caminhão fora de estrada CAT® 797F é responsável pelo transporte do minério lavrado do ponto de extração, nesse caso, as cavas de minério, onde é carregado por uma escavadeira. Esse material é levado até os pontos de descarga, que são os britadores semimóveis, cumprindo a função atribuída.</p>
 <p>Com uma demanda de até 23h/dia de operação, sua disponibilidade é o estado de capacidade em desempenhar sua função requerida. O tempo de disponibilidade (horas disponíveis – HD), refere-se às horas calendário (HC) subtraída do somatório das horas em manutenção (HM). As horas trabalhadas (HT) é parte de HD que efetivamente exerce sua função requerida e, complementarmente, a horas ociosas (HO) refere-se ao tempo não utilizado.</p>
-<p>Figura 1 – Gráfico de horas calendário: mostra as 10 categorias de horas para um total CH = 315.360, referente aos 36 caminhões. Em particular, podemos analisar as categorias referentes à manutenção: HMC = 28.023; HAC = 2.771; MPS = 26.966; MPNS = 10.166.</p>
-<p><img src="../images/Figura08_artigo_horas.png" class="img-fluid" style="width:80.0%" data-fig-cap="Figura 1 – Gráfico de horas calendário – HC"></p>
-<p>Figura 2 – Exemplo de teste de referência cruzada. <img src="../images/Figura08_artigo_horas.png" class="img-fluid" style="width:40.0%" data-fig-cap="Figura 2 – Exemplo de teste de referência cruzada"></p>
+<p><img src="../images/Figura08_artigo_horas.png" id="fig:horas-calendario" class="img-fluid" style="width:80.0%" data-fig-cap="Gráfico de horas calendário – HC"></p>
+<p><img src="../images/Figura08_artigo_horas.png" id="fig:referencia-cruzada" class="img-fluid" style="width:40.0%" data-fig-cap="Exemplo de teste de referência cruzada"></p>
 <p>O plano de produção é feito antecipadamente com o intuito de cobrir o período anual, explorando ao máximo as possibilidades dos recursos da empresa e proporcionando condições ideais de eficiência e eficácia.</p>
 <p>Tabela 1: Indicadores de produção dos caminhões CAT® 797F em 2022</p>
 <table class="caption-top table">
@@ -467,8 +466,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </tbody>
 </table>
 <p>Quando comparamos o programado com o realizado, nota-se que a produção e a produtividade ficaram acima do previsto, enquanto os indicadores de disponibilidade (DF) e utilização (UF) apresentaram queda — DF caiu 3,08 p.p. (78,46% realizado) e UF caiu 2,66 p.p. (81,25% realizado).</p>
-<p>Figura 3 – Build-up das perdas de produção por indicador: apresenta a representatividade em toneladas de cada fonte de perda.</p>
-<p><img src="../images/Figura9_artigo_buildup.png" class="img-fluid" style="width:80.0%" data-fig-cap="Figura 3 – Build-up das perdas de produção por indicador"></p>
+<p><img src="../images/Figura9_artigo_buildup.png" id="fig:build-up-perdas" class="img-fluid" style="width:80.0%" data-fig-cap="Build-up das perdas de produção por indicador"></p>
 <p>O indicador DF foi o principal problema em 2022 para os 36 caminhões analisados: a perda total de produção foi de -5.086.957 ton/a e a indisponibilidade total foi de 9.722,88 h.</p>
 </section>
 <section id="análise-do-fenômeno" class="level2" data-number="3.2">
@@ -1134,47 +1132,45 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Com uma demanda de até 23h/dia de operação, sua disponibilidade é o estado de capacidade em desempenhar sua função requerida. O tempo de disponibilidade (horas disponíveis – HD), refere-se às horas calendário (HC) subtraída do somatório das horas em manutenção (HM). As horas trabalhadas (HT) é parte de HD que efetivamente exerce sua função requerida e, complementarmente, a horas ociosas (HO) refere-se ao tempo não utilizado.</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>Figura 1 – Gráfico de horas calendário: mostra as 10 categorias de horas para um total CH = 315.360, referente aos 36 caminhões. Em particular, podemos analisar as categorias referentes à manutenção: HMC = 28.023; HAC = 2.771; MPS = 26.966; MPNS = 10.166.</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="al">![](../images/Figura08_artigo_horas.png)</span>{fig-cap="Figura 1 – Gráfico de horas calendário – HC" width="80%"}</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="al">![](../images/Figura08_artigo_horas.png)</span>{#fig:horas-calendario fig-cap="Gráfico de horas calendário – HC" width="80%"}</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Figura 2 – Exemplo de teste de referência cruzada.</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="al">![](../images/Figura08_artigo_horas.png)</span>{fig-cap="Figura 2 – Exemplo de teste de referência cruzada" width="40%"}</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>O plano de produção é feito antecipadamente com o intuito de cobrir o período anual, explorando ao máximo as possibilidades dos recursos da empresa e proporcionando condições ideais de eficiência e eficácia.</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="al">![](../images/Figura08_artigo_horas.png)</span>{#fig:referencia-cruzada fig-cap="Exemplo de teste de referência cruzada" width="40%"}</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>O plano de produção é feito antecipadamente com o intuito de cobrir o período anual, explorando ao máximo as possibilidades dos recursos da empresa e proporcionando condições ideais de eficiência e eficácia.</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>Tabela 1: Indicadores de produção dos caminhões CAT® 797F em 2022</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>| Indicadores de produção | Programado | Realizado |</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>|---|---:|---:|</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>| Disponibilidade física – DF | 81,54% | 78,46% ↓ |</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>| Utilização física – UF | 83,91% | 81,25% ↓ |</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>| Produtividade | 465,64 𝑡𝑜𝑛/ℎ | 523,27 𝑡𝑜𝑛/ℎ ↑ |</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>| Produção | 100.471.267 𝑡𝑜𝑛/a | 105.200.782 𝑡𝑜𝑛/a ↑ |</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>Tabela 1: Indicadores de produção dos caminhões CAT® 797F em 2022</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>| Indicadores de produção | Programado | Realizado |</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>|---|---:|---:|</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>| Disponibilidade física – DF | 81,54% | 78,46% ↓ |</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>| Utilização física – UF | 83,91% | 81,25% ↓ |</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>| Produtividade | 465,64 𝑡𝑜𝑛/ℎ | 523,27 𝑡𝑜𝑛/ℎ ↑ |</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>| Produção | 100.471.267 𝑡𝑜𝑛/a | 105.200.782 𝑡𝑜𝑛/a ↑ |</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>Quando comparamos o programado com o realizado, nota-se que a produção e a produtividade ficaram acima do previsto, enquanto os indicadores de disponibilidade (DF) e utilização (UF) apresentaram queda — DF caiu 3,08 p.p. (78,46% realizado) e UF caiu 2,66 p.p. (81,25% realizado).</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>Quando comparamos o programado com o realizado, nota-se que a produção e a produtividade ficaram acima do previsto, enquanto os indicadores de disponibilidade (DF) e utilização (UF) apresentaram queda — DF caiu 3,08 p.p. (78,46% realizado) e UF caiu 2,66 p.p. (81,25% realizado).</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>Figura 3 – Build-up das perdas de produção por indicador: apresenta a representatividade em toneladas de cada fonte de perda.</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="al">![](../images/Figura9_artigo_buildup.png)</span>{#fig:build-up-perdas fig-cap="Build-up das perdas de produção por indicador" width="80%"}</span>
 <span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="al">![](../images/Figura9_artigo_buildup.png)</span>{fig-cap="Figura 3 – Build-up das perdas de produção por indicador" width="80%"}</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>O indicador DF foi o principal problema em 2022 para os 36 caminhões analisados: a perda total de produção foi de -5.086.957 ton/a e a indisponibilidade total foi de 9.722,88 h.</span>
 <span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>O indicador DF foi o principal problema em 2022 para os 36 caminhões analisados: a perda total de produção foi de -5.086.957 ton/a e a indisponibilidade total foi de 9.722,88 h.</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="fu">## Análise do fenômeno</span></span>
 <span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="fu">## Análise do fenômeno</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="fu">## Análise do processo</span></span>
 <span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="fu">## Análise do processo</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="fu">## Plano de ação</span></span>
 <span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="fu">## Plano de ação</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="fu">## Execução</span></span>
 <span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="fu">## Execução</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="fu">## Verificação</span></span>
 <span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="fu">## Verificação</span></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="fu">## Padronização</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="fu">## Padronização</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer id="quarto-footer">
