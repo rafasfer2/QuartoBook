@@ -54,27 +54,7 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -512,17 +492,13 @@ window.Quarto = {
 <h3 data-number="2.1.3" class="anchored" data-anchor-id="categoria-de-horas"><span class="header-section-number">2.1.3</span> Categoria de horas</h3>
 <p>Categoria de horas corresponde à divisão do tempo em classes de serviços ou condição dos equipamentos, detalhando as horas na execução de atividades de operação e manutenção no equipamento. Para melhor cálculo dos indicadores, os tempos de funcionamento são agrupados em horas dependendo da ocorrência dos eventos e do conjunto de equipamentos que compõe o sistema.</p>
 <p>No ciclo de processos de transporte, os dados coletados em caminhões “off-highway” são obtidos dos horímetros instalados no sistema de medição e denominados tempos operacionais.</p>
-<div id="fig-categorias-horas" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-categorias-horas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/fig-categorias-horas.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-categorias-horas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;2.1: Fluxo de relacionamento entre categorias de horas
-</figcaption>
+<div id="fig:categorias-horas" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/fig-categorias-horas.png" class="img-fluid figure-img"></p>
+<figcaption>Fluxo de relacionamento entre categorias de horas.</figcaption>
 </figure>
 </div>
-<p>A partir daí, estas são apontadas no banco de dados em categorias de horas, que são as: horas efetivas (HEF), horas de atraso operacional (HAO), horas trabalhadas diversas (HTD), horas trabalhadas de infraestrutura (HTI); horas ociosas interna (HOI); horas ociosas externa (HOE); horas de manutenção corretiva (HMC), horas de acidente (HAC); horas preventivas sistemática (MPS) e horas preventivas não sistemática (MPNS). Iremos denominar estes elementos com o tempo de primeiro nível. A Figura @ref(fig-categorias-horas) ilustra o fluxo de relacionamento entre estas categorias.</p>
+<p>A partir daí, estas são apontadas no banco de dados em categorias de horas, que são as: horas efetivas (HEF), horas de atraso operacional (HAO), horas trabalhadas diversas (HTD), horas trabalhadas de infraestrutura (HTI); horas ociosas interna (HOI); horas ociosas externa (HOE); horas de manutenção corretiva (HMC), horas de acidente (HAC); horas preventivas sistemática (MPS) e horas preventivas não sistemática (MPNS). Iremos denominar estes elementos com o tempo de primeiro nível. Como mostrado na Figura <span class="citation" data-cites="ref">@ref</span>(fig-categorias-horas), o fluxo de relacionamento entre estas categorias é ilustrado.</p>
 <p>Para o cálculo de indicadores, é comum realizar a síntese de algumas categorias de horas ou, de outra forma, a junção de horas. Assim, os <strong>elementos de tempo de segundo nível</strong> são:</p>
 <ul>
 <li><strong>Horas de manutenção corretiva total</strong> (HMCT = HMC + HAC)</li>
@@ -606,7 +582,7 @@ Legenda das Categorias de Horas
 <section id="sec-icd" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="sec-icd"><span class="header-section-number">2.4</span> Indicadores Chave de Desempenho (ICD)</h2>
 <p>O principal produto do ciclo de transporte é a <strong>massa transportada (MT)</strong>, este configura-se como elemento quantitativo.</p>
-<p>Os ICDs são derivados de elementos de medição, logo, como um elemento pode ser usado nas definições de vários ICDs, é improvável que eles sejam independentes entre si. De acordo com <span class="citation" data-cites="kang2016">Kang et al. (<a href="#ref-kang2016" role="doc-biblioref">2016</a>)</span>, há dois tipos básicos de relacionamento, o primeiro dado pela relação de identidade dos ICDs, baseado em suas definições e, o outro, é a relevância com elementos de suporte compartilhados que podem ser obtidos por comparação aos pares e/ou por agrupamentos em níveis.</p>
+<p>Os ICDs são derivados de elementos de medição, logo, como um elemento pode ser usado nas definições de vários ICDs, é improvável que eles sejam independentes entre si. De acordo com <span class="citation" data-cites="kang2016">@kang2016</span>, há dois tipos básicos de relacionamento, o primeiro dado pela relação de identidade dos ICDs, baseado em suas definições e, o outro, é a relevância com elementos de suporte compartilhados que podem ser obtidos por comparação aos pares e/ou por agrupamentos em níveis.</p>
 <p>Cada ICD revela um aspecto de desempenho para uma unidade de trabalho ou sistema, derivado de dados monitorados de elementos de suporte. Os ICDs podem ser agrupados por aqueles que representam um grupo de aspectos com atributos semelhantes.</p>
 <section id="disponibilidade-física-df" class="level3" data-number="2.4.1">
 <h3 data-number="2.4.1" class="anchored" data-anchor-id="disponibilidade-física-df"><span class="header-section-number">2.4.1</span> Disponibilidade Física (DF)</h3>
@@ -880,11 +856,6 @@ Interpretação das Perdas
 
 <!-- -->
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-kang2016" class="csl-entry" role="listitem">
-Kang, Ning, Chuan Zhao, Jing Li, e J. A. Horst. 2016. <span>“A Hierarchical structure of key performance indicators for operation management and continuous improvement in production systems”</span>. <em>International Journal of Production Research</em> 54 (21): 6333–50. <a href="https://doi.org/10.1080/00207543.2015.1136082">https://doi.org/10.1080/00207543.2015.1136082</a>.
-</div>
-</div>
 </section>
 
 </main> <!-- /main -->
@@ -1534,9 +1505,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>No ciclo de processos de transporte, os dados coletados em caminhões "off-highway" são obtidos dos horímetros instalados no sistema de medição e denominados tempos operacionais.</span>
 <span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="al">![Fluxo de relacionamento entre categorias de horas](../images/fig-categorias-horas.png)</span>{#fig-categorias-horas}</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="al">![Fluxo de relacionamento entre categorias de horas.](../images/fig-categorias-horas.png)</span>{#fig:categorias-horas}</span>
 <span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>A partir daí, estas são apontadas no banco de dados em categorias de horas, que são as: horas efetivas (HEF), horas de atraso operacional (HAO), horas trabalhadas diversas (HTD), horas trabalhadas de infraestrutura (HTI); horas ociosas interna (HOI); horas ociosas externa (HOE); horas de manutenção corretiva (HMC), horas de acidente (HAC); horas preventivas sistemática (MPS) e horas preventivas não sistemática (MPNS). Iremos denominar estes elementos com o tempo de primeiro nível. A Figura \@ref(fig-categorias-horas) ilustra o fluxo de relacionamento entre estas categorias.</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>A partir daí, estas são apontadas no banco de dados em categorias de horas, que são as: horas efetivas (HEF), horas de atraso operacional (HAO), horas trabalhadas diversas (HTD), horas trabalhadas de infraestrutura (HTI); horas ociosas interna (HOI); horas ociosas externa (HOE); horas de manutenção corretiva (HMC), horas de acidente (HAC); horas preventivas sistemática (MPS) e horas preventivas não sistemática (MPNS). Iremos denominar estes elementos com o tempo de primeiro nível. Como mostrado na Figura @ref(fig-categorias-horas), o fluxo de relacionamento entre estas categorias é ilustrado.</span>
 <span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>Para o cálculo de indicadores, é comum realizar a síntese de algumas categorias de horas ou, de outra forma, a junção de horas. Assim, os **elementos de tempo de segundo nível** são:</span>
 <span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>

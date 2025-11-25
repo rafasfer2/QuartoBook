@@ -2,7 +2,7 @@
 /.quarto/
 /_site/
 /_book/
-/docs/
+ # /docs/ removido para publicação no GitHub Pages
 *.html
 
 # R
